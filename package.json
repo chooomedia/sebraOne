@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SebraOne/SebraOne.git"
+    "url": "https://github.com/chooomedia/sebraOne.git"
   },
   "keywords": [
     "wordpress",
@@ -20,13 +20,12 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "The SebraOne Authors (https://github.com/SebraOne/SebraOne/graphs/contributors)",
+  "author": "The SebraOne Authors (https://github.com/chooomedia/sebraOne/graphs/contributors)",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/SebraOne/SebraOne/issues"
+    "url": "https://github.com/chooomedia/sebraOne/issues"
   },
-  "homepage": "https://SebraOne.com",
-  "dependencies": {},
+  "homepage": "https://www.chooomedia.de",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -47,5 +46,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.2.4"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.0"
   }
 }
