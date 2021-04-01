@@ -47,7 +47,7 @@ foreach ( $SebraOne_includes as $file ) {
 add_filter( 'wp_nav_menu_items', 'my_custom_menu_item', 10, 2 );
 function my_custom_menu_item($items, $args) {
     if(!is_user_logged_in() && $args->theme_location == 'primary') {
-        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a class="nav-link mx-lg-1" href="'. site_url('wp-login.php') .'">Einloggen oder Registrieren</a></li>';
+        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a class="nav-link mx-lg-1" href="/signup">Einloggen oder Registrieren</a></li>';
     } elseif ( $args->theme_location == 'primary' ) {
 		$user=wp_get_current_user();
         $name=$user->display_name; // or user_login , user_firstname, user_lastname
@@ -67,7 +67,7 @@ function my_custom_menu_item($items, $args) {
 add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
 function add_search_box_to_menu( $items, $args ) {
     if( $args->theme_location == 'primary' )
-        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><svg class='search-icon' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M23.832 19.641l-6.821-6.821c2.834-5.878-1.45-12.82-8.065-12.82-4.932 0-8.946 4.014-8.946 8.947 0 6.508 6.739 10.798 12.601 8.166l6.879 6.879c1.957.164 4.52-2.326 4.352-4.351zm-14.886-4.721c-3.293 0-5.973-2.68-5.973-5.973s2.68-5.973 5.973-5.973c3.294 0 5.974 2.68 5.974 5.973s-2.68 5.973-5.974 5.973z'/></svg><input type='text' name='s' id='search' placeholder='Finde einen Händler'></form></li>";
+        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><i class='fa fa-search pr-2 text-white' aria-hidden='true'></i><input type='text' name='s' id='search' placeholder='Finde einen Händler'></form></li>";
 
     return $items;
 }
