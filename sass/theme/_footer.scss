@@ -4,9 +4,14 @@ footer#wrapper-footer {
 
 	.footer-widget {
 		h3 {
+			font-weight: 700;
 			text-transform: uppercase;
 			color: $navbar-dark-color;
 			margin-bottom: 30px;
+		}
+
+		@media screen and (max-width:$sm) {
+			margin-top: calc(#{$spacer} * 3)
 		}
 	}
 

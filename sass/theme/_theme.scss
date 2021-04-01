@@ -353,6 +353,7 @@
 			}
 
 			legend {
+                font-weight: 600;
 				box-sizing: border-box;
 				color: inherit;
 				display: table;
@@ -850,4 +851,15 @@
 			}
 		}
 	}
+}
+
+.single, .page {
+
+    #main-nav {
+        background: #000;
+    }
+}
+
+#single-wrapper, #page-wrapper {
+    padding-top: calc(#{$spacer} * 7);
 }

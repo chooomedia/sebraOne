@@ -43,17 +43,25 @@ foreach ( $SebraOne_includes as $file ) {
 	require_once $SebraOne_inc_dir . $file;
 }
 
-// Add User Login-Out to Header Nav
-add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
-function add_loginout_link( $items, $args ) {
-    if (is_user_logged_in() && $args->theme_location == 'primary') {
-        $items .= '<li class="menu-item nav-item"><a class="nav-link mx-lg-1" href="'. wp_logout_url() .'">Abmelden</a></li>';
-    }
-    elseif (!is_user_logged_in() && $args->theme_location == 'primary') {
-        $items .= '<li class="menu-item nav-item"><a class="nav-link mx-lg-1" href="'. site_url('wp-login.php') .'">Einloggen oder Registrieren</a></li>';
+// Add User to Menu
+add_filter( 'wp_nav_menu_items', 'my_custom_menu_item', 10, 2 );
+function my_custom_menu_item($items) {
+    if(is_user_logged_in()) {
+        $user=wp_get_current_user();
+        $name=$user->display_name; // or user_login , user_firstname, user_lastname
+        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-user" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-user nav-item">';
+		$items .= '<a title="Usermenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-user">' . $name . '</a>';
+		$items .= '<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-user" role="menu">';
+		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-profil" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-profil nav-item"><a title="Profil" href="#" class="dropdown-item">Profil</a></li>';
+		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-logout nav-item"><a title="Abmelden" href="'. wp_logout_url() .'" class="dropdown-item">Abmelden</a></li>';
+		$items .= '</ul>';
+		$items .= '</li>';
+    } else {
+        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a class="nav-link mx-lg-1" href="'. site_url('wp-login.php') .'">Einloggen oder Registrieren</a></li>';
     }
     return $items;
 }
+
 
 // Add Search to Header Nav
 add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
