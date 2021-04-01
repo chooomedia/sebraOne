@@ -26,7 +26,7 @@ if ( ! function_exists( 'SebraOne_add_site_info' ) ) {
 		$the_theme = wp_get_theme();
 
 		$site_info = sprintf(
-			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
+			'<a href="%1$s">%2$s</a><span class="sep"> · </span>%3$s(%4$s)',
 			esc_url( __( 'http://wordpress.org/', 'SebraOne' ) ),
 			sprintf(
 				/* translators: WordPress */
@@ -35,13 +35,13 @@ if ( ! function_exists( 'SebraOne_add_site_info' ) ) {
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators: 1: Theme name, 2: Theme author */
-				esc_html__( 'Theme: %1$s by %2$s.', 'SebraOne' ),
+				esc_html__( ' %1$s by %2$s.', 'SebraOne' ),
 				$the_theme->get( 'Name' ),
 				'<a href="' . esc_url( __( 'https://chooomedia.de', 'CHOOOMEDIA' ) ) . '">CHOOOMEDIA</a>'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators: Theme version */
-				esc_html__( 'Version: %1$s', 'SebraOne' ),
+				esc_html__( 'Version %1$s', 'SebraOne' ),
 				$the_theme->get( 'Version' )
 			)
 		);

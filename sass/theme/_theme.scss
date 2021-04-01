@@ -1,29 +1,4 @@
-#main-nav {
-	position: relative;
-	z-index: 1;
 
-	#searchform {
-		#search {
-			line-height: 2;
-			background: transparent;
-			color: #fff;
-			box-shadow: 0 1px 0px white;
-			border: unset;
-
-			&:focus {
-				outline: none;
-				background: rgba(255, 255, 255, 0.1);
-				color: #fff;
-				text-indent: 0.5em;
-				transition: all .3s;
-			}
-
-			&::placeholder {
-				color: $navbar-dark-color;
-			}
-		}
-	}
-}
 
 .search-icon {
 	fill: #fff;
@@ -35,12 +10,17 @@
 	.front {
 		background-attachment: fixed;
 		background-size: cover;
+        background-position: center center;
+
+        @media screen and (max-width:$md) {
+            padding-top: 2rem;
+        }
 
 		&::before {
 			content: "";
 			display: block;
 			width: 100%;
-			height: calc(100% - 56px);
+			height: 100%;
 			position: absolute;
 			z-index: 0;
 			background: rgba(0, 0, 0, 0.5);
@@ -48,7 +28,7 @@
 	}
 
 	#main-search {
-		min-height: calc(100vh - 56px);
+		min-height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -864,97 +844,6 @@
 						&:after {
 							right: auto;
 							left: 10px;
-						}
-					}
-				}
-			}
-		}
-
-		@media screen and (max-width: $md) {
-			#page-wrapper {
-				#main-search {
-					form {
-						legend {
-							font-size: 50px;
-							text-align: center;
-							margin-bottom: 50px;
-						}
-
-						.inner-form {
-							-ms-flex-wrap: wrap;
-							flex-wrap: wrap;
-							-ms-flex-pack: justify;
-							justify-content: space-between;
-							max-width: 90%;
-							margin: 0 auto;
-
-							.input-field {
-								margin-bottom: 15px;
-							}
-
-							.input-field.first-wrap {
-								width: 100%;
-							}
-
-							.input-field.second-wrap {
-								width: calc(50% - 7.5px);
-								max-width: none;
-							}
-
-							.input-field.third-wrap {
-								width: calc(50% - 7.5px);
-								max-width: none;
-							}
-
-							.input-field.fouth-wrap {
-								width: calc(50% - 7.5px);
-								max-width: none;
-								margin-bottom: 0;
-							}
-
-							.input-field.fifth-wrap {
-								width: calc(50% - 7.5px);
-								max-width: none;
-								padding-left: 0;
-								margin-bottom: 0;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		@media screen and(max-width: $sm) {
-			#page-wrapper {
-				#main-search {
-					form {
-						legend {
-							font-size: 40px;
-							margin-bottom: 10px;
-						}
-
-						.inner-form {
-							.input-field.second-wrap {
-								width: 100%;
-								margin-bottom: 15px;
-							}
-
-							.input-field.third-wrap {
-								width: 100%;
-								margin-bottom: 15px;
-							}
-
-							.input-field.fouth-wrap {
-								width: 100%;
-								margin-bottom: 15px;
-							}
-
-							.input-field.fifth-wrap {
-								width: 100%;
-								margin-bottom: 15px;
-								margin-bottom: 0;
-								padding-left: 0;
-							}
 						}
 					}
 				}

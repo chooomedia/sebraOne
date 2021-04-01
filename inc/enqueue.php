@@ -23,7 +23,9 @@ if ( ! function_exists( 'SebraOne_scripts' ) ) {
 		wp_enqueue_script( 'jquery' );
 
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
+		$header_js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'SebraOne-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
+		wp_enqueue_script( 'Header', get_template_directory_uri() . '/js/header.js', array(), $header_js_version, true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
