@@ -39,7 +39,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 								</path>
 							</svg>
 						</div>
-						<input id="search" type="text" placeholder="Dein Wohnort (PLZ)" />
+						<input id="search" type="text" placeholder="Dein Wohnort (PLZ) *" required/>
 					</div>
 					<div class="input-field second-wrap">
 						<div class="icon-wrap">
