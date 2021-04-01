@@ -22,7 +22,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 </head>
 
 <body <?php body_class(); ?> <?php SebraOne_body_attributes(); ?>>
-<?php do_action( 'wp_body_open' ); ?>
+<?php do_action( 'wp_body_open' ); 
+?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
@@ -39,18 +40,12 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php if ( 'container' === $container ) : ?>
 			<div class="container">
 		<?php endif; ?>
-
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
-
 						<?php if ( is_front_page() && is_home() ) : ?>
-
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
 						<?php else : ?>
-
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
 						<?php endif; ?>
 
 						<?php
@@ -75,7 +70,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
-						'walker'          => new SebraOne_WP_Bootstrap_Navwalker(),
+						'walker'          => new SebraOne_WP_Bootstrap_Navwalker()
 					)
 				);
 				?>

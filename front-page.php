@@ -23,10 +23,9 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<!-- Adds Thumbnail defined from Pages-Parameters of Wp Pages -->
 	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
 
-	<div class="row" style="background-image: url('<?php echo $thumb['0'];?>')">
-    <div class="row-overlay"></div>
+	<div class="front" style="background-image: url('<?php echo $thumb['0'];?>');">
 		<div class="container mb-5" id="main-search">
-			<form class="p-2">
+			<form class="p-lg-2">
 				<fieldset class="text-white text-center">
 					<legend>Finde einen Händler</legend>
                     <p>zum Bestpreis in deiner Umgebung</p>
@@ -78,7 +77,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 						</select>
 					</div>
 					<div class="input-field fifth-wrap">
-						<button class="btn btn-search bg-primary" type="button">Händler finden</button>
+						<button class="btn btn-search bg-primary" type="button"><svg class='search-icon' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M23.832 19.641l-6.821-6.821c2.834-5.878-1.45-12.82-8.065-12.82-4.932 0-8.946 4.014-8.946 8.947 0 6.508 6.739 10.798 12.601 8.166l6.879 6.879c1.957.164 4.52-2.326 4.352-4.351zm-14.886-4.721c-3.293 0-5.973-2.68-5.973-5.973s2.68-5.973 5.973-5.973c3.294 0 5.974 2.68 5.974 5.973s-2.68 5.973-5.974 5.973z'/></svg>Händler finden</button>
 					</div>
 				</div>
 			</form>
@@ -112,10 +111,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/choices.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/flatpickr.js"></script>
-	<script>
-		flatpickr(".datepicker", {});
 
-	</script>
 	<script>
 		const choices = new Choices('[data-trigger]', {
 			searchEnabled: false,

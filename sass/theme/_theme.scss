@@ -1,18 +1,53 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
 
+#main-nav {
+	position: relative;
+	z-index: 1;
+
+	#searchform {
+		#search {
+			line-height: 2;
+			background: transparent;
+			color: #fff;
+			box-shadow: 0 1px 0px white;
+			border: unset;
+
+			&:focus {
+				outline: none;
+				background: rgba(255, 255, 255, 0.1);
+				color: #fff;
+				text-indent: 0.5em;
+				transition: all .3s;
+			}
+
+            &::placeholder {
+                color: $navbar-dark-color;
+            }
+		}
+	}
+}
+
+.search-icon {
+    fill: #fff;
+    transform: scale(.65);
+    margin-right: .5rem;
+}
+
 #page-wrapper {
-	.row {
+	.front {
 		background-attachment: fixed;
 		background-size: cover;
 
-        .row-overlay {
-            width: 100vw;
-            height: 99vh;
-            position: absolute;
-            z-index: 0;
-            background:rgba(0, 0, 0, 0.5);
-        }
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: calc(100% - 56px);
+			position: absolute;
+			z-index: 0;
+			background: rgba(0, 0, 0, 0.5);
+		}
 	}
 
 	#main-search {
@@ -37,13 +72,13 @@
 				font-weight: 600;
 				text-align: center;
 
-                p {
-                    font-size: 1.3rem;
-                }
+				p {
+					font-size: 1.3rem;
+				}
 			}
 
 			.inner-form {
-				background: rgba(255, 255, 255, 0.95);
+				background: #fff;
 				border-radius: $br1;
 				padding: 16px;
 				display: -ms-flexbox;
@@ -55,14 +90,20 @@
 				align-items: center;
 
 				.input-field {
+					margin-left: .5rem;
+					margin-right: .5rem;
 					position: relative;
-					border-right: 1px solid #ddd;
+					box-shadow: 0 1px 0px #555;
+
+					&:last-of-type {
+						box-shadow: none;
+					}
 
 					.icon-wrap {
 						position: absolute;
 						top: 0;
 						left: 0;
-						width: 40px;
+						width: 20px;
 						height: 100%;
 						display: -ms-flexbox;
 						display: flex;
@@ -80,17 +121,17 @@
 					}
 
 					input {
-						height: 70px;
+						height: 56px;
 						background: #fff;
 						border-radius: 0;
 						border: 0;
 						display: block;
 						width: 100%;
-						padding: 10px 20px 10px 45px;
+						padding: 10px 20px 10px 30px;
 						font-size: 16px;
 						color: #555;
 						font-weight: 400;
-						font-family: 'Poppins', sans-serif;
+						transition: all .3s;
 
 						&:-moz-placeholder {
 							color: #9a9a9a;
@@ -107,12 +148,12 @@
 						}
 
 						&:hover {
-							box-shadow: none;
+							box-shadow: 0 2px 0px #555;
 							outline: 0;
 						}
 
 						&:focus {
-							box-shadow: none;
+							box-shadow: 0 2px 0px #555;
 							outline: 0;
 						}
 					}
@@ -129,16 +170,16 @@
 					-ms-flex-positive: 1;
 					flex-grow: 1;
 				}
-				
+
 				.input-field.fouth-wrap {
-	
+
 					border-right: 0;
 
 					.choices__inner {
 						background: #fff;
 						border-radius: 0;
 						border: 0;
-						height: 70px;
+						height: 56px;
 						color: #666;
 						display: -ms-flexbox;
 						display: flex;
@@ -214,16 +255,12 @@
 				}
 
 				.input-field.fifth-wrap {
-					min-width: 190px;
-					max-width: 190px;
-					padding-left: 10px;
-					border-right: 0;
 
 					.btn-search {
-						height: 70px;
+						height: 56px;
 						width: 100%;
 						white-space: nowrap;
-						border-radius: .5px;
+						border-radius: $br1;
 						font-size: 20px;
 						color: #fff;
 						transition: all .2s ease-out, color .2s ease-out;
@@ -1929,7 +1966,7 @@
 	}
 }
 
-@media (min-width: $xl) {
+@media screen and (min-width: $lg) {
 	.choices__list--dropdown {
 		.choices__item--selectable {
 			padding-right: 100px;
@@ -1962,86 +1999,91 @@
 	}
 }
 
-@media(max-width: $lg) {
-	#main-search {
-		form {
-			legend {
-				font-size: 50px;
-				text-align: center;
-				margin-bottom: 50px;
-			}
-
-			.inner-form {
-				-ms-flex-wrap: wrap;
-				flex-wrap: wrap;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
-				max-width: 90%;
-				margin: 0 auto;
-
-				.input-field {
-					margin-bottom: 15px;
+@media screen and (max-width: $md) {
+	#page-wrapper {
+		#main-search {
+			form {
+				legend {
+					font-size: 50px;
+					text-align: center;
+					margin-bottom: 50px;
 				}
 
-				.input-field.first-wrap {
-					width: 100%;
-				}
+				.inner-form {
+					-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+					-ms-flex-pack: justify;
+					justify-content: space-between;
+					max-width: 90%;
+					margin: 0 auto;
 
-				.input-field.second-wrap {
-					width: calc(50% - 7.5px);
-					max-width: none;
-				}
+					.input-field {
+						margin-bottom: 15px;
+					}
 
-				.input-field.third-wrap {
-					width: calc(50% - 7.5px);
-					max-width: none;
-				}
+					.input-field.first-wrap {
+						width: 100%;
+					}
 
-				.input-field.fouth-wrap {
-					width: calc(50% - 7.5px);
-					max-width: none;
-					margin-bottom: 0;
-				}
+					.input-field.second-wrap {
+						width: calc(50% - 7.5px);
+						max-width: none;
+					}
 
-				.input-field.fifth-wrap {
-					width: calc(50% - 7.5px);
-					max-width: none;
-					padding-left: 0;
-					margin-bottom: 0;
+					.input-field.third-wrap {
+						width: calc(50% - 7.5px);
+						max-width: none;
+					}
+
+					.input-field.fouth-wrap {
+						width: calc(50% - 7.5px);
+						max-width: none;
+						margin-bottom: 0;
+					}
+
+					.input-field.fifth-wrap {
+						width: calc(50% - 7.5px);
+						max-width: none;
+						padding-left: 0;
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
 	}
 }
 
-@media(max-width: $md) {
-	#main-search {
-		form {
-			legend {
-				font-size: 40px;
-				margin-bottom: 40px;
-			}
-
-			.inner-form {
-				.input-field.second-wrap {
-					width: 100%;
-					margin-bottom: 15px;
+@media screen and(max-width: $sm) {
+	#page-wrapper {
+		#main-search {
+			form {
+				legend {
+					font-size: 40px;
+					margin-bottom: 10px;
 				}
 
-				.input-field.third-wrap {
-					width: 100%;
-					margin-bottom: 15px;
-				}
+				.inner-form {
+					.input-field.second-wrap {
+						width: 100%;
+						margin-bottom: 15px;
+					}
 
-				.input-field.fouth-wrap {
-					width: 100%;
-					margin-bottom: 15px;
-				}
+					.input-field.third-wrap {
+						width: 100%;
+						margin-bottom: 15px;
+					}
 
-				.input-field.fifth-wrap {
-					width: 100%;
-					margin-bottom: 15px;
-					margin-bottom: 0;
+					.input-field.fouth-wrap {
+						width: 100%;
+						margin-bottom: 15px;
+					}
+
+					.input-field.fifth-wrap {
+						width: 100%;
+						margin-bottom: 15px;
+						margin-bottom: 0;
+						padding-left: 0;
+					}
 				}
 			}
 		}
