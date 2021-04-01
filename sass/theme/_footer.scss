@@ -21,6 +21,24 @@ footer#wrapper-footer {
 		color: $navbar-dark-color;
 	}
 
+	li {
+		list-style-type: none;
+
+		a {
+			color: $navbar-dark-color;
+			transition: all .3s;
+
+			&:hover {
+				color: $navbar-dark-color-hover;
+			}
+		}
+	}
+
+	#menu-footer-services,
+	#menu-footer-haendler {
+		padding-left: 0;
+	}
+
 	// footer social
 	.footer-social {
 		ul {
@@ -43,29 +61,6 @@ footer#wrapper-footer {
 						color: $navbar-dark-color-hover;
 					}
 				}
-			}
-		}
-	}
-
-	// opening hour
-	.opening-time {
-		padding-left: 0;
-		color: $navbar-dark-color;
-
-		li {
-			list-style: none;
-
-			span {
-				float: left;
-				padding-right: 10px;
-
-				.fa-times {
-					color: $navbar-dark-color-hover;
-				}
-			}
-
-			strong {
-				color: $navbar-dark-color-hover;
 			}
 		}
 	}
@@ -110,7 +105,7 @@ footer#wrapper-footer {
 }
 
 .site-footer {
-	background: rgba(0,0,0,0.94);
+	background: rgba(0, 0, 0, 0.94);
 	color: $navbar-dark-color-hover;
 
 	a {
