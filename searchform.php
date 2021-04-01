@@ -12,9 +12,11 @@ defined( 'ABSPATH' ) || exit;
 <div class="container mb-5">
 	<form method="get" class="p-lg-2" id="searchform" action="/<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 		<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'SebraOne' ); ?></label>
+		<?php if(!is_search()) : ?>
 		<legend class="text-white">Jetzt Auto verkaufen</legend>
 		<p class="text-white text-center">zum besten Preis in deiner Umgebung</p>
 		</fieldset>
+		<?php endif ?>
 		<div class="inner-form">
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
@@ -24,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 						</path>
 					</svg>
 				</div>
-				<input id="search" type="text" placeholder="Dein Wohnort (PLZ) *" required />
+				<input id="search" type="text" placeholder="Wohnort / PLZ *" required />
 			</div>
 			<div class="input-field second-wrap">
 				<div class="icon-wrap">

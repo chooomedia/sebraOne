@@ -20,25 +20,25 @@
 			display: block;
 			width: 100%;
 			max-height: 100%;
-            min-height: auto;
+			min-height: auto;
 			position: absolute;
 			z-index: 0;
 			background: rgba(0, 0, 0, 0.5);
 		}
 	}
 
-    header.page-header {
-        .page-title {
-            font-weight: 600;
-            color: #fff;
-        }
-    }
+	header.page-header {
+		.page-title {
+			font-weight: 600;
+			color: #fff;
+		}
+	}
 }
 
 #search-wrapper {
-    p {
-        color: #fff;
-    }
+	p {
+		color: #fff;
+	}
 }
 
 .single,
@@ -54,13 +54,29 @@
 #page-wrapper,
 #search-wrapper {
 	padding-top: calc(#{$spacer} * 5);
-    padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 #search-wrapper {
 	padding-top: calc(#{$spacer} * 5);
 
-    .front {
-        padding-top: calc(#{$spacer} * 3);
+	.front {
+		padding-top: calc(#{$spacer} * 3);
+        padding-bottom: calc(#{$spacer} * 3);
+	}
+
+    article {
+		padding-top: calc(#{$spacer} * 3);
+        padding-bottom: $spacer;
+	}
+
+	p,
+	a,
+    span {
+		color: #fff;
+	}
+
+    a {
+        font-weight: 600;
     }
 }
