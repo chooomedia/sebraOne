@@ -15,29 +15,29 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 ?>
 
 <div class="wrapper" id="search-wrapper">
+	<div class="front" style="background: #000;">
+		<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+			<div class="row">
 
-		<div class="row">
+				<!-- Do the left sidebar check and opens the primary div -->
+				<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+				<main class="site-main" id="main">
 
-			<main class="site-main" id="main">
-
-				<?php if ( have_posts() ) : ?>
+					<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
 
-							<h1 class="page-title">
-								<?php
+						<h1 class="page-title">
+							<?php
 								printf(
 									/* translators: %s: query term */
 									esc_html__( 'Search Results for: %s', 'SebraOne' ),
 									'<span>' . get_search_query() . '</span>'
 								);
 								?>
-							</h1>
+						</h1>
 
 					</header><!-- .page-header -->
 
@@ -55,25 +55,26 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					endwhile;
 					?>
 
-				<?php else : ?>
+					<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-				<?php endif; ?>
+					<?php endif; ?>
 
-			</main><!-- #main -->
+				</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php SebraOne_pagination(); ?>
+				<!-- The pagination component -->
+				<?php SebraOne_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+				<!-- Do the right sidebar check -->
+				<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-		</div><!-- .row -->
+			</div><!-- .row -->
 
-	</div><!-- #content -->
+		</div><!-- #content -->
 
-</div><!-- #search-wrapper -->
+	</div><!-- #search-wrapper -->
+</div>
 
 <?php
 get_footer();

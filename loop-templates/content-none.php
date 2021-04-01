@@ -34,18 +34,20 @@ defined( 'ABSPATH' ) || exit;
 		elseif ( is_search() ) :
 
 			printf(
-				'<p>%s<p>',
+				'<div id="search-search" class="row vh-50"><p>%s<p>',
 				esc_html__( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'SebraOne' )
 			);
 			get_search_form();
+			printf('</div>');
 
 		else :
 
 			printf(
-				'<p>%s<p>',
+				'<div id="search-search" class="row vh-50"><p>%s<p>',
 				esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'SebraOne' )
 			);
 			get_search_form();
+			printf('</div>');
 
 		endif;
 		?>

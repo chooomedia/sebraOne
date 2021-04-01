@@ -4,6 +4,13 @@
 @import "theme/mobile";  // <-------- Loads the mobile media queries
 // @import "sebraone/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 
+// Add Search
+@import "theme/search";
+
+// Add Header & Footer Styles
+@import "theme/footer"; // <-------- Add Footer Styles
+@import "theme/header"; // <-------- Add Header Styles
+
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/font-awesome";    // <-------- Font Awesome Icon font
 
@@ -13,10 +20,6 @@
 
 // Add Calendar Styles
 @import "theme/calendar"; // <-------- Add Flatcalendar Styles
-
-// Add Header & Footer Styles
-@import "theme/footer"; // <-------- Add Footer Styles
-@import "theme/header"; // <-------- Add Header Styles
 
 // Add Google Font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800;900&display=swap');
