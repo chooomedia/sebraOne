@@ -24,7 +24,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 			<div class="<?php echo is_active_sidebar( 'right-sidebar' ) ? 'col-md-8' : 'col-md-12'; ?> content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
+				<main class="site-main container" id="main" role="main">
 
 					<?php
 					while ( have_posts() ) {

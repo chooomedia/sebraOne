@@ -37,7 +37,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 			<div class="row mt-5">
 				<div class="container">
-					<main class="site-main" id="main">
+					<main class="site-main container" id="main">
 
 						<?php
                 while ( have_posts() ) {

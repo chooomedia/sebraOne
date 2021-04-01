@@ -26,7 +26,7 @@ if ( is_front_page() ) {
 
 			<div class="col-md-12 content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
+				<main class="site-main container" id="main" role="main">
 
 					<?php
 					while ( have_posts() ) {

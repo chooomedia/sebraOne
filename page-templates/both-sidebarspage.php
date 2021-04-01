@@ -33,7 +33,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			?>
 			<div class="<?php echo $class; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
+				<main class="site-main container" id="main" role="main">
 
 					<?php
 					while ( have_posts() ) {
