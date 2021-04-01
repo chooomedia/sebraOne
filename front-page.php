@@ -27,8 +27,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<div class="container mb-5" id="main-search">
 			<form class="p-lg-2">
 				<fieldset class="text-white text-center">
-					<legend>Finde einen Händler</legend>
-                    <p>zum Bestpreis in deiner Umgebung</p>
+					<legend>Jetzt Auto verkaufen</legend>
+                    <p>zum besten Preis in deiner Umgebung</p>
 				</fieldset>
 				<div class="inner-form">
 					<div class="input-field first-wrap">
