@@ -5,3 +5,15 @@
 
 $primary: #000; // Thats a sample how you could change a BootStrap variable.
 $secondary: #111;
+
+// Border radius Vars
+$br1: 4px;
+$br2: calc(#{$br1} * 2);
+$br3: calc(#{$br1} * 3);
+$br4: calc(#{$br1} * 4);
+
+// Media Breakpoints
+$xl: 1440px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
