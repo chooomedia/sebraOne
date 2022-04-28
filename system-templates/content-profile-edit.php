@@ -126,27 +126,25 @@ $role = array_shift($u->roles);
 						</a>
 					</div>
 					<div class="collapse" id="collapseOtherCarbrands">
-						<div class="card card-no">
-							<div id="form-settings" class="card-body p-0 p-md-3">
-								<form action="#" method="POST" name="masterdata-form" role="form">
-									<label class="sr-only"
-										for="user-form"><?php esc_html_e( 'Notification-Settings', 'SebraOne' ); ?></label>
-									<p class="register-message" style="display:none"></p>
-									<div class="row">
-										<?php echo do_shortcode( '[brand-list offset="9"]' ); ?>
-										<div class="col-12 form-wrapper">
-											<div class="input-group fifth-wrap">
-												<!--ADVICE COMMENT-->
-												<!-- Do not change #settings-button. -->
-												<button id="settings-button" class="btn btn-signup bg-primary"
-													type="submit">
-													<i class="fa fa-check pr-2" aria-hidden="true"></i>Einstellungen
-													ändern</button>
-											</div>
+						<div id="form-settings" class="card-body p-0 p-md-3">
+							<form action="#" method="POST" name="masterdata-form" role="form">
+								<label class="sr-only"
+									for="user-form"><?php esc_html_e( 'Notification-Settings', 'SebraOne' ); ?></label>
+								<p class="register-message" style="display:none"></p>
+								<div class="row">
+									<?php echo do_shortcode( '[brand-list offset="9"]' ); ?>
+									<div class="col-12 form-wrapper">
+										<div class="input-group fifth-wrap">
+											<!--ADVICE COMMENT-->
+											<!-- Do not change #settings-button. -->
+											<button id="settings-button" class="btn btn-signup bg-primary"
+												type="submit">
+												<i class="fa fa-check pr-2" aria-hidden="true"></i>Einstellungen
+												ändern</button>
 										</div>
 									</div>
-								</form>
-							</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
