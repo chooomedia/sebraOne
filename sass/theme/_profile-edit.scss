@@ -4,6 +4,8 @@
 @media screen and (max-width:$sm) {
 	.explore-head {
 		margin-top: $spacer;
+		z-index: 1111;
+		position: relative;
 	}
 }
 

@@ -7,7 +7,9 @@
 
  // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-global $current_user; wp_get_current_user();
+global $current_user; 
+wp_get_current_user();
+$name = $current_user->display_name;
 global $wp_roles;
 $u = get_userdata($current_user->ID);
 $role = array_shift($u->roles);
@@ -39,12 +41,20 @@ $role = array_shift($u->roles);
 							<label class="sr-only"
 								for="user-form"><?php esc_html_e( 'Edit master data', 'SebraOne' ); ?></label>
 							<p class="register-message" style="display:none"></p>
-							<div class="form-wrapper">
+							<div class="form-wrapper row">
+								<div class="col-md col-12">
 								<div class="input-field">
 									<div class="icon-wrap">
 										<i class="fa fa-user" aria-hidden="true"></i>
 										<input name="new_user_name" type="text" id="new-username" value=""
-											placeholder=" Benutzername" />
+											placeholder="<?php echo $current_user->role = $wp_roles->roles[$role]['name']; ?>-<?php echo get_current_user_id(); ?>" disabled/>
+									</div>
+								</div>
+								<div class="input-field">
+									<div class="icon-wrap">
+										<i class="fa fa-eye-slash" aria-hidden="true"></i>
+										<input name="new_user_name" type="text" id="new-username-hidden" value=""
+											placeholder="<?php echo $name ?> (versteckt)" disabled/>
 									</div>
 								</div>
 								<div class="input-field">
@@ -54,6 +64,8 @@ $role = array_shift($u->roles);
 											placeholder="Straße & Hausnummer" />
 									</div>
 								</div>
+								</div>
+								<div class="col-md col-12">
 								<div class="input-field">
 									<div class="icon-wrap">
 										<i class="fas fa-city" aria-hidden="true"></i>
@@ -75,7 +87,8 @@ $role = array_shift($u->roles);
 											placeholder="<?php echo $current_user->role = $wp_roles->roles[$role]['name']; ?>" />
 									</div>
 								</div>
-								<div class="input-field fifth-wrap">
+								</div>
+								<div class="input-field fifth-wrap col-12">
 									<!--ADVICE COMMENT-->
 									<!-- Do not change #masterdata-button. -->
 									<button id="masterdata-button" class="btn btn-signup bg-primary" type="submit">
