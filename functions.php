@@ -167,7 +167,6 @@ if (is_admin()) {
     // We only need to setup ajax action in admin.
     add_action('wp_ajax_custom_ajax_logout', 'custom_ajax_logout_func');
 } else {
-    wp_enqueue_script('custom-ajax-logout', get_stylesheet_directory_uri() . '/js/ajax-login-script.js', array('jquery'), '1.0', true );
     wp_localize_script('custom-ajax-logout', 'ajax_object',
         array(
             'ajax_url' => admin_url('admin-ajax.php'),

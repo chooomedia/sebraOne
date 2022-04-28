@@ -12,7 +12,6 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'SebraOne_container_type' );
 $pageslug = get_page_template_slug( get_queried_object_id() );
-$profileStatus = $args['api-notification'];
 ?>
 
 <!DOCTYPE html>
