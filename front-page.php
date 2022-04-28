@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: User Page Template
+ * Template Name: Front Page
  *
  * Description: A page template that provides a key component of WordPress as a CMS
  * by meeting the need for a carefully crafted introductory page. The front page template
@@ -25,19 +25,31 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<div class="front" style="background: #000;">
 		<?php else : ?>
 		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
-		<div class="front" style="background-image: url('<?php echo $thumb['0'];?>');">
+		<img class="d-none d-md-none bg-primary" src="<?php echo $thumb['0'];?>" />
+		<div class="front">
 			<?php endif ?>
-			<div id="main-search" class="vh-100">
-				<!-- Add searchform.php -->
-				<?php get_template_part( 'searchform' ); ?>
-			</div>
+			
+			<div id="results-map" class="col-md-auto col-12 pt-md-5 pr-sm-0 pr-md-0 pl-md-0">
+			<?php /**
+					* Maps Modul
+					* @param string:id Full-height: maps; half-height: boxed
+					* @param bool:id Show inner Searchform true or not false
+					*/
+				get_template_part( 'sidebar-templates/sidebar-maps', null, array(
+					'data' => array(
+						'id' => 'boxed',
+						'searchform' => true,
+					)
+				)); 
+			?>
+			</div>		
 		</div>
 
 		<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 			<div class="row mt-5">
 				<div class="container">
-					<main class="site-main container" id="main">
+					<main class="site-main" id="main">
 
 						<?php
                 while ( have_posts() ) {
@@ -58,7 +70,92 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 		</div><!-- #content -->
 
+		<!-- Section: Customer reviews slider -->
+		<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
+		<?php if( have_rows('customersReviewArray') ) : ?>
+			<?php /**
+			* Customer reviews Section-Module
+			* Pass specific Data into Seller details page header
+			* @param string:class Max-width: container, half: col-md-6
+			* @param string:title Headline customer reviews slider section
+			*/
+			get_template_part( 'loop-templates/content-reviewslider', null, array(
+				'id' => 'customerReviews',
+				'class' => 'container',
+				'data'  => array(
+					'headline' => get_field('customerReviewHeadline'),
+					'footline' => get_field('customerReviewFootline'),
+				))
+			);
+			?>
+		<?php endif; ?>
+		</section>
+
+	<!-- CTA Footer -->
+	<?php $footerCta = get_field('sectionCta');
+	if( $footerCta ): ?>
+		<?php /**
+		* CTA Section-Module
+		* Pass specific Data into data array
+		* @param string:cta-background-color Hex Color i.e. #111
+		* @param string:cta-spacing Top/Bottom Spacing in px i.e. 100px
+		* @param string:cta-headline Headline of the CTA Module
+		* @param string:cta-text Text CTA Module
+		* @param string:cta-link-name Text of button
+		* @param string:cta-link Link i.e. /impress
+		*/
+
+		get_template_part( 'page-templates/footer-cta', null, array(
+			'id' => 'section-cta',
+			'class' => 'container',
+			'data'  => array(
+				'ctabackgroundcolor' => $footerCta['sectionFooterCtaBackgroundColor'],
+				'ctaspacing' => $footerCta['sectionFooterCtaSpacing'],
+				'ctaheadline' => $footerCta['sectionFooterCtaHeadline'],
+				'ctatext' => $footerCta['sectionFooterCtaText'],
+				'ctalinkname' => $footerCta['sectionFooterCtaLinkTitle'],
+				'ctalink' => $footerCta['sectionFooterCtaLink'],
+			))
+		);
+		?>
+	<?php endif; ?>
+
 	</div><!-- #page-wrapper -->
+<section>
+<?php if (!is_user_logged_in()) {
+	/**
+	* Modal Info Module
+	* Pass specific Data into the Modal i.e. Error Handling (Login, Search) and so on.
+	* @param number:type 1 = Register Type, 2 = Login Type, 3 = Error-Type 4 = Info-Type
+	* @param string:id Builds DIV ID to wrapping container
+	* @param string:class Adds DIV Class to wrapping container
+	* @param function:title Show the Title of Modal
+	* @param string:text Display Text also HTML or JS insert posibile
+	* @param bool:show-button Show Modal Button (open/close)
+	* @param string:button Define Button Title
+	* @param bool:is-event for Error Handling: Search, Login...
+	* @param string:event-function-name Defines the JS Function to Call Modal
+	* @param bool:show-footer Show Modal footer with Buttons?
+	* @param bool:is-active Helperclass to change visibility
+	*/
+	get_template_part( 'system-templates/modal-info', null, array(
+		'id' => 'modal-login-main',
+		'class' => 'container',
+		'data'  => array(
+			'type' => 2,
+			'title' => 'Frontpage', /*strval($pageTitle)*/
+			'text' => 'Um die zu den Suchergebnissen zu gelangen registriere dich jetzt kostenlos.',
+			'show-button' => true,
+			'button' => 'Jetzt einloggen',
+			'is-event' => true,
+			'event-function-name' => 'loginFn',
+			'show-footer' => false,
+			'is-active' => false,
+		))
+	);
+} ?>
+</section>
+
 
 	<?php
 get_footer();

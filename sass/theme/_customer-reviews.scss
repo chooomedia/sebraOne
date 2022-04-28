@@ -1,0 +1,31 @@
+#customer-reviews {
+
+    #customerReviews {
+
+        .customer-review {
+            background: rgba(0, 0, 0, 0.14) !important;
+            min-height: 10rem;
+            padding: 2rem;
+            border-radius: 2rem;
+        }
+
+        .arrow-bottom:after {
+            content: " ";
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 34px;
+            margin: 0 auto;
+            bottom: -34px;
+            border-top: 34px solid rgba(0, 0, 0, 0.14);
+            border-right: 34px solid transparent;
+            border-left: 34px solid transparent;
+            border-bottom: none;
+        }
+    }
+
+    #trusted-logos {
+        background: rgba(0, 0, 0, 0.14) !important;
+    }
+
+}

@@ -13,6 +13,12 @@
 *.orig
 *.rej
 *.zip
+*.org
+
+# Minimized Style and Script Files and Mapping #
+*.min.js
+*.min.css
+*.min.css.map
 
 # Ignore all files and directories starting with . or ~ or ._ or ending with ~
 .*

@@ -1,4 +1,5 @@
 #main-search,
+#landingpage-search,
 #register-form,
 #signup-wrapper,
 #search-search {
@@ -8,7 +9,7 @@
 	background-size: cover;
 	background-position: center center;
 
-	form {
+	form, form#bug-issue-form {
 		width: 100%;
 		max-width: 1190px;
 		position: relative;
@@ -67,14 +68,14 @@
 					}
 				}
 
-				input {
+				input, button.dropdown-toggle {
+					padding: 10px 20px 10px 30px;
 					height: 56px;
 					background: #fff;
 					border-radius: 0;
 					border: 0;
 					display: block;
 					width: 100%;
-					padding: 10px 20px 10px 30px;
 					font-size: 16px;
 					color: #555;
 					font-weight: 400;
@@ -95,13 +96,39 @@
 					}
 
 					&:hover {
-						box-shadow: 0 2px 0px #555;
+						box-shadow: 0 3px 0px #555;
 						outline: 0;
 					}
 
 					&:focus {
-						box-shadow: 0 2px 0px #555;
+						box-shadow: 0 3px 0px #555;
 						outline: 0;
+					}
+
+					.input-field {
+						.bs-searchbox {
+							input {
+								padding: 10px 20px!important;
+								border: none!important;
+								outline: none!important;
+								box-shadow: none!important;
+							}
+						}
+					}
+				}
+
+				button.dropdown-toggle {
+					font-size: 16px;
+					color: #555!important;
+					font-weight: 400;
+					text-transform: uppercase;
+
+					.filter-option-inner {
+						line-height: 39px;
+					}
+
+					&::after {
+						display:none;
 					}
 				}
 
@@ -113,9 +140,12 @@
 				}
 			}
 
+			.input-field.fouth-wrap {
+				width: 15vw;
+			}
+
 			.input-field.first-wrap {
 				-ms-flex-positive: 1;
-				flex-grow: 1;
 			}
 
 			.input-field.fouth-wrap {
@@ -132,7 +162,7 @@
 					display: flex;
 					-ms-flex-align: center;
 					align-items: center;
-					padding: 10px 32px 10px 45px;
+					padding: 10px 32px 10px 30px;
 					border-radius: 0;
 
 					.choices__list.choices__list--single {
@@ -153,7 +183,8 @@
 						height: 100%;
 						opacity: 1;
 						color: #9a9a9a;
-						font-weight: 600;
+						font-weight: 500;
+						font-family: inherit;
 						text-transform: uppercase;
 					}
 
@@ -224,7 +255,7 @@
 		}
 
 		button {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
@@ -243,22 +274,27 @@
 		}
 
 		input {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
 			overflow: visible;
+
+			&:disabled {
+				opacity: .5;
+				cursor: no-drop;
+			}
 		}
 
 		optgroup {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
 		}
 
 		select {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
@@ -266,7 +302,7 @@
 		}
 
 		textarea {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
@@ -324,6 +360,7 @@
 		}
 
 		legend {
+			font-family: "Montserrat Black";
 			font-weight: 600;
 			box-sizing: border-box;
 			color: inherit;
@@ -831,15 +868,17 @@
 	padding-top: calc(#{$spacer} * 10);
 }
 
+// Signup & Login Form
 #signup-wrapper {
 	.form-wrapper {
 
-		.input-field {
+		.input-field:not(.fifth-wrap) {
 			box-shadow: 0 2px 0 #000;
 			margin-bottom: $spacer;
 
-			i {
-				width: 24px;
+			svg {
+				width: 17px;
+				height: 56px;
 				position: absolute;
 				line-height: 56px;
 				text-align: center;
@@ -857,7 +896,7 @@
 				color: #555;
 				font-weight: 400;
 				transition: all .3s;
-				font-family: sans-serif;
+				font-family: "Montserrat";
 				font-size: 100%;
 				line-height: 1.15;
 
@@ -876,12 +915,12 @@
 				}
 
 				&:hover {
-					box-shadow: 0 2px 0px #000;
+					box-shadow: 0 3px 0px #000;
 					outline: 0;
 				}
 
 				&:focus {
-					box-shadow: 0 2px 0px #000;
+					box-shadow: 0 3px 0px #000;
 					outline: 0;
 				}
 			}
@@ -895,7 +934,7 @@
 		}
 
 		button {
-			font-family: sans-serif;
+			font-family: "Montserrat";
 			font-size: 100%;
 			line-height: 1.15;
 			margin: 0;
@@ -909,7 +948,7 @@
 			}
 
 			&:-moz-focusring {
-				outline: 1px dotted ButtonText;
+				outline: 1px dotted $primary;
 			}
 		}
 
@@ -941,5 +980,107 @@
 		li {
 			margin-bottom: $spacer;
 		}
+	}
+}
+
+// Error Shaking
+.ahashakeheartache {
+	animation: kf_shake 0.4s 1 linear;
+}
+@keyframes kf_shake {
+	0% { -webkit-transform: translate(30px); }
+	20% { -webkit-transform: translate(-30px); }
+	40% { -webkit-transform: translate(15px); }
+	60% { -webkit-transform: translate(-15px); }
+	80% { -webkit-transform: translate(8px); }
+	100% { -webkit-transform: translate(0px); }
+}
+
+// Error Handling
+input {
+	transition: all .3s;
+
+	&.error {
+		box-shadow: 0 3px 0 $red!important;
+
+		&::placeholder {
+			color: $red!important;
+		}
+	}
+}
+
+form {
+	.inner-form {
+		.input-field.second-wrap {
+			width:15%;
+		}
+	}
+}
+
+#carbrand-arrow-0,
+#carbrand-arrow-1,
+#carbrand-arrow-2,
+#carbrand-arrow-3,
+#carbrand-arrow-4,
+#carbrand-arrow-5 {
+	transition: all .3s;
+}
+
+.chevron-rotate {
+	transform: rotate(180deg);
+}
+
+
+.bootstrap-select {
+	&.fit-width {
+	  width: auto !important;
+	}
+  
+	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	  width: 186px;
+	}
+
+	@media screen and (max-width:$md) {
+		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+			width: 126px;
+		  }
+	}
+
+	.input-field.third-wrap {
+		max-width: 140px;
+	}
+  
+	/*.dropdown-toggle:focus, > select.mobile-device:focus + .dropdown-toggle {
+	  outline: thin dotted #333 !important;
+	  outline: 5px auto -webkit-focus-ring-color !important;
+	  outline-offset: -2px;
+	}*/
+  
+	&.form-control {
+	  margin-bottom: 0;
+	  padding: 0;
+	  border: none;
+	  height: auto;
+	}
+  }
+
+.search-box-inside-map {
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 45px);
+	z-index: 1040;
+	margin: 0 auto;
+}
+
+input[type="checkbox"] {
+	filter: grayscale(1);
+	margin-right: .8rem!important;
+	width: calc(#{$spacer} * 1.2);
+	height: calc(#{$spacer} * 1.2);
+}
+
+@media screen and (max-width:$sm) {
+	.search-box-inside-map {
+		height: 100%;
 	}
 }

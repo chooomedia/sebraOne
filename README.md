@@ -1,25 +1,17 @@
-[![Build Status](https://api.travis-ci.org/SebraOne/SebraOne.svg?branch=master)](https://travis-ci.org/SebraOne/SebraOne)
-[![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/SebraOne.svg)](https://wordpress.org/themes/SebraOne)
-[![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/SebraOne.svg)](https://wordpress.org/themes/SebraOne/)
-[![Github Last Commit](https://img.shields.io/github/last-commit/SebraOne/SebraOne)](https://github.com/SebraOne/SebraOne/commits/master)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
-#### See: [Official Demo](https://SebraOne.com/SebraOne) | Read: [Official Docs Page](https://SebraOne.github.io/)
+#### See: [Official Demo](https://chooomedia.de/sebraone) | Read: [Official Docs Page](https://chooomedia.github.io/)
 
 # SebraOne WordPress Theme Framework
 
-Website: [https://SebraOne.com](https://SebraOne.com)
-
-Child Theme Project: [https://github.com/SebraOne/SebraOne-child](https://github.com/SebraOne/SebraOne-child)
-
-OverStrap Child Themes: [https://SebraOne.com/overstrap/](https://SebraOne.com/overstrap/)
+Website: [https://chooomedia.de](https://chooomedia.de)
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what SebraOne is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for SebraOne.
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what SebraOne is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for understrap.
 
 ## License
-SebraOne WordPress Theme, Copyright 2013-2018 Holger Koenemann
+SebraOne WordPress Theme, Copyright 2020-2021 Christopher Matt
 SebraOne is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
@@ -37,7 +29,6 @@ See [changelog](CHANGELOG.md)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
-- [Child Theme](https://github.com/SebraOne/SebraOne-child) ready.
 - Translation ready.
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
@@ -69,7 +60,7 @@ Some basics about the Sass and CSS files that come with SebraOne:
 There are several ways to install SebraOne. We'll look at three of them: (1) classic install by uploading SebraOne to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
 
 ### Classic install
-- Download the SebraOne folder from GitHub or from [https://SebraOne.com](https://SebraOne.com)
+- Download the SebraOne folder from GitHub
 - IMPORTANT: If you download it from GitHub make sure you rename the "SebraOne-master.zip" file just to "SebraOne.zip" or you might have problems using child themes!
 - Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
 - Login to your WordPress backend

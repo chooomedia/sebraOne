@@ -1,0 +1,8 @@
+@media screen and (max-width: $sm) {
+    // Container that the modal scrolls within
+    .modal {
+        width: calc(100% - 2.33rem);
+        height: calc(100% - 2rem);
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,32 @@
+#menu-improvement {
+	&-wrapper {
+		opacity: .7;
+		list-style-type: none;
+		display: inline-flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			margin: 0 .33rem;
+
+			a {
+				i {
+					margin-right: .4rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-Width:$sm) {
+	#menu-improvement {
+		&-wrapper {
+			li {
+				a {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

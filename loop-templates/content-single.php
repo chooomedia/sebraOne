@@ -11,21 +11,25 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<header class="col-md-8 entry-header mx-md-auto pt-md-5 pt-5 text-center">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<b><h1 class="entry-title">', '</h1></b>' ); ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta mb-3">
 
 			<?php SebraOne_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
-
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<div class="container-fluid mx-md-auto">
+		<div id="single-excerpt" class="col-md-8 mx-md-auto text-justify">
+			<?php the_excerpt(); ?>
+		</div>
+		<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+	</div>
 
-	<div class="entry-content">
+	<div class="container col-md-8 entry-content">
 
 		<?php the_content(); ?>
 
@@ -40,10 +44,9 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="col-md-8 mx-md-auto entry-footer">
 
 		<?php SebraOne_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
-
 </article><!-- #post-## -->

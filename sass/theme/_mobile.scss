@@ -1,91 +1,286 @@
-@media screen and (max-width: $md) {
-	#page-wrapper {
-		#main-search {
-			form {
-				legend {
-					font-size: 50px;
-					text-align: center;
-					margin-bottom: 50px;
+@media screen and (max-width: $lg) {
+	#main-nav {
+		padding-top: 34px;
+		top: -26px;
+
+		&.scrolled {
+			height: 88px !important;
+		}
+
+		#main-menu {
+			.dropdown-menu {
+				background-color: rgba(255, 255, 255, 0.05);
+
+				.dropdown-item {
+					color: #f5f5f5;
 				}
+			}
 
-				.inner-form {
-					-ms-flex-wrap: wrap;
-					flex-wrap: wrap;
-					-ms-flex-pack: justify;
-					justify-content: space-between;
-					max-width: 90%;
-					margin: 0 auto;
+			#searchform {
+				margin-left: 0;
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: .25rem;
 
-					.input-field {
-						margin-bottom: 15px;
-					}
+				#search {
+					width: 96%;
+				}
+			}
 
-					.input-field.first-wrap {
-						width: 100%;
-					}
+			#searchform-lp {
+				margin-left: 0;
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: .25rem;
 
-					.input-field.second-wrap {
-						width: calc(50% - 7.5px);
-						max-width: none;
-					}
-
-					.input-field.third-wrap {
-						width: calc(50% - 7.5px);
-						max-width: none;
-					}
-
-					.input-field.fouth-wrap {
-						width: calc(50% - 7.5px);
-						max-width: none;
-						margin-bottom: 0;
-					}
-
-					.input-field.fifth-wrap {
-						width: calc(50% - 7.5px);
-						max-width: none;
-						padding-left: 0;
-						margin-bottom: 0;
-					}
+				#search {
+					width: 96%;
+				}
+				
+				.searchbox-inner-comment {
+					display: none;
 				}
 			}
 		}
 	}
+
+	#page-results-wrapper #content,
+	#page-wrapper #content,
+	#search-wrapper #content {
+		margin: 88px auto;
+	}
+}
+
+@media screen and (max-width: $md) {
+	form {
+		legend {
+			font-size: 50px;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.inner-form {
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			max-width: 90%;
+			margin: 0 auto;
+			padding-right: 32px !important;
+
+			.input-field {
+				margin-bottom: 15px;
+				min-width: 100%;
+			}
+
+			.input-field.first-wrap {
+				width: 100%;
+			}
+
+			.input-field.second-wrap {
+				width: calc(50% - 7.5px);
+				max-width: none;
+			}
+
+			.input-field.third-wrap {
+				width: calc(50% - 7.5px);
+				max-width: none;
+			}
+
+			.input-field.fouth-wrap {
+				width: calc(50% - 7.5px);
+				max-width: none;
+				margin-bottom: 0;
+			}
+
+			.input-field.fifth-wrap {
+				width: calc(50% - 7.5px);
+				max-width: none;
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	#page-results-wrapper #content,
+	#page-wrapper #content,
+	#search-wrapper #content {
+		margin: 44px auto;
+	}
+
+	.explore-head {
+		padding: 0;
+	}
 }
 
 @media screen and(max-width: $sm) {
-	#page-wrapper {
-		#main-search {
-			form {
-				legend {
-					margin-top: 1rem;
-					font-size: 38px !important;
-					margin-bottom: 10px;
+	.wrapper {
+		padding: 62px 0 0 0;
+	}
+
+	.card {
+		border-color: transparent!important;
+	}
+
+	// Hotfix no-jumping Logo and Navbar-Toggler after click TODO: find a cleaner solution
+	#main-nav {
+		padding-top: 34px;
+		top: -26px;
+
+		&.scrolled {
+			height: 88px !important;
+		}
+
+		#main-menu {
+			.dropdown-menu {
+				background-color: rgba(255, 255, 255, 0.05);
+
+				.dropdown-item {
+					color: #f5f5f5;
 				}
+			}
 
-				.inner-form {
-					.input-field.second-wrap {
-						width: 100%;
-						margin-bottom: 15px;
-					}
+			#searchform {
+				margin-left: 0;
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: .25rem;
 
-					.input-field.third-wrap {
-						width: 100%;
-						margin-bottom: 15px;
-					}
-
-					.input-field.fouth-wrap {
-						width: 100%;
-						margin-bottom: 15px;
-					}
-
-					.input-field.fifth-wrap {
-						width: 100%;
-						margin-bottom: 15px;
-						margin-bottom: 0;
-						padding-left: 0;
-					}
+				#search {
+					width: 96%;
 				}
 			}
 		}
+	}
+
+	#main-search, #landingpage-search {
+		form {
+			legend {
+				margin-top: 1rem;
+				font-size: 38px !important;
+				margin-bottom: 10px;
+				text-shadow: 0 0 20px #000;
+			}
+
+			p {
+				text-shadow: 0 0 20px #000;
+			}
+
+			.inner-form {
+				.input-field.second-wrap {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+
+				.input-field.third-wrap {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+
+				.input-field.fouth-wrap {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+
+				.input-field.fifth-wrap {
+					width: 100%;
+					margin-bottom: 15px;
+					margin-bottom: 0;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	#error-404-wrapper,
+	#page-wrapper,
+	#search-wrapper,
+	#single-wrapper {
+		padding-top: 0;
+	}
+
+	#profile-wrapper {
+		padding-top: 0 !important;
+	}
+
+	.explore-types {
+		.finder-title {
+			display: none;
+		}
+	}
+
+	.explore-head {
+		padding: 0!important;
+
+		.explore-types {
+			overflow-x: auto!important;
+
+			.type-info > h4 {
+				display: inline-block;
+				margin-top: 0;
+				margin-bottom: 0;
+				font-size: 14px;
+			}
+
+			& > div {
+				position: relative;
+
+				a {
+					padding-left: 15px !important;
+					padding-right: 15px !important;
+
+					.type-info {
+						display: block;
+					}
+				}
+			}
+			.cts-next,
+			.cts-prev {
+				&.cts-show {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	footer#wrapper-footer {
+		padding: 20px 0 40px 0!important;
+	}
+}
+
+@media screen and (max-width:$sm) {
+
+	.cts-next,
+	.cts-prev {
+		position: absolute !important;
+		opacity: 0;
+		transition: .2s ease;
+		font-size: 0;
+		height: 100%;
+		top: 0;
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 100%, 0)), color-stop(80%, #fff));
+		background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff 80%);
+		padding-left: 25px;
+		pointer-events: none;
+
+		&:before {
+			content: "▲";
+			transform: rotate(90deg);
+			font-weight: 400;
+			font-style: normal;
+			font-size: 14px;
+			opacity: .3;
+		}
+
+		&.cts-show {
+			opacity: 1;
+		}
+	}
+
+	.cts-prev {
+		transform: rotate(180deg);
+	}
+
+	.cts-next {
+		right: 0;
 	}
 }

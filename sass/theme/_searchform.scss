@@ -1,0 +1,99 @@
+#main-search {
+    background: rgba(0,0,0,0.33);
+
+    .main-search-inner {
+        .dropdown-menu.show {
+            max-width: 120px;
+        }
+        @media screen and (max-width:$sm) {
+            .main-search-inner {
+                position: absolute;
+                top: 5.5rem;
+            }
+        }
+    }
+    .input-field.third-wrap, .input-field.third-wrap {
+        max-width: 140px;
+    }
+    .input-field.second-wrap {
+        min-width: 198px;
+    }
+
+    @media screen and (max-width:$md) {
+        .input-field.second-wrap {
+            min-width: 98px;
+        }
+    }
+
+    @media screen and (max-width:$sm) {
+        .input-field.third-wrap, .input-field.third-wrap {
+            min-width: 100%;
+        }
+        .input-field.second-wrap {
+            min-width: 100%;
+        }
+        .main-search-inner {
+            .dropdown-menu.show {
+                min-width: 72vw!important;
+            }
+        }
+    }
+}
+
+#landingpage-search {
+
+    @media screen and (max-width:$sm) {
+        div.my-md-3.mt-2.mb-5 {
+            margin-bottom: 0!important;
+        }
+    }
+
+    form {
+        padding: 0 5px 0 0!important;
+
+        .searchbox-inner-comment {
+            display: none!important;
+        }
+        .inner-form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: stretch;
+            justify-content: center;
+            padding: 0;
+    
+            .input-field {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                border-bottom: 1px solid #111;
+
+                .icon-wrap {
+                    color: #000!important;
+                }
+    
+                .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+                    width: 100%;
+                }
+
+                .dropdown-menu.show {
+                    z-index: 1048!important;
+                    max-height: 250px!important;
+                }
+            }
+    
+            .input-field.first-wrap,
+            .input-field.second-wrap,
+            .input-field.third-wrap,
+            .input-field.fourth-wrap,
+            .input-field.fifth-wrap {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:$sm) {
+            .inner-form {
+                padding-right: 0px!important;
+            }
+        }
+    }
+}

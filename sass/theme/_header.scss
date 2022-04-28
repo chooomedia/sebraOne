@@ -1,55 +1,121 @@
 #main-nav {
-    height: 88px;
+	height: 88px;
 	position: relative;
 	z-index: 100000;
 
-    @media screen and (max-width: $md) {
-        background: #000;
-    }
+	#main-menu {
+		align-items: center;
 
-	&.scrolled {
-        height: 56px;
-		background-color: #000 !important;
-		transition: all 300ms linear;
-	}
+		@media (max-width:$sm) {
+			flex-direction: row;
+			align-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
 
-    .navbar-brand {
-        max-width: 260px;
+		#searchform {
+			margin-left: 1rem;
 
-        @media screen and (max-width: $md) {
-            max-width: 200px;
-        }
-    }
+			@media (max-width:$sm) {
+				margin-left: 0;
 
-	#searchform {
-		#search {
-			line-height: 2;
-			background: transparent;
-			color: #fff;
-			box-shadow: 0 1px 0px white;
-			border: unset;
-
-			&:focus {
-				outline: none;
-				background: rgba(255, 255, 255, 0.1);
-				color: #fff;
-				text-indent: 0.5em;
-				transition: all .3s;
 			}
 
-			&::placeholder {
-				color: $navbar-dark-color;
+			#search {
+				line-height: 2;
+				background: transparent;
+				color: #fff;
+				box-shadow: 0 1px 0px white;
+				border: unset;
+
+				&:focus {
+					outline: none;
+					background: rgba(255, 255, 255, 0.1);
+					color: #fff;
+					text-indent: 0.5em;
+					transition: all .3s;
+				}
+
+				&::placeholder {
+					color: $navbar-dark-color;
+				}
+			}
+		}
+			
+		// Promo Button
+		.btn-promo {
+			order: 3;
+			padding-left: 33px;
+
+			@media screen and (max-width:$sm) {
+				margin-top: .5rem;
+				width:100%;
+			}
+
+			a {
+				color: black;
+
+				&:before {
+					content: '';
+					margin-left: -38px;
+					margin-top: -6px;
+					width: 36px;
+					height: 36px;
+					background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQflBgYXOxeGflXnAAACaElEQVRIx+3VS0iUURTA8f9/fPRSG8cxiSKIXsJEL3qJBUGtCiIiqkURPaBNQZAJbQKVVrWLiKQHRFRLN62KCCLpgdlgBaFEm5xRs0JCwdJp4VgfNtrnppXn7u7l/rjn3HO5MBX/LZzcYmay0Oh0RsupYCb9pPkcdDJhoOxkHtUcpJooEYb5SjO3eMpwbip/3LPGOMshPnCHJH2UsIqdFPCcQVaziCZ+hiibGPOuKU8Yld8j5lxxha3et8R/Ooh5XjDljlGCP1jCFj+6PByDm+325CjCH6jSZ372k1XyT0rQRp9bGkhqZCy12Ra3+MIrhIEs963nRCyw+DezyCcmXSnW2WbZWCiSw6qglCQAx7hKFICFXCfKYZJAkhgVhIBmEKEPgA62cgpYwDXmcIRXAPQRYcbYTbn6qJ9hZgPwgIucoZNdzOcQL7PrUYbpD3Nrcdusz1Zmlvcc8r3VgUY4b9JYiGJPw8u2WJalltnklsDdldvqpUioW8ONpq0Z2ViIxZFgE9Sacn2oPhK1wS53B7sou7LHbus0BJTdUOJNu6wxHsDi1trtDUtCMQGqwbSvrHOBuNgGW01bPwkmkOBGL/vFC6ux0R4vuSFkUmOgkVHvG6vs8HSwXn9HXm4GgFksZS2VbGM5S2ijkEL6+RHiwQbOk+9+H9tpynZ7zNhtuyk7feRe8ycDbfCLD91nwrjHHfCocRPu95G9rssFjZdaMdspZZACihhkkNeUk2Ada/jGLXrHLUeOyQQH2MQ8piND5JFhgE6ecJt3uf63ib4jmEkZpRRRwA++85Xe0VcfEppwYYLfdiomjl8+Do3TMYUuPwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNi0wNlQyMzo1ODo0NiswMDowMAxHH9AAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDYtMDZUMjM6NTg6NDYrMDA6MDB9GqdsAAAAAElFTkSuQmCC);
+					position: absolute;
+				}
 			}
 		}
 	}
 
-    @media screen and (max-width:$md) {
-        #navbarNavDropdown {
-            background: $primary;
-            padding: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            border: 2px solid $secondary;
-            margin-top: 0;
-        }
-    }
+	@media screen and (max-width: $md) {
+		background: #000;
+	}
+
+	&.scrolled {
+		height: 56px;
+		background-color: #000 !important;
+		transition: all 300ms linear;
+	}
+
+	.navbar-brand {
+		max-width: 260px;
+
+		@media screen and (max-width: $md) {
+			max-width: 200px;
+		}
+	}
+
+	@media screen and (max-width:$md) {
+		#navbarNavDropdown {
+			background: $primary;
+			padding: 15px;
+			box-shadow: 0 20px 30px rgba(255, 255, 255, 0.25);
+			border: 2px solid $secondary;
+			margin-top: 0;
+		}
+	}
+
+	#ex4 .p1[data-count]:after{
+        position: absolute;
+		right: 10%;
+		top: 6%;
+		content: attr(data-count);
+		font-size: 10px;
+		padding: 0.2em;
+		-moz-border-radius: 26px;
+		border-radius: 26px;
+		line-height: 1em;
+		color: #fff;
+		background: #28a746dc;
+		text-align: center;
+		min-width: 1em;
+      }
+}
+
+.error404 {
+	#main-nav {
+		background: $primary;
+	}
 }

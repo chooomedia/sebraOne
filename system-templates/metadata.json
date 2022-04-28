@@ -1,0 +1,60 @@
+{
+  "name": "WordPress",
+  "homeURL": "",
+  "supportURL": "",
+  "version": "5.6.1-1",
+  "vendor": "",
+  "id": "",
+  "uuid": "DCA96262-9CCB-4BF1-9966-60300C909139",
+  "description": "WordPress",
+  "storagePath": "/Users/chooom/.bitnami/stackman/machines/wordpress",
+  "resourcesDir": "",
+  "services": [
+    {
+      "id": "apache",
+      "name": "Apache",
+      "description": "Apache",
+      "startCmd": "/opt/bitnami/ctlscript.sh start apache",
+      "stopCmd": "/opt/bitnami/ctlscript.sh stop apache",
+      "statusCmd": "/opt/bitnami/ctlscript.sh status apache"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "description": "MySQL",
+      "startCmd": "/opt/bitnami/ctlscript.sh start mysql",
+      "stopCmd": "/opt/bitnami/ctlscript.sh stop mysql",
+      "statusCmd": "/opt/bitnami/ctlscript.sh status mysql"
+    },
+    {
+      "id": "php-fpm",
+      "name": "PHP-FPM",
+      "description": "PHP-FPM",
+      "startCmd": "/opt/bitnami/ctlscript.sh start php-fpm",
+      "stopCmd": "/opt/bitnami/ctlscript.sh stop php-fpm",
+      "statusCmd": "/opt/bitnami/ctlscript.sh status php-fpm"
+    }
+  ],
+  "volumes": [
+    {
+      "id": "root",
+      "kind": "",
+      "remoteDir": "/opt/bitnami"
+    }
+  ],
+  "PortForwards": [
+    {
+      "LocalPort": 8080,
+      "RemotePort": 80,
+      "RequireLocal": true,
+      "OverSSH": true
+    },
+    {
+      "LocalPort": 8443,
+      "RemotePort": 443,
+      "RequireLocal": true,
+      "OverSSH": true
+    }
+  ],
+  "requiredMemory": 700
+}

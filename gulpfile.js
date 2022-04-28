@@ -23,6 +23,7 @@ var paths = cfg.paths;
  *
  * Run: gulp sass
  */
+ 
 gulp.task( 'sass', function() {
 	return gulp
 		.src( paths.sass + '/*.scss' )
@@ -123,6 +124,7 @@ gulp.task( 'cleancss', function() {
 gulp.task( 'styles', function( callback ) {
 	gulp.series( 'sass', 'minifycss' )( callback );
 } );
+
 
 /**
  * Watches .scss, .js and image files for changes.

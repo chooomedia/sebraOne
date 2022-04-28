@@ -1,0 +1,14 @@
+#toaster-wrapper {
+    .toast-container {
+        top: 110px;
+        z-index: 1100;
+
+        &.right-end {
+            right: 0;
+        }
+
+        .toast {
+            clear:both;
+        }
+    }
+}

@@ -23,7 +23,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main container" id="main">
+			<main class="site-main col-md-10 mx-md-auto my-md-5 text-center" id="main">
 
 				<header class="page-header author-header">
 
@@ -35,7 +35,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					}
 					?>
 
-					<h1><?php echo esc_html__( 'About:', 'SebraOne' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
+					<h1><b><?php echo esc_html__( 'About:', 'SebraOne' ) . ' ' . esc_html( $curauth->nickname ); ?></b></h1>
 
 					<?php
 					if ( ! empty( $curauth->ID ) ) {
