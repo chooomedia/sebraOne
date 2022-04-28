@@ -29,7 +29,7 @@ if ( ! function_exists( 'SebraOne_posted_on' ) ) {
 		$posted_on   = apply_filters(
 			'SebraOne_posted_on',
 			sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+				'<span class="posted-on"><i class="far fa-clock"></i> %1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 				esc_html_x( 'Posted on', 'post date', 'SebraOne' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'SebraOne_posted_on_time', $time_string )
@@ -38,7 +38,7 @@ if ( ! function_exists( 'SebraOne_posted_on' ) ) {
 		$byline      = apply_filters(
 			'SebraOne_posted_by',
 			sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
+				'<span class="byline"><i class="far fa-user"></i> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
 				$posted_on ? esc_html_x( 'by', 'post author', 'SebraOne' ) : esc_html_x( 'Posted by', 'post author', 'SebraOne' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )

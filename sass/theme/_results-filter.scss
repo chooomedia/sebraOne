@@ -1,0 +1,169 @@
+#results-filter {
+	@media screen and (max-width:$sm) {
+		border-bottom: 1px solid $red;
+		padding: 0;
+	}
+
+	#finderSearch {
+		@media screen and (max-width:$sm) {
+			display: none;
+		}
+
+		.input-field {
+			position: relative;
+			box-shadow: 0 1px 0 #555;
+
+			&:before,
+			&:after {
+				content: "";
+				height: 56px;
+				width: 2px;
+				position: absolute;
+				background: #fff;
+				top: 0;
+			}
+
+			&:before {
+				left: -1px;
+			}
+
+			&:after {
+				right: -1px;
+			}
+
+			input {
+				line-height: 1.15;
+				text-transform: uppercase;
+				margin: 0;
+				overflow: visible;
+				font-family: inherit;
+				height: 56px;
+				background: #fff;
+				border-radius: 0;
+				border: 0;
+				display: block;
+				width: 100%;
+				padding: 10px 20px 10px 30px;
+				font-size: 14px;
+				color: #555;
+				font-weight: 400;
+				transition: all .3s;
+
+				&:focus {
+					box-shadow: 0 3px 0 #555;
+					outline: 0;
+				}
+			}
+		}
+
+		&.input-wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			z-index: 1;
+		}
+
+		.icon-wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			z-index: 1;
+		}
+
+		.btn-search {
+			height: 56px;
+		}
+	}
+
+	@media screen and (min-width:$lg) {
+		#finderSearchMobile {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width:$sm) {
+		#finderSearchMobile {
+			.input-field {
+
+				position: relative;
+				box-shadow: 0 1px 0 #555;
+
+				&:before,
+				&:after {
+					content: "";
+					height: 56px;
+					width: 2px;
+					position: absolute;
+					background: #fff;
+					top: 0;
+				}
+
+				&:before {
+					left: -1px;
+				}
+
+				&:after {
+					right: -1px;
+				}
+
+				input {
+					line-height: 1.15;
+					text-transform: uppercase;
+					margin: 0;
+					overflow: visible;
+					font-family: inherit;
+					height: 56px;
+					background: #fff;
+					border-radius: 0;
+					border: 0;
+					display: block;
+					width: 100%;
+					padding: 10px 20px 10px 30px;
+					font-size: 14px;
+					color: #555;
+					font-weight: 400;
+					transition: all .3s;
+
+					&:focus {
+						box-shadow: 0 3px 0 #555;
+						outline: 0;
+					}
+				}
+			}
+
+			&.input-wrap {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				z-index: 1;
+			}
+
+			.icon-wrap {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				z-index: 1;
+			}
+		}
+	}
+}

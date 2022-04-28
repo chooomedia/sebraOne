@@ -1,0 +1,41 @@
+#page-results-wrapper {
+	.card {
+		.card-body {
+			.btn.bg-grey {
+				height: 36px;
+				display: inline-flex;
+				width: 36px;
+				line-height: 21px;
+				align-items: center;
+				justify-content: center;
+				align-content: center;
+
+				.svg-inline--fa {
+					width: auto;
+					margin-top: -2px;
+				}
+			}
+		}
+	}
+
+	#results-filter {
+		.svg-inline--fa {
+			width: auto;
+		}
+	}
+
+	@media screen and (max-width:$sm) {
+		.container-fluid {
+			padding: 0;
+		}
+		#content {
+			padding: 0 15px;
+		}
+	}
+
+	// Adds (on mobile horizontaly scrollable) Header
+	@import 'menu-scrollable';
+	// Adds Cards (Content Middle)
+	@import 'results-cards';
+
+}

@@ -7,62 +7,116 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+	$pageTitle = get_the_title();
+	if ( $args['formId'] ) {
+		$searchboxId = $args['formId']; // searchform or map-searchform
+	}
 ?>
 
-<div class="container mb-5">
-	<form method="get" name="search-form" class="p-lg-2" id="searchform" action="/<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+<div class="my-md-3 mt-2 mb-5">
+	<!--ADVICE COMMENT-->
+	<!-- Do not change the following input names: userplace, carbuildyear, carkilometers, choices-single-default. -->
+	<form method="get" name="search-form" class="p-lg-2" id="<?php echo $searchboxId ?>"
+		action="<?php echo home_url( '/results/' ); ?>" role="search">
 		<label class="sr-only" for="search-form"><?php esc_html_e( 'Search', 'SebraOne' ); ?></label>
 		<?php if(!is_search()) : ?>
-		<legend class="text-white">Jetzt Auto verkaufen</legend>
-		<p class="text-white text-center">zum besten Preis in deiner Umgebung</p>
-		</fieldset>
+			<?php if (!is_page('landingpage')) : ?>
+			<div class="searchbox-inner-comment">
+				<legend class="text-white">Jetzt Auto verkaufen</legend>
+				<p class="text-white text-center">zum besten Preis in deiner Umgebung</p>
+				</fieldset>
+			</div>
+			<?php endif ?>
 		<?php endif ?>
 		<div class="inner-form">
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
-				<i class="fa fa-map-marker" aria-hidden="true"></i>
+					<i class="fa fa-car" aria-hidden="true"></i>
 				</div>
-				<input id="search" type="text" placeholder="Wohnort / PLZ *" required />
+				<select class="selectpicker brand" data-live-search="true" name="choices-single-default">
+					<optgroup label="Beliebte Marken">
+						<?php echo do_shortcode( '[brand-dropdown count="5"]' ); ?>
+					</optgroup>
+					<optgroup label="Andere Marken">
+						<?php echo do_shortcode( '[brand-dropdown offset="5"]' ); ?>
+					</optgroup>
+				</select>
 			</div>
+			<div class="input-field first-wrap">
+				<div class="icon-wrap">
+					<i class="fa fa-car" aria-hidden="true"></i>
+				</div>
+				<select class="selectpicker type" data-live-search="true" name="choices-model-default">
+
+						<?php echo do_shortcode( '[type-dropdown]' ); ?>
+				</select>
+			</div>
+
+			<div class="input-field first-wrap">
+				<div class="icon-wrap">
+					<i class="fa fa-car" aria-hidden="true"></i>
+				</div>
+				<select class="selectpicker power" data-live-search="true" name="choices-power-default">
+
+					<?php echo do_shortcode( '[power-dropdown]' ); ?>
+				</select>
+			</div>
+
 			<div class="input-field second-wrap">
 				<div class="icon-wrap">
-				<i class="fa fa-calendar" aria-hidden="true"></i>
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
 				</div>
-				<input class="number" id="depart" type="text" placeholder="Baujahr" />
+				<input id="search" type="text" name="userPlace" placeholder="Wohnort / PLZ *" />
 			</div>
 			<div class="input-field third-wrap">
 				<div class="icon-wrap">
-				<i class="fa fa-tachometer" aria-hidden="true"></i>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
 				</div>
-				<input class="number" id="return" type="text" placeholder="Kilometerstand" />
+				<input class="number" id="depart" name="carBuildyear" type="text" placeholder="Baujahr" />
 			</div>
-			<div class="input-field fouth-wrap">
+			<div class="input-field fourth-wrap">
 				<div class="icon-wrap">
-				<i class="fa fa-car" aria-hidden="true"></i>
+					<i class="fa fa-tachometer-alt" aria-hidden="true"></i>
 				</div>
-				<select data-trigger="" name="choices-single-defaul">
-					<option placeholder="">Marke</option>
-					<option>Audi</option>
-					<option>BMW</option>
-					<option>Citroen</option>
-				</select>
+				<input class="number" id="return" name="carKilometers" type="text" placeholder="KM Stand" />
 			</div>
-			<div class="input-field  ">
+			<div class="input-field fifth-wrap">
 				<button class="btn btn-search bg-primary" type="submit">
-				<i class="fa fa-search pr-2" aria-hidden="true"></i>Händler finden</button>
+					<i class="fa fa-search pr-2" aria-hidden="true"></i>Händler finden</button>
 			</div>
 		</div>
 	</form>
 </div>
 
-<!-- Add required Scripts for Search Checkbox and Calendar -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/choices.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/flatpickr.js"></script>
-
-<script>
-	const choices = new Choices('[data-trigger]', {
-		searchEnabled: false,
-		itemSelectText: '',
-	});
-
-</script>
+<?php
+/**
+* Modal Info Module
+* Pass specific Data into the Modal i.e. Error Handling (Login, Search) and so on.
+* @param number:type 1 = Register Type, 2 = Login Type, 3 = Info-Type
+* @param string:id Builds DIV ID to wrapping container
+* @param string:class Adds DIV Class to wrapping container
+* @param function:title Show the Title of Modal
+* @param string:text Display Text also HTML or JS insert posibile
+* @param bool:show-button Show Modal Button (open/close)
+* @param string:button Define Button Title
+* @param bool:is-event for Error Handling: Search, Login...
+* @param string:event-function-name Defines the JS Function to Call Modal
+* @param bool:show-footer Show Modal footer with Buttons?
+* @param bool:is-active Helperclass to change visibility
+*/
+get_template_part( 'system-templates/modal-info', null, array(
+	'id' => 'modal-info-results',
+	'class' => 'container',
+	'data'  => array(
+		'type' => 1,
+		'title' => strval($pageTitle),
+		'text' => 'Um die zu den Suchergebnissen zu gelangen registriere dich jetzt kostenlos.',
+		'show-button' => false,
+		'button' => 'jetzt registrieren',
+		'is-event' => true,
+		'event-function-name' => 'nologgedin',
+		'show-footer' => false,
+		'is-active' => false
+	))
+);
+?>

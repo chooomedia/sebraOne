@@ -192,8 +192,8 @@ msgstr ""
 "제작되었습니다. 스타터 테마나 부모 테마로 사용하세요."
 
 #. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+msgid "Christopher Matt"
+msgstr "Christopher Matt"
 
 #. Author URI of the theme
 msgid "http://www.holgerkoenemann.de"

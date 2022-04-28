@@ -1,6 +1,6 @@
 // Some basic padding for all wrappers
 .wrapper {
-	padding: $grid-gutter-width 0;
+	padding: $navbar-spacing 0 0 0;
 }
 
 // Reset hero wrapper padding to 0
@@ -126,6 +126,9 @@ a.skip-link {
 			background-image: none;
 		}
 	}
+	#menu-item-user {
+		margin-right: 1rem;
+	}
 }
 
 .navbar-light .navbar-brand a {
@@ -148,6 +151,10 @@ a.skip-link {
 	font-weight: $font-weight-normal;
 }
 
+h1.entry-title {
+	font-weight: $font-weight-bolder;
+}
+
 // Galleries
 .gallery {
 	margin-bottom: 1.5em;
@@ -166,4 +173,14 @@ a.skip-link {
 }
 .gallery-caption {
 	display: block;
+}
+
+// Font Overwrites
+b,
+strong {
+  	font-family: "Montserrat Black" // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+.bg-grey {
+	background-color: $bg-greywhite;
 }

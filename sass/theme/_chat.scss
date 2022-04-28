@@ -1,0 +1,323 @@
+#exampleCalendarChattBtn {
+    max-width: 64px;
+    width: 64px;
+    display: flex;
+    height: 64px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat-wrapper {
+    &:after  {
+        content: '';
+        background: rgba(0,0,0,0.03);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    #messages-history {
+        #chat-block {
+            
+        }
+    }
+    #messages-main {
+        position: relative;
+        z-index: 1050;
+        margin: 0 auto;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    
+        &:after,
+        &:before {
+            content: " ";
+            display: table;
+        }
+    
+        #ms-compose {
+            position: fixed;
+            bottom: 120px;
+            z-index: 1;
+            right: 30px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+        }
+    }
+    
+    @media (max-width: 767px) {
+        #messages-main {
+            .ms-menu {
+                height: calc(100% - 58px);
+                display: none;
+                z-index: 1;
+                top: 58px;
+    
+                &.toggled {
+                    display: block;
+                }
+            }
+    
+            .ms-body {
+                overflow: hidden;
+            }
+        }
+    }
+    
+    #ms-menu-trigger {
+        user-select: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        padding-right: 10px;
+        padding-top: 19px;
+    
+        i {
+            font-size: 21px;
+        }
+    
+        &.toggled i:before {
+            content: "";
+        }
+    }
+    
+    .fc-toolbar:before,
+    .login-content:after {
+        content: "";
+    }
+    
+    .message-feed {
+        padding: 20px;
+        flex-direction: column!important;
+        align-items: flex-start!important;
+    }
+    
+    #footer,
+    .fc-toolbar .ui-button,
+    .fileinput .thumbnail {
+        text-align: center;
+    }
+    
+    .four-zero {
+        text-align: center;
+    
+        footer>a {
+            text-align: center;
+        }
+    }
+    
+    .ie-warning,
+    .login-content,
+    .login-navigation {
+        text-align: center;
+    }
+    
+    .pt-inner {
+        text-align: center;
+    
+        .pti-footer>a {
+            text-align: center;
+        }
+    }
+    
+    .message-feed {
+        &.right>.pull-right {
+            margin-left: 15px;
+        }
+    
+        .term-checked {
+            background: #08a9e8!important;;
+        }
+    
+        .term-rate {
+            background: #ffc107!important;
+        }
+    
+        .term-success {
+            background: #28a745!important;
+        }
+    
+        &:not(.right) .mf-content {
+            color: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+    
+        &.right .mf-content {
+            background: #eee;
+        }
+    }
+    
+    .mf-content {
+        padding: 12px 17px 13px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    
+    .mf-date {
+        display: block;
+        color: #B3B3B3;
+        margin-top: 7px;
+    
+        >i {
+            font-size: 14px;
+            line-height: 100%;
+            position: relative;
+            top: 1px;
+        }
+    }
+    
+    .msb-reply {
+        box-shadow: 0 -20px 20px -5px #fff;
+        position: relative;
+        margin-top: 30px;
+
+        .chat-calendar, .chat-submit {
+            width: 64px;
+        }
+
+        .chat-calendar {
+            margin-left: -12px;
+        }
+
+        @media screen and (max-width:$sm) {
+            .chat-calendar {
+                margin-left: 0;
+            }
+        }
+    }
+    
+    .four-zero,
+    .lc-block {
+        box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    }
+    
+    .msb-reply {
+        border: 1px solid $danger;
+
+        @media screen and (max-width:$sm) {
+            border: 0;
+        }
+    
+        input {
+            font-family: inherit!important;
+            color: #ffffff!important;
+            width: 100%;
+            font-size: 16px;
+            border: 0;
+            padding: 10px 15px;
+            resize: none;
+            height: 60px;
+            background: 0 0;
+            transition: background .3s linear;
+    
+            &:focus, &:active {
+                transition: all 1s;
+                background: $primary;
+                border: transparent!important;
+                outline: none!important;
+                box-shadow: none!important;
+            }
+        }
+    
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+            height: 100%;
+            width: 64px;
+            font-size: 25px;
+            color: $danger;
+            background: 0 0;
+    
+            &:hover {
+                background: $danger;
+            }
+        }
+    }
+    
+    .img-avatar {
+        height: 37px;
+        border-radius: 18.5px;
+        width: 37px;
+    }
+    
+    .list-group.lg-alt .list-group-item {
+        border: 0;
+    }
+    
+    .p-15 {
+        padding: 15px !important;
+    }
+    
+    .btn:not(.btn-alt) {
+        border: 0;
+    }
+    
+    .action-header {
+        position: relative;
+        background: #f8f8f8;
+        padding: 15px 13px 15px 17px;
+    }
+    
+    .ah-actions {
+        z-index: 3;
+        float: right;
+        margin-top: 7px;
+        position: relative;
+    }
+    
+    .actions {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    
+        >li {
+            display: inline-block;
+        }
+    
+        &:not(.a-alt)>li>a>i {
+            color: #939393;
+        }
+    
+        >li>a {
+            >i {
+                font-size: 20px;
+            }
+    
+            display: block;
+            padding: 0 10px;
+        }
+    }
+    
+    .ms-body {
+        background: #fff;
+    }
+    
+    #ms-menu-trigger {
+        user-select: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        padding-right: 10px;
+        padding-top: 19px;
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    .message-feed.right {
+        text-align: right;
+    }
+    
+    #ms-menu-trigger,
+    .toggle-switch {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+}

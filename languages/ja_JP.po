@@ -776,7 +776,7 @@ msgid "http://SebraOne.com"
 msgstr "http://SebraOne.com"
 
 #. Author of the theme
-msgid "Holger Koenemann"
+msgid "Christopher Matt"
 msgstr "ホルガー・ケーネマン"
 
 #. Author URI of the theme

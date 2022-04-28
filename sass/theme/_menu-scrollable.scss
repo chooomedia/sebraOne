@@ -1,0 +1,137 @@
+$red:     #dc3545 !default;
+
+.explore-head {
+	padding: 0 40px;
+	width: 100%;
+
+	&:not(:empty)~.finder-map {
+		top: 61px;
+	}
+
+	&:empty {
+		display: none;
+	}
+
+	.explore-types {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: hidden;
+		position: static !important;
+
+		&:after {
+			content: "";
+			margin: auto;
+		}
+
+		&:before {
+			content: "";
+			margin: auto;
+		}
+
+		&>div {
+			>a {
+				display: block;
+				font-size: 14px;
+				padding: 0 40px;
+				text-align: center;
+				height: 60px;
+				color: #242429;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				.type-info {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					>h4 {
+						display: inline-block;
+						margin-bottom: 0;
+						font-size: 14px;
+					}
+				}
+
+				i {
+					font-size: 20px;
+					display: inline-block;
+					position: relative;
+					padding-right: 7px;
+					color: #484848;
+				}
+
+				&:after {
+					content: "";
+					height: 2px;
+					width: 0;
+					position: absolute;
+					bottom: 0;
+					transition: width .3s ease;
+					left: 0;
+					background: $red;
+				}
+	
+				/*&:hover {
+					&:after {
+						width: max-content;
+					}
+				}*/
+			}
+		}
+
+		>div.finder-title {
+			&:after {
+				display: none;
+			}
+		}
+
+		/*.type-company a.active {
+			&:after {
+				width: 100%;
+			}
+
+			color: $red;
+		}*/
+
+		&>div:after {
+			content: "";
+			height: 2px;
+			width: 0;
+			position: absolute;
+			bottom: 0;
+			transition: width .3s ease;
+			left: 0;
+			background: $red;
+		}
+
+		.resize-sensor {
+			position: absolute;
+			inset: -10px 0px 0px -10px;
+			overflow: hidden;
+			z-index: -1;
+			visibility: hidden;
+			max-width: 100%;
+
+			&-expand, &-shrink {
+				position: absolute;
+				left: -10px;
+				top: -10px;
+				right: 0;
+				bottom: 0;
+				overflow: hidden;
+				z-index: -1;
+				visibility: hidden;
+				max-width: 100%;
+			}
+		}
+	}
+
+	z-index: 50;
+	position: relative;
+	top: 0;
+	border-bottom: 1px solid #ebebeb;
+}

@@ -45,7 +45,7 @@ if ( ! function_exists( 'SebraOne_woocommerce_wrapper_start' ) ) {
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
 		get_template_part( 'global-templates/left-sidebar-check' );
-		echo '<main class="site-main container" id="main">';
+		echo '<main class="site-main" id="main">';
 	}
 }
 

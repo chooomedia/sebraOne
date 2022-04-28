@@ -1,7 +1,7 @@
-@import "theme/theme_variables";  // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or SebraOne variables here
-@import "assets/bootstrap4";      // <-------- Loads Bootstrap4
-@import "sebraone/sebraone";  // <-------- Loads the SebraOne defaults. Just a few classes to incorporate BS in WP
-@import "theme/mobile";  // <-------- Loads the mobile media queries
+@import "theme/theme_variables"; // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or SebraOne variables here
+@import "assets/bootstrap4"; // <-------- Loads Bootstrap4
+@import "sebraone/sebraone"; // <-------- Loads the SebraOne defaults. Just a few classes to incorporate BS in WP
+@import "theme/mobile"; // <-------- Loads the mobile media queries
 // @import "sebraone/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 
 // Add Forms Styles
@@ -10,19 +10,81 @@
 // Add User Styles
 @import "theme/user";
 
+// Add Searchfom Styles
+@import "theme/searchform";
+
+// Add Slick slider
+@import "theme/slick";
+
+// Add Landingpage Styles
+@import "theme/landingpage";
+
+// Add Blog Styles
+@import "theme/blog";
+
 // Add Header & Footer Styles
 @import "theme/footer"; // <-------- Add Footer Styles
 @import "theme/header"; // <-------- Add Header Styles
 
-// Optional files - If you dont use the corresponding scripts/fonts comment em out
-@import "assets/font-awesome";    // <-------- Font Awesome Icon font
+// Archive Style
+@import "theme/archive";
+
+// Results
+@import "theme/results";
+
+// Seller Details
+@import "theme/seller-details";
+
+// Sections: Customer Reviews
+@import "theme/customer-reviews";
+
+// Sections CTA before footer
+@import "theme/cta";
+
+// Results Sidebars
+@import "theme/results-filter";
+@import "theme/results-maps";
+
+// Comments Chat
+@import "theme/chat";
+
+// Various Modal Styleing
+@import "theme/modal";
 
 // Any additional imported files //
-@import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
-@import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+@import "theme/theme"; // <-------- That's where you can add your own design. Thats your part!
+@import "theme/contact-form7"; // <-------- Contact Form 7 - Bootstrap 4 support
 
 // Add Calendar Styles
-@import "theme/calendar"; // <-------- Add Flatcalendar Styles
+@import "theme/custom-calendar"; // <-------- Add Flatcalendar Styles
 
-// Add Google Font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800;900&display=swap');
+// Add Profile Edit Styles
+@import "theme/profile-edit";
+
+// Add Charts Styles
+@import "theme/charts"; // <-------- Add Charts Styles
+
+// Add Menu Improvenent (Seller Page Details)
+@import "theme/menu-improvement";
+
+// Add Profile Views (Seller Page Details)
+@import "theme/profile-views";
+
+// Add Custom Toasts Styles
+@import "theme/toasts";
+
+// Add Montserrat regular Font
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/montserrat-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+// Add Montserrat extrabold Font
+@font-face {
+	font-family: 'Montserrat Black';
+	src: url('../fonts/montserrat-black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+

@@ -1,0 +1,50 @@
+#ui-datepicker-div {
+	border: none !important;
+	background: #000000 !important;
+	color: #ffffff !important;
+	border-radius: 0px !important;
+    z-index: 1050!important;
+
+	.ui-widget-header {
+		font-family: "Montserrat Black" !important;
+		border: none !important;
+		background: #343a40 !important;
+		color: #ffffff;
+		font-weight: bold;
+		border-radius: 0px !important;
+
+        .ui-icon {
+            filter: hue-rotate(103deg)!important;
+        }
+	}
+
+    .ui-slider-handle {
+        border-color: #333333!important;
+        background: #ffffff!important;
+    }
+
+	.ui-datepicker-calendar {
+		.ui-state-default {
+			border: none!important;
+			background: #f5f5f5!important;
+			font-weight: bold;
+		}
+	}
+
+    .ui-timepicker-div {
+        .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+            background: #f5f5f5!important;
+            margin-top: 1.2rem!important;
+        }
+    }
+
+    .ui-datepicker-buttonpane.ui-widget-content {
+        margin-bottom: 10px!important;
+
+        button.ui-state-default {
+            border-radius: 0!important;
+            margin: 5px auto!important;
+            background: #f5f5f5!important;
+        }
+    }
+}

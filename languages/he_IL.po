@@ -682,8 +682,8 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenmann"
+msgid "Christopher Matt"
+msgstr "Christopher Matt"
 
 #. Author URI of the plugin/theme
 msgid "http://www.holgerkoenemann.de"

@@ -148,8 +148,6 @@
   @include hover-focus() {
     color: $dropdown-link-hover-color;
     text-decoration: none;
-    text-indent: 7px;
-    transition: all 300ms;
     @include gradient-bg($dropdown-link-hover-bg);
   }
 

@@ -1,0 +1,180 @@
+div[id] {
+
+    @media screen and (max-width:$sm) {
+        padding: 0 !important;
+        height: auto;
+
+        .container {
+            &.p-sm-0 {
+                padding: 0;
+            }
+        }
+    }
+
+    .card-result,
+    .card-seller-details {
+        font-size: 14px;
+
+        .card-img-top {
+            height: 100px;
+
+            .card-img-head {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 4;
+
+                .card-head-btn {
+                    position: static;
+                    float: left;
+                    margin-right: 5px;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    font-size: 12px;
+                    padding: 0 7px;
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    top: 20px;
+                    background: transparent;
+                    justify-content: center;
+                    border: 1px solid hsla(0, 0%, 100%, .3);
+                    border-radius: 3px;
+                    z-index: 4;
+                    line-height: 17px;
+                    height: 32px;
+                    min-width: 38px;
+
+                    &.level-promoted.ad-badge {
+                        border-color: #fff47c;
+                        color: #fff47c;
+                    }
+
+                    &.ad-badge {
+                        border-color: #abffec;
+                        color: #abffec;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                        transition: .2s ease;
+                    }
+                }
+            }
+        }
+
+        .card-img-bottom {
+
+            .card-img-head {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                z-index: 4;
+
+                .card-head-btn {
+                    position: static;
+                    float: left;
+                    margin-right: 5px;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    font-size: 12px;
+                    padding: 0 7px;
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    top: 20px;
+                    background: transparent;
+                    justify-content: center;
+                    border: 1px solid hsla(0, 0%, 100%, .3);
+                    border-radius: 3px;
+                    z-index: 4;
+                    line-height: 17px;
+                    height: 32px;
+                    min-width: 38px;
+
+                    &.level-promoted.ad-badge {
+                        border-color: #fff47c;
+                        color: #fff47c;
+                    }
+
+                    &.ad-badge {
+                        border-color: #abffec;
+                        color: #abffec;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                        transition: .2s ease;
+                    }
+                }
+            }
+
+            @media screen and (max-width:$sm) {
+                .card-img-head {
+                    bottom: 0;
+                    top: 20px;
+                    right: 0;
+                }
+            }
+        }
+
+        .card-body {
+            .card-avatar:not(.seller-details) {
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                border-radius: 50%;
+                z-index: 9;
+                background-color: #fff;
+                background-size: cover;
+                background-position: 50%;
+                position: absolute;
+                top: 66px;
+                left: 15px;
+            }
+
+            .card-avatar.seller-details {
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 50%;
+                z-index: 9;
+                background-color: #fff;
+                background-size: cover;
+                background-position: 50%;
+            }
+            
+
+            .card-title {
+                align-items: center;
+            }
+
+            .badge-verified:not(.seller-details) {
+                width: 18px;
+                height: 18px;
+                margin-left: 5px;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAeQAAAHkBOLWIEgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH3SURBVDiNnZRNSFRRFMd/573nzHvPmnGIFpp9GJRSkiAuqpUGbQQRyqJo0UJIkFZR1KoW1SIM2hjVrk0bbREVLUJpF7iwxaTFEDVDRRCKDeJ8qM29LV4zb+Y102T/3fmfc3/cw7n3CLX0KmlTaLoFnPntPMJMX6avLV+tXCqiFzpMaPkAupBH5CowFKh/DPo6YtoYS/FyqA96me7B0JPArpq3rFQKQ4Y40jTrg559c3Gc+Q1AivqEmd5PX1veAMB1D/4HBGA3P6M9AB4I1fgvp5rDBk+7GtluG75pEvFBms56kAaByU6X/i0N7HHKQIouAGEqfQ70g3qgu+0Oo61hLn3IcfvzaiArI8LUjwSwt9zeGhIW1nQpPtsc4uE+l4nv65yay6AJSicM0DvKrd6YRfJwhJFtIQC6N5vc63CYWykw/D5bBQLATgvkHdBddFI5RSKruN/hcihq0RuzWFVw7G2GlUINDDIvTC8NoOUJpQmCbcB4u8twSwilYTCe4fnieg0ICvSg9yCn0xfReixYcb41TNQSbqaqfi9Pmgscjd2xvEDPVqsZ/xqcThUZaoZSO7ncDJCqf+oPfcRYfuODBlqyKDmxQVgSkZPFDfC3NXINOF6RFz2B4gZi2qxF4vRLqfdKULlef3HIbhoDTgMKb7FdqbXYfgGiVJoeayjLdAAAAABJRU5ErkJggg==);
+            }
+            .badge-verified.seller-details {
+                width: 18px;
+                height: 18px;
+                margin-left: 8px;
+                transform: scale(1.2);
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAeQAAAHkBOLWIEgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH3SURBVDiNnZRNSFRRFMd/573nzHvPmnGIFpp9GJRSkiAuqpUGbQQRyqJo0UJIkFZR1KoW1SIM2hjVrk0bbREVLUJpF7iwxaTFEDVDRRCKDeJ8qM29LV4zb+Y102T/3fmfc3/cw7n3CLX0KmlTaLoFnPntPMJMX6avLV+tXCqiFzpMaPkAupBH5CowFKh/DPo6YtoYS/FyqA96me7B0JPArpq3rFQKQ4Y40jTrg559c3Gc+Q1AivqEmd5PX1veAMB1D/4HBGA3P6M9AB4I1fgvp5rDBk+7GtluG75pEvFBms56kAaByU6X/i0N7HHKQIouAGEqfQ70g3qgu+0Oo61hLn3IcfvzaiArI8LUjwSwt9zeGhIW1nQpPtsc4uE+l4nv65yay6AJSicM0DvKrd6YRfJwhJFtIQC6N5vc63CYWykw/D5bBQLATgvkHdBddFI5RSKruN/hcihq0RuzWFVw7G2GlUINDDIvTC8NoOUJpQmCbcB4u8twSwilYTCe4fnieg0ICvSg9yCn0xfReixYcb41TNQSbqaqfi9Pmgscjd2xvEDPVqsZ/xqcThUZaoZSO7ncDJCqf+oPfcRYfuODBlqyKDmxQVgSkZPFDfC3NXINOF6RFz2B4gZi2qxF4vRLqfdKULlef3HIbhoDTgMKb7FdqbXYfgGiVJoeayjLdAAAAABJRU5ErkJggg==);
+            }
+
+            .card-footer {
+                align-items: center;
+                justify-content: space-between;
+
+                .btn {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+#result-main {
+    height: 83vh;
+}

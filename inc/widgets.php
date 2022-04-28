@@ -67,13 +67,13 @@ if ( ! function_exists( 'SebraOne_widget_classes' ) ) {
 			$widget_classes = 'widget-count-' . $widget_count;
 			if ( 0 === $widget_count % 4 || $widget_count > 6 ) {
 				// Four widgets per row if there are exactly four or more than six widgets.
-				$widget_classes .= ' col-md-3';
+				$widget_classes .= ' col-md-3 col-6';
 			} elseif ( 6 === $widget_count ) {
 				// If exactly six widgets are published.
-				$widget_classes .= ' col-md-2';
+				$widget_classes .= ' col-md-2 col-6';
 			} elseif ( $widget_count >= 3 ) {
 				// Three widgets per row if there's three or more widgets.
-				$widget_classes .= ' col-md-4';
+				$widget_classes .= ' col-md-4 col-6';
 			} elseif ( 2 === $widget_count ) {
 				// If two widgets are published.
 				$widget_classes .= ' col-md-6';
