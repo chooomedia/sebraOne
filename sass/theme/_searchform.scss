@@ -12,18 +12,6 @@
             }
         }
     }
-    .input-field.third-wrap, .input-field.third-wrap {
-        max-width: 140px;
-    }
-    .input-field.second-wrap {
-        min-width: 198px;
-    }
-
-    @media screen and (max-width:$md) {
-        .input-field.second-wrap {
-            min-width: 98px;
-        }
-    }
 
     @media screen and (max-width:$sm) {
         .input-field.third-wrap, .input-field.third-wrap {
@@ -63,6 +51,7 @@
             padding: 0;
     
             .input-field {
+                width: calc(100% / 6);
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
                 border-bottom: 1px solid #111;

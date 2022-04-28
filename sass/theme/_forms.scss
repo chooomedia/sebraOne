@@ -40,6 +40,7 @@
 			align-items: center;
 
 			.input-field {
+				width: calc(100% / 6);
 				margin-left: .5rem;
 				margin-right: .5rem;
 				position: relative;
@@ -1009,14 +1010,6 @@ input {
 	}
 }
 
-form {
-	.inner-form {
-		.input-field.second-wrap {
-			width:15%;
-		}
-	}
-}
-
 #carbrand-arrow-0,
 #carbrand-arrow-1,
 #carbrand-arrow-2,
@@ -1037,9 +1030,9 @@ form {
 	}
   
 	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	  width: 186px;
+	  width: 140px;
 	}
-
+	/*
 	@media screen and (max-width:$md) {
 		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
 			width: 126px;
@@ -1048,7 +1041,7 @@ form {
 
 	.input-field.third-wrap {
 		max-width: 140px;
-	}
+	}*/
   
 	/*.dropdown-toggle:focus, > select.mobile-device:focus + .dropdown-toggle {
 	  outline: thin dotted #333 !important;

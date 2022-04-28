@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="inner-form">
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
-					<i class="fa fa-car" aria-hidden="true"></i>
+					<i class="fas fa-industry"></i>
 				</div>
 				<select class="selectpicker brand" data-live-search="true" name="choices-single-default">
 					<optgroup label="Beliebte Marken">
@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
-					<i class="fa fa-car" aria-hidden="true"></i>
+					<i class="fas fa-car-side"></i>
 				</div>
 				<select class="selectpicker type" data-live-search="true" name="choices-model-default">
 
@@ -54,7 +54,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
-					<i class="fa fa-car" aria-hidden="true"></i>
+					<i class="fas fa-cogs"></i>
 				</div>
 				<select class="selectpicker power" data-live-search="true" name="choices-power-default">
 
