@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Partial template for customer review slider
