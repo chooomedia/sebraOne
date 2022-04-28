@@ -166,14 +166,6 @@ function ajax_login(){
 if (is_admin()) {
     // We only need to setup ajax action in admin.
     add_action('wp_ajax_custom_ajax_logout', 'custom_ajax_logout_func');
-} else {
-    wp_localize_script('custom-ajax-logout', 'ajax_object',
-        array(
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'home_url' => get_home_url(),
-            'logout_nonce' => wp_create_nonce('ajax-logout-nonce'),
-        )
-    );
 }
 function custom_ajax_logout_func(){
     check_ajax_referer( 'ajax-logout-nonce', 'ajaxsecurity' );
