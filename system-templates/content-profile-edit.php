@@ -82,7 +82,7 @@ $role = array_shift($u->roles);
 								</div>
 								<div class="input-field">
 									<div class="icon-wrap">
-										<i class="fas fa-user" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
 										<input name="user_role" type="text" id="user-role" value="" disabled
 											placeholder="<?php echo $current_user->role = $wp_roles->roles[$role]['name']; ?>" />
 									</div>
