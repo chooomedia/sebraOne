@@ -7,10 +7,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
 get_header();
-
 $container = get_theme_mod( 'SebraOne_container_type' );
+
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
