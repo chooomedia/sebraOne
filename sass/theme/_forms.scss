@@ -238,7 +238,6 @@
 
 				.btn-search {
 					height: 56px;
-					width: 100%;
 					white-space: nowrap;
 					border-radius: $br1;
 					font-size: 20px;
@@ -1028,9 +1027,15 @@ input {
 	&.fit-width {
 	  width: auto !important;
 	}
-  
+
 	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	  width: 140px;
+		width:140px;
+	}
+  
+	@media screen and (max-width:$sm) {
+		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+			width: 100%;
+		}
 	}
 	/*
 	@media screen and (max-width:$md) {

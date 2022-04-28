@@ -13,6 +13,8 @@ if ( $args['data'] ) {
 }
 ?>
 
+<script type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/slick.min.js'?>"></script>
+
 <div id="<?php echo esc_html($consumerReviewId) ?>" class="container pt-md-4 text-white">
     <div class="text-center">
         <div class="rounded-circle">
