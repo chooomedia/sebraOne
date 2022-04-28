@@ -123,6 +123,66 @@ function register_user_front_end() {
 	die;
 }
 
+// Ajax User Login Script
+function ajax_login_init(){
+    wp_register_script('ajax-login-script', get_template_directory_uri() . '/js/ajax-login-script.js', array('jquery') ); 
+    wp_enqueue_script('ajax-login-script');
+
+    wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'redirecturl' => '/account',
+        'loadingmessage' => __('Daten werden verarbeitet...')
+    ));
+
+    // Enable the user with no privileges to run ajax_login() in AJAX
+    add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+    add_action('init', 'ajax_login_init');
+}
+
+function ajax_login(){
+    // First check the nonce, if it fails the function will break
+    check_ajax_referer( 'ajax-login-nonce', 'security' );
+
+    // Nonce is checked, get the POST data and sign user on
+    $info = array();
+    $info['user_login'] = $_POST['username'];
+    $info['user_password'] = $_POST['password'];
+    $info['remember'] = true;
+
+    $user_signon = wp_signon( $info, false );
+    if ( is_wp_error($user_signon) ){
+        echo json_encode(array('loggedin'=>false, 'message'=>__('* Benutzername oder Passwort falsch')));
+    } else {
+        echo json_encode(array('loggedin'=>true, 'message'=>__('Erfolgreicher Login, Weiterleitung...')));
+    }
+    die();
+}
+
+/** Set up the Ajax Logout */
+if (is_admin()) {
+    // We only need to setup ajax action in admin.
+    add_action('wp_ajax_custom_ajax_logout', 'custom_ajax_logout_func');
+} else {
+    wp_enqueue_script('custom-ajax-logout', get_stylesheet_directory_uri() . '/js/ajax-login-script.js', array('jquery'), '1.0', true );
+    wp_localize_script('custom-ajax-logout', 'ajax_object',
+        array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'home_url' => get_home_url(),
+            'logout_nonce' => wp_create_nonce('ajax-logout-nonce'),
+        )
+    );
+}
+function custom_ajax_logout_func(){
+    check_ajax_referer( 'ajax-logout-nonce', 'ajaxsecurity' );
+    wp_logout();
+    ob_clean(); // probably overkill for this, but good habit
+    wp_send_json_success();
+}
+
 /*require_once( get_template_directory() . '/inc/custom-ajax-auth.php' );*/
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {
