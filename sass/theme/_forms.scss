@@ -275,6 +275,10 @@
 			&:-moz-focusring {
 				outline: 1px dotted ButtonText;
 			}
+
+			@media screen and (max-width:$md) {
+				width: 100%;
+			}
 		}
 
 		input {
