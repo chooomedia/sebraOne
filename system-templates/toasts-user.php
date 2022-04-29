@@ -27,15 +27,6 @@ $page_title = $wp_query->post->post_title;
     <?php echo $toastBodyMessage ?>
     </div>
 </div>
-
-<!--<script>
-jQuery(function($) {
-    $('#masterdata-button, #settings-button').on('click', function() {
-        $('#toaster-wrapper .toast').toast('show');
-    });
-});
-</script>-->
-
 <script>
 jQuery(document).ready(function($){
     var ajax_url = "<?= admin_url('admin-ajax.php'); ?>";
@@ -59,6 +50,10 @@ jQuery(document).ready(function($){
         event.preventDefault();
         callApi();
         alert('test');
+    });
+
+    $('#masterdata-button, #settings-button').on('click', function() {
+        callApi();
     });
 });
 </script>
