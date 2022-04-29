@@ -23,7 +23,7 @@
 
     #messages-history {
         #chat-block {
-            
+            clear: both;
         }
     }
     #messages-main {
@@ -236,6 +236,10 @@
     
             &:hover {
                 background: $danger;
+            }
+
+            &:disabled {
+                
             }
         }
     }
