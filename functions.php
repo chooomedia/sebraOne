@@ -183,6 +183,12 @@ function custom_ajax_logout_func(){
     wp_send_json_success();
 }
 
+add_action('wp_ajax_testiram', 'testiram');
+add_action('wp_ajax_nopriv_testiram', 'testiram');
+function testiram() {
+    wp_send_json_success();
+}
+
 /*require_once( get_template_directory() . '/inc/custom-ajax-auth.php' );*/
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {

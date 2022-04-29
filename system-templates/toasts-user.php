@@ -36,30 +36,19 @@ jQuery(document).ready(function($){
     }, 5000);*/
  
     function callApi() {
-        $.ajax({
-        url: ajax_url,
-        method:"GET",
-        success:function(data){
-            $('#toaster-wrapper .toast').toast('show');
-            $('#toaster-wrapper .toast .toast-body').html(data);
-            }
-        });
-
-        $.ajax({
-            method: "POST",
-            url: ajax_url,
-            beforeSend: function ( xhr ) {
-                xhr.setRequestHeader( 'X-WP-Nonce', ajax_url.nonce );
+        jQuery.ajax({
+            url: link,
+            dataType : "json",
+            data: formData,
+            contentType: false,
+            processData: false,
+            type: 'post',
+            success: function (result) {
+                alert(result);
             },
-            success : function( response ) {
-                console.log( response );
-                alert( ajax_url.success );
-            },
-            fail : function( response ) {
-                console.log( response );
-                alert( ajax_url.failure );
+            error: function (error) {
+                console.log(error);
             }
- 
         });
     }
  
