@@ -233,11 +233,11 @@ $user_id = $current_user_id = get_current_user_id();
 							</button>
 						</div>
 						<div class="col-md-10 col-8 m-0 p-0">
-							<input type="text" maxlength="120" placeholder="Etwas mitteilen..." pattern="[^()/><\][\\\x22,;|]@+" required>
+							<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen..." onkeyup="responseCheck()">
 						</div>
 						<div class="col-md col-2 chat-submit">
-							<button class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
-								title="Nachricht versenden"><i class="fas fa-paper-plane"></i></button>
+							<button id="sendMessage" class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
+								title="Nachricht versenden"><i class="fas fa-paper-plane" disabled="disabled"></i></button>
 						</div>
 					</div>
 				</div>
@@ -245,32 +245,48 @@ $user_id = $current_user_id = get_current_user_id();
 		</div>
 	</div>
 </div>
+
 <script>
-	jQuery(function ($) {
-		/* Activate bootstrap tooltip */
-		$(function () {
-			$('[data-toggle="tooltip"]').tooltip()
-		});
+/* Bann Words for Chat Message Input */
+function responseCheck() {
+	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+	var textvalue = document.getElementById('messageContent').value;
+	for(var i=0; i<banned_words.length; i++) {
+		if (~textvalue.indexOf(banned_words[i])){
+			document.getElementById('sendMessage').disabled = true;
+		} else {
+			document.getElementById('sendMessage').disabled = false;
+		}
+	}
+}
+</script>
 
-		/* Save/check status of chat rules infobox in localstorge */
-		$(function () {
-			if (localStorage.getItem('acceptChatRules') == null) {
-				localStorage.setItem('acceptChatRules', 'false'); //store a key/value
-				$('#chatRulesInfoBox').show();
-			}
+<script>
+/* Save/check status of chat rules infobox in localstorge */
+jQuery(function ($) {
+	/* Activate bootstrap tooltip */
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
 
-			let chatRulesBool = localStorage.getItem('acceptChatRules');
+	$(function () {
+		if (localStorage.getItem('acceptChatRules') == null) {
+			localStorage.setItem('acceptChatRules', 'false'); //store a key/value
+			$('#chatRulesInfoBox').show();
+		}
 
-			if (chatRulesBool == 'true') {
-				$('#chatRulesInfoBox').hide();
-			}
+		let chatRulesBool = localStorage.getItem('acceptChatRules');
 
-			$('#chatRulesAcceptedBtn').on('click', function () {
-				localStorage.setItem('acceptChatRules', 'true');
-				$('#chatRulesInfoBox').hide();
-			});
+		if (chatRulesBool == 'true') {
+			$('#chatRulesInfoBox').hide();
+		}
+
+		$('#chatRulesAcceptedBtn').on('click', function () {
+			localStorage.setItem('acceptChatRules', 'true');
+			$('#chatRulesInfoBox').hide();
 		});
 	});
+});
 </script>
 
 <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>

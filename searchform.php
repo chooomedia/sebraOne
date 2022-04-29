@@ -47,8 +47,7 @@ defined( 'ABSPATH' ) || exit;
 					<i class="fas fa-car-side"></i>
 				</div>
 				<select class="selectpicker type" data-live-search="true" name="choices-model-default">
-
-						<?php echo do_shortcode( '[type-dropdown]' ); ?>
+					<?php echo do_shortcode( '[type-dropdown]' ); ?>
 				</select>
 			</div>
 
@@ -57,7 +56,6 @@ defined( 'ABSPATH' ) || exit;
 					<i class="fas fa-cogs"></i>
 				</div>
 				<select class="selectpicker power" data-live-search="true" name="choices-power-default">
-
 					<?php echo do_shortcode( '[power-dropdown]' ); ?>
 				</select>
 			</div>

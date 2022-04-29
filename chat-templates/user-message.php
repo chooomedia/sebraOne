@@ -10,12 +10,27 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen..." pattern="[^()/><\][\\\x22,;|]@+" required>
+		<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
 		<!-- Do not change #sendMessage. -->
-		<button id="sendMessage" class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
-				title="Nachricht versenden"><i class="fas fa-paper-plane"></i></button>
+		<button id="sendMessage" class="bg-dark text-light" disabled="disabled"><i class="fas fa-paper-plane"></i></button>
 	</div>
 </div>
+
+<script>
+/* Bann Words for Chat Message Input */
+function responseCheck() {
+	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+	var textvalue = document.getElementById('messageContent').value;
+	for(var i=0; i<banned_words.length; i++) {
+		if (~textvalue.indexOf(banned_words[i])){
+			document.getElementById('sendMessage').disabled = true;
+		} else {
+			document.getElementById('sendMessage').disabled = false;
+		}
+	}
+}
+</script>
+
