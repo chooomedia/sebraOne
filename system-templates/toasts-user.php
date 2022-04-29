@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
     function callApi(){
         $.ajax({
         url: ajax_url,
-        method:"POST",
+        method:"GET",
         success:function(data){
             $('#toaster-wrapper .toast').toast('show');
             $('#toaster-wrapper .toast .toast-body').html(data);
