@@ -37,9 +37,17 @@ jQuery(document).ready(function($){
  
     function callApi() {
         $.ajax({
+        url: ajax_url,
+        method:"GET",
+        success:function(data){
+            $('#toaster-wrapper .toast').toast('show');
+            $('#toaster-wrapper .toast .toast-body').html(data);
+            }
+        });
+
+        $.ajax({
             method: "POST",
             url: ajax_url,
-            data: data,
             beforeSend: function ( xhr ) {
                 xhr.setRequestHeader( 'X-WP-Nonce', ajax_url.nonce );
             },
