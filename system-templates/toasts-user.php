@@ -28,10 +28,36 @@ $page_title = $wp_query->post->post_title;
     </div>
 </div>
 
-<script>
+<!--<script>
 jQuery(function($) {
-    $(':not(#maps-searchform) button[type=submit]').on('click', function() {
+    $('#masterdata-button, #settings-button').on('click', function() {
         $('#toaster-wrapper .toast').toast('show');
+    });
+});
+</script>-->
+
+<script>
+jQuery(document).ready(function($){
+    var ajax_url = "<?= admin_url('admin-ajax.php'); ?>";
+ 
+    /*setInterval(function(){
+    load_last_notification();
+    }, 5000);*/
+ 
+    function callApi(){
+        $.ajax({
+        url: ajax_url,
+        method:"POST",
+        success:function(data){
+            $('#toaster-wrapper .toast').toast('show');
+            $('#toaster-wrapper .toast .toast-body').html(data);
+        }
+    });
+    }
+ 
+    $('form[name=carbrand-form], form[name=masterdata-form]').on('submit', function(event){
+        event.preventDefault();
+        callApi();
     });
 });
 </script>
