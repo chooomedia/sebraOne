@@ -29,16 +29,17 @@ $page_title = $wp_query->post->post_title;
 </div>
 <script>
 jQuery(document).ready(function($){
-    var ajax_url = "<?= admin_url('admin-ajax.php'); ?>";
-    var formData = $('form[name=masterdata-form]');
- 
-    /*setInterval(function(){
-    load_last_notification();
-    }, 5000);*/
- 
-    function callApi() {
+
+    jQuery("form[name=masterdata-form]").submit(function () {
+        event.preventDefault();
+        var link = '<?= admin_url('admin-ajax.php'); ?>';
+        var form = jQuery("form[name=masterdata-form]").serialize();
+        var formData = new FormData;
+        formData.append('action', 'testiram');
+        formData.append('testiram', form);
+
         jQuery.ajax({
-            url: ajax_url,
+            url: link,
             dataType : "json",
             data: formData,
             contentType: false,
@@ -51,16 +52,8 @@ jQuery(document).ready(function($){
                 console.log(error);
             }
         });
-    }
- 
-    $('form[name=carbrand-form], form[name=masterdata-form]').on('submit', function(event){
-        event.preventDefault();
-        callApi();
-        alert('test');
-    });
 
-    $('#masterdata-button, #settings-button').on('click', function() {
-        callApi();
+        return false;
     });
 });
 
