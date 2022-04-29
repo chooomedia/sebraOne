@@ -123,16 +123,6 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 					?>
 					<!-- end custom logo -->
 
-					<?php if (is_user_logged_in()) : ?>
-					<div id="ex5">
-						<span class="p1 fa-stack has-badge" data-count="✓">
-							<a href="/account" role="button" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" data-target="#main" data-slide-to="2" class="btn text-white d-md-none d-block menu-item nav-item type-company item">
-								<i class="p3 fas fa-comments fa-stack-1x xfa-inverse" data-count="4b"></i>
-							</a>
-						</span>
-					</div>
-					<?php endif; ?>
-
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
 						aria-controls="navbarNavDropdown" aria-expanded="false"
 						aria-label="<?php esc_attr_e( 'Toggle navigation', 'SebraOne' ); ?>">
