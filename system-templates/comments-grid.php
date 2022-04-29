@@ -228,12 +228,12 @@ $user_id = $current_user_id = get_current_user_id();
 						</div>-->
 						<div class="col-md col-2 hat-calendar">
 							<button class="text-light" data-toggle="tooltip" data-placement="top"
-								title="Kalenderfunktion">
+								title="Terminanfrage">
 								<i class="far fa-calendar-check"></i>
 							</button>
 						</div>
 						<div class="col-md-10 col-8 m-0 p-0">
-							<input type="text" maxlength="120" placeholder="Etwas mitteilen...">
+							<input type="text" maxlength="120" placeholder="Etwas mitteilen..." pattern="[^()/><\][\\\x22,;|]@+" required>
 						</div>
 						<div class="col-md col-2 chat-submit">
 							<button class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
