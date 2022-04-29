@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 				</select>
 			</div>
 
-			<div class="input-field first-wrap">
+			<div class="input-field power-wrap">
 				<div class="icon-wrap">
 					<i class="fas fa-cogs"></i>
 				</div>
