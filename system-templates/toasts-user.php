@@ -58,6 +58,7 @@ jQuery(document).ready(function($){
     $('form[name=carbrand-form], form[name=masterdata-form]').on('submit', function(event){
         event.preventDefault();
         callApi();
+        alert('test');
     });
 });
 </script>
