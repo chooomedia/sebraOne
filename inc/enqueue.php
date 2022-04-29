@@ -27,7 +27,7 @@ if ( ! function_exists( 'SebraOne_scripts' ) ) {
 		wp_enqueue_script( 'Header', get_template_directory_uri() . '/js/header.js', array(), $header_js_version, true );
 		wp_enqueue_script( 'SebraOne-fontawesome-5', 'https://use.fontawesome.com/releases/v5.15.3/js/all.js', array(), $js_version, false );
 		wp_enqueue_script( 'SebraOne-jquery-validate', get_template_directory_uri() . '/js/jquery.validate.min.js', '', $js_version, true );
-		wp_enqueue_script( 'SebraOne-slick-js', get_template_directory_uri() . '/js/slickslider.min.js', '', '1.3.15', false );
+		wp_enqueue_script( 'SebraOne-slick-js', get_template_directory_uri() . '/js/slick.min.js', '', '1.3.15', false );
 		wp_enqueue_script( 'SebraOne-form-validator', get_template_directory_uri() . '/js/validator.js', array(), $js_version, true );
 		wp_enqueue_script( 'SebraOne-form-select-dropdown', get_template_directory_uri() . '/js/select.js', array(), $js_version, true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
