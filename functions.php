@@ -58,12 +58,12 @@ function sebraone_menu_items($items, $args) {
     } elseif ( $args->theme_location == 'primary' ) {
 		$user=wp_get_current_user();
         $name=$user->display_name; // or user_login , user_firstname, user_lastname
-		$items .= '<li id="ex4" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom d-md-block d-none nav-item type-company item"><span class="p1 fa-stack has-badge" data-count="✓"><a title="Benachrichtigungen" role="button" href="/account/" data-target="#main" data-slide-to="2" class="nav-link mx-lg-1"><i class="p3 fas fa-comments fa-stack-1x xfa-inverse" data-count="4b"></i></a></span></li>';
+		$items .= '<li id="ex4" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-item"><a title="Benachrichtigungen" role="button" href="/account/#2" data-target="#main" data-slide-to="2" class="nav-link"><span class="p1 fa-stack has-badge" data-count="✓"><i class="p3 fas fa-comments fa-stack-1x xfa-inverse" data-count="4b"></i></span></a></li>';
         $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-user" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-user nav-item">';
 		$items .= '<a title="Usermenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-user">' . $name . '</a>';
 		$items .= '<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-user" role="menu">';
-		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-profil" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-profil nav-item"><a title="Profil" href="/account/#2" data-target="#main" data-slide-to="0" class="dropdown-item">Profil</a></li>';
-		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-logout nav-item"><a title="Abmelden" href="#" class="logout dropdown-item">Abmelden</a></li>';
+		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-profil" class="nav-item"><a title="Profil" href="/account/#1" data-target="#main" data-slide-to="1" class="dropdown-item">Profil</a></li>';
+		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="nav-item"><a title="Abmelden" href="#" class="logout dropdown-item">Abmelden</a></li>';
 		$items .= '</ul>';
 		$items .= '</li>';
         }
