@@ -30,7 +30,7 @@ $page_title = $wp_query->post->post_title;
 <script>
 jQuery(document).ready(function($){
     var ajax_url = "<?= admin_url('admin-ajax.php'); ?>";
-    var formData = "";
+    var formData = $('form[name=masterdata-form]');
  
     /*setInterval(function(){
     load_last_notification();
