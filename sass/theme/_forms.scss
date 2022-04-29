@@ -40,6 +40,7 @@
 			align-items: center;
 
 			.input-field {
+				width: calc(100% / 6);
 				margin-left: .5rem;
 				margin-right: .5rem;
 				position: relative;
@@ -148,6 +149,10 @@
 				-ms-flex-positive: 1;
 			}
 
+			.input-field.power-wrap {
+				
+			}
+
 			.input-field.fouth-wrap {
 
 				border-right: 0;
@@ -237,7 +242,6 @@
 
 				.btn-search {
 					height: 56px;
-					width: 100%;
 					white-space: nowrap;
 					border-radius: $br1;
 					font-size: 20px;
@@ -270,6 +274,10 @@
 
 			&:-moz-focusring {
 				outline: 1px dotted ButtonText;
+			}
+
+			@media screen and (max-width:$md) {
+				width: 100%;
 			}
 		}
 
@@ -1009,14 +1017,6 @@ input {
 	}
 }
 
-form {
-	.inner-form {
-		.input-field.second-wrap {
-			width:15%;
-		}
-	}
-}
-
 #carbrand-arrow-0,
 #carbrand-arrow-1,
 #carbrand-arrow-2,
@@ -1035,11 +1035,17 @@ form {
 	&.fit-width {
 	  width: auto !important;
 	}
-  
-	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	  width: 186px;
-	}
 
+	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		width:140px;
+	}
+  
+	@media screen and (max-width:$sm) {
+		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+			width: 100%;
+		}
+	}
+	/*
 	@media screen and (max-width:$md) {
 		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
 			width: 126px;
@@ -1048,7 +1054,7 @@ form {
 
 	.input-field.third-wrap {
 		max-width: 140px;
-	}
+	}*/
   
 	/*.dropdown-toggle:focus, > select.mobile-device:focus + .dropdown-toggle {
 	  outline: thin dotted #333 !important;

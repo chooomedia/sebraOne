@@ -7,7 +7,8 @@
 
  // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-global $current_user; wp_get_current_user();
+global $current_user; 
+wp_get_current_user();
 global $wp_roles;
 $u = get_userdata($current_user->ID);
 $role = array_shift($u->roles);
@@ -36,7 +37,7 @@ $role = array_shift($u->roles);
 										<div class="icon-wrap">
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<input name="new_user_name" type="text" id="new-username" value=""
-												placeholder=" Benutzername" />
+												placeholder=" <?php $current_user ?> Benutzername" />
 										</div>
 									</div>
 									<div class="input-field">

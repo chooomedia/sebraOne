@@ -7,10 +7,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
 get_header();
-
 $container = get_theme_mod( 'SebraOne_container_type' );
+
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
@@ -23,11 +22,11 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 				<main class="site-main container" id="main">
 
-					<section class="error-404 not-found">
+					<section class="error-404 not-found my-5">
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'SebraOne' ); ?></h1>
+							<h2 class="page-title"><b><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'SebraOne' ); ?></b></h2>
 
 						</header><!-- .page-header -->
 

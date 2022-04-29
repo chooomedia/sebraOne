@@ -29,13 +29,13 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					<header class="page-header">
 
 						<h1 class="page-title">
-							<?php
+							<b><?php
 								printf(
 									/* translators: %s: query term */
 									esc_html__( 'Search Results for: %s', 'SebraOne' ),
 									'<span>' . get_search_query() . '</span>'
 								);
-								?>
+								?></b>
 						</h1>
 
 					</header><!-- .page-header -->

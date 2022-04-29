@@ -236,8 +236,7 @@ $user_id = $current_user_id = get_current_user_id();
 							<input type="text" maxlength="120" placeholder="Etwas mitteilen...">
 						</div>
 						<div class="col-md col-2 chat-submit">
-							<button class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
-								title="Nachricht versenden"><i class="fas fa-paper-plane"></i></button>
+							<button class="bg-dark text-light" disabled="disabled"><i class="fas fa-paper-plane"></i></button>
 						</div>
 					</div>
 				</div>

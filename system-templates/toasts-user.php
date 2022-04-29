@@ -27,11 +27,34 @@ $page_title = $wp_query->post->post_title;
     <?php echo $toastBodyMessage ?>
     </div>
 </div>
-
 <script>
-jQuery(function($) {
-    $('button[type=submit]').on('click', function() {
-        $('#toaster-wrapper .toast').toast('show');
+jQuery(document).ready(function($){
+
+    jQuery("form[name=masterdata-form]").submit(function () {
+        event.preventDefault();
+        var link = '<?= admin_url('admin-ajax.php'); ?>';
+        var form = jQuery("form[name=masterdata-form]").serialize();
+        var formData = new FormData;
+        formData.append('action', 'testiram');
+        formData.append('testiram', form);
+
+        jQuery.ajax({
+            url: link,
+            dataType : "json",
+            data: formData,
+            contentType: false,
+            processData: false,
+            type: 'post',
+            success: function (result) {
+                alert(result);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        return false;
     });
 });
+
 </script>

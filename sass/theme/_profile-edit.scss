@@ -4,6 +4,8 @@
 @media screen and (max-width:$sm) {
 	.explore-head {
 		margin-top: $spacer;
+		z-index: 1111;
+		position: relative;
 	}
 }
 
@@ -25,6 +27,20 @@
 			font-family: 'Montserrat';
 			top: -5px;
 			position: relative;
+		}
+	}
+}
+
+#signup-wrapper {
+	.card-columns {
+		@include media-breakpoint-only(md) {
+			column-count: 1;
+		}
+		@include media-breakpoint-only(lg) {
+			column-count: 1;
+		}
+		@include media-breakpoint-only(xl) {
+			column-count: 1;
 		}
 	}
 }

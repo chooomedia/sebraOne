@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Partial template for customer review slider
@@ -51,7 +50,7 @@ if ( $args['data'] ) {
                 <div class="col-8 mx-auto">
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="col-lg-3 col-12">
-                            <img class="filter-brightness" src="<?php echo get_template_directory_uri() ?>/src/img/trustpilot-logo-sebra1.png" alt="Trusitpilot Sebra1 5 Stars Rating" />
+                            <img loading="lazy" class="filter-brightness" src="<?php echo get_template_directory_uri() ?>/src/img/trustpilot-logo-sebra1.png" alt="Trusitpilot Sebra1 5 Stars Rating" />
                         </div>
                         <div class="col-lg-9 col-12 mx-auto text-center">
                             <h4 class="large text-white"><?php echo esc_html($consumerReviewFootline) ?></h4>
