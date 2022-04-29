@@ -43,5 +43,4 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 </div>
 
 </body>
-
 </html>
