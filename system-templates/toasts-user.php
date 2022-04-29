@@ -30,7 +30,7 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 jQuery(function($) {
-    $('button[type=submit]:not(#maps-searchform)').on('click', function() {
+    $(':not(#maps-searchform) button[type=submit]').on('click', function() {
         $('#toaster-wrapper .toast').toast('show');
     });
 });
