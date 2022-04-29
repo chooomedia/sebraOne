@@ -35,15 +35,24 @@ jQuery(document).ready(function($){
     load_last_notification();
     }, 5000);*/
  
-    function callApi(){
+    function callApi() {
         $.ajax({
-        url: ajax_url,
-        method:"GET",
-        success:function(data){
-            $('#toaster-wrapper .toast').toast('show');
-            $('#toaster-wrapper .toast .toast-body').html(data);
-        }
-    });
+            method: "POST",
+            url: ajax_url,
+            data: data,
+            beforeSend: function ( xhr ) {
+                xhr.setRequestHeader( 'X-WP-Nonce', ajax_url.nonce );
+            },
+            success : function( response ) {
+                console.log( response );
+                alert( ajax_url.success );
+            },
+            fail : function( response ) {
+                console.log( response );
+                alert( ajax_url.failure );
+            }
+ 
+        });
     }
  
     $('form[name=carbrand-form], form[name=masterdata-form]').on('submit', function(event){
@@ -56,4 +65,5 @@ jQuery(document).ready(function($){
         callApi();
     });
 });
+
 </script>
