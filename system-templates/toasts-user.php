@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
  
     function callApi() {
         jQuery.ajax({
-            url: link,
+            url: ajax_url,
             dataType : "json",
             data: formData,
             contentType: false,
