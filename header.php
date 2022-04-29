@@ -82,7 +82,7 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 
 				<!-- Toasts -->
 				<div id="toaster-wrapper" class="position-relative" aria-live="polite" aria-atomic="true">
-					<div class="toast-container position-fixed p-3 right-end col-md-2 col-12">
+					<div class="toast-container position-fixed p-3 right-end col-md-auto col-12">
 					<?php /**
 							* Request results
 							* Pass specific Data into the Template
