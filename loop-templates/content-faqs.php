@@ -12,7 +12,7 @@
 	<?php while( have_rows('faqsarray') ) : the_row(); ?>
 	<?php $c++; ?>
     <div class="card">
-        <div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
+        <div id="faqs-<?php echo $c ?>" class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
             <b><?php the_sub_field('faqs_question'); ?></b>
             <a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
                 <div id="carbrand-arrow-0">
@@ -31,7 +31,7 @@
     <div class="col-12 py-3"></div>
     <script>
     jQuery(function($) {
-        $(".card-header[data-toggle='collapse']").on( "click", function() {
+        $("#faqs-<?php echo $c ?>").on( "click", function() {
             $("#carbrand-arrow-<?php echo $c ?>").toggleClass('chevron-rotate','');
         });
     });
