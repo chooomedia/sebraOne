@@ -91,7 +91,7 @@ $role = array_shift($u->roles);
 								<div class="input-field fifth-wrap col-12">
 									<!--ADVICE COMMENT-->
 									<!-- Do not change #masterdata-button. -->
-									<button id="masterdata-button" class="btn btn-signup bg-primary btn-address" type="submit">
+									<button id="masterdata-button" class="btn btn-signup bg-primary btn-masterdata" type="submit">
 										<i class="fa fa-check pr-2" aria-hidden="true"></i>Stammdaten
 										ändern</button>
 								</div>
@@ -102,7 +102,7 @@ $role = array_shift($u->roles);
 
 				<script>
 				let toasterXmlHttpReq = new XMLHttpRequest();
-				let $submitDataButton = document.querySelector('#masterdata-button');
+				let $submitDataButton = document.querySelector('.btn-masterdata');
 					toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
 				$submitDataButton.onclick = function() {
