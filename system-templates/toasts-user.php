@@ -35,8 +35,7 @@ jQuery(function($) {
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
-        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true); 
-        xmlHttpReq.send(null);
+        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', false);
         return xmlHttpReq.responseText;
     }
 
