@@ -43,9 +43,9 @@ function httpGet() {
     xhttp.send();
 }
 
-$submitDataButton.addEventListener('click', function() {
+$submitDataButton.onclick = function() {
     httpGet();
-});
+};
 </script>
 
 <!--<script>
