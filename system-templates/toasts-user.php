@@ -26,17 +26,3 @@ $page_title = $wp_query->post->post_title;
 		<?php echo $toastBodyMessage ?>
 	</div>
 </div>
-
-<script>
-let toasterXmlHttpReq = new XMLHttpRequest();
-let $submitDataButton = document.querySelector('form#address #masterdata-button');
-    toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-
-$submitDataButton.onclick = function() {
-    if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
-      let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
-      alert(dataAnfrage);
-    };
-};
-
-</script>

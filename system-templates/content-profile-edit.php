@@ -100,6 +100,20 @@ $role = array_shift($u->roles);
 					</div>
 				</div>
 
+				<script>
+				let toasterXmlHttpReq = new XMLHttpRequest();
+				let $submitDataButton = document.querySelector('form#address #masterdata-button');
+					toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+
+				$submitDataButton.onclick = function() {
+					if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
+					let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
+					alert(dataAnfrage);
+					};
+				};
+
+				</script>
+
 				<div class="card-no card">
 					<div class="card-header">
 						<b>Beliebte Marken</b>
