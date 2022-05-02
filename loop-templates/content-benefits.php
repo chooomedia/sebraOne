@@ -7,15 +7,17 @@
 
 if ( $args['data'] ) {
     $benefitsClass = $args['class'];
+    $benefitsHeadline = $args['data']['headline'];
+    $benefitsSubline = $args['data']['subline'];
 }
 ?>
 <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
 <?php while( have_rows('benefitsArray') ) : the_row(); ?>
 <div class="container">
 	<div class="text-center">
-		<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('headline') ?></b></h2>
+		<h2 class="section-heading text-uppercase mt-md-0"><b><?php $benefitsHeadline ?></b></h2>
 		<!-- Welche Vorteile? -->
-		<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('subline') ?></h3>
+		<h3 class="section-subheading text-accent mb-5"><?php $benefitsSubline ?></h3>
 		<!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 	</div>
 	<div class="<?php echo $benefitsClass ?>">
