@@ -19,7 +19,7 @@ if ( $args['data'] ) {
     <div class="<?php echo $benefitsClass ?>">
         <?php if( have_rows('landingpageBenefitsArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('landingpageBenefitsArray') ) : the_row(); ?>
-                 <?php 
+                <?php 
                     $sub_icon = get_sub_field('landingpageBenefitsIcon');
                     $sub_Headline = get_sub_field('landingpageBenefitsHeadline');
                     $sub_Text = get_sub_field('landingpageBenefitsText'); 

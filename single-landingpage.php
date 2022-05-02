@@ -60,13 +60,21 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<div id="nav-tabContent" class="tab-content card col-md-7 col-10 mb-5 mx-auto mx-md-0 px-0 mb-md-0 mt-md-3 mt-0 box-shadow-lg">
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
-							<h2 class="mt-3 mt-md-0">Angebote in <b><?php get_sub_field('heroBoxZipCityname'); ?>,</b><BR>
-								in der Nähe von <b><?php get_sub_field('heroBoxStreet'); ?></b>
-							</h2>
-							<p>
-							Verkaufe jetzt dein Auto in der Nähe von <b><?php get_sub_field('heroBoxStreet'); ?></b>.<br>
-							</p>
-							<p>
+							<?php if( have_rows('hero_box')) : ?>
+								<?php
+									$heroBoxZipCityName = get_sub_field('heroBoxZipCityname');
+									$heroBoxStreet = get_sub_field('heroBoxStreet');
+									$heroCtaLink = get_sub_field('buttonLink');
+									$heroCtaTitle = get_sub_field('buttonTitle');	
+								?>
+								<h2 class="mt-3 mt-md-0">Angebote in <b><?php $heroBoxZipCityName ?>,</b><BR>
+									in der Nähe von <b><?php $heroBoxStreet ?></b>
+								</h2>
+								<p>
+								Verkaufe jetzt dein Auto in der Nähe von <b><?php $heroBoxStreet ?></b>.<br>
+								</p>
+								<p>
+							<?php endif; ?>
 							<?php the_content(); ?>
 						</div>
 					</div>
@@ -85,10 +93,6 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 						</div>						
 					</div>
 					<div class="card-footer">
-						<?php 
-							$heroCtaLink = get_sub_field('buttonLink');
-							$heroCtaTitle = get_sub_field('buttonTitle'); 
-						?>
 						<div class="d-flex" id="nav-tab" role="tablist">
 							<a class="btn btn-primary px-4 py-3" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
 								<i class="fa fa-home"></i>
