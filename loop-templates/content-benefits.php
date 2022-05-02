@@ -7,8 +7,6 @@
 
 if ( $args['data'] ) {
     $benefitsClass = $args['class'];
-    $benefitsHeadline = $args['data']['headline'];
-    $benefitsSubline = $args['data']['subline'];
 }
 ?>
 
