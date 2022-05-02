@@ -28,10 +28,9 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-let $submitDataButton = document.querySelector('form#address #masterdata-button');
 let $toasterToastBody = document.querySelector('#toaster-wrapper .toast .toast-boddy');
 
-$submitDataButton.onclick = function() {
+document.querySelector('form#address #masterdata-button').onclick = function() {
     httpGet();
 };
 
