@@ -15331,12 +15331,7 @@ input[type="checkbox"] {
   max-height: 250px !important;
 }
 
-#landingpage-search form .inner-form .input-field.first-wrap,
-#landingpage-search form .inner-form .input-field.second-wrap,
-#landingpage-search form .inner-form .input-field.third-wrap,
-#landingpage-search form .inner-form .input-field.fourth-wrap,
-#landingpage-search form .inner-form .input-field.fifth-wrap,
-#landingpage-search form .inner-form .input-field.power-wrap {
+#landingpage-search form .inner-form .input-field.first-wrap, #landingpage-search form .inner-form .input-field.second-wrap, #landingpage-search form .inner-form .input-field.third-wrap, #landingpage-search form .inner-form .input-field.fourth-wrap, #landingpage-search form .inner-form .input-field.fifth-wrap, #landingpage-search form .inner-form .input-field.power-wrap {
   width: 100%;
 }
 

@@ -67,15 +67,15 @@
                     z-index: 1048!important;
                     max-height: 250px!important;
                 }
-            }
-    
-            .input-field.first-wrap,
-            .input-field.second-wrap,
-            .input-field.third-wrap,
-            .input-field.fourth-wrap,
-            .input-field.fifth-wrap,
-            .input-field.power-wrap {
-                width: 100%;
+
+                &.first-wrap,
+                &.second-wrap,
+                &.third-wrap,
+                &.fourth-wrap,
+                &.fifth-wrap,
+                &.power-wrap {
+                 width: 100%;
+                }
             }
         } 
         @media screen and (max-width:$sm) {
