@@ -8,9 +8,10 @@
 ?>
 
 <div class="col-md-12 col-12 p-0">
-<?php if( have_rows('faqsarray') ): $c = 0; $class = ''; ?>
+<?php if( have_rows('faqsarray') ): $c = 0; $s = 1; $class = ''; ?>
 	<?php while( have_rows('faqsarray') ) : the_row(); ?>
 	<?php $c++; ?>
+    <?php $s++; ?>
     <div class="card">
         <div id="faqs-<?php echo $c ?>" class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
             <b><?php the_sub_field('faqs_question'); ?></b>
@@ -32,7 +33,7 @@
     <script>
     jQuery(function($) {
         $("#faqs-<?php echo $c ?>").on( "click", function() {
-            $("#carbrand-arrow-<?php echo $c ?>").toggleClass('chevron-rotate','');
+            $("#carbrand-arrow-<?php echo $s ?>").toggleClass('chevron-rotate','');
         });
     });
     </script>
