@@ -19,7 +19,6 @@ if ( $args['data'] ) {
 		<!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 	</div>
 	<div class="<?php echo $benefitsClass ?>">
-
 		<?php $c++; ?>
 		<div class="col-md-4 px-md-3 py-md-0 my-3">
 			<span class="negative-margin fa-stack fa-3x">
@@ -28,7 +27,7 @@ if ( $args['data'] ) {
 			<div class="card px-0 mx-3 box-shadow-lg">
 				<div class="card-header">
 					<br>
-					<h4><?php echo the_sub_field('benefits_headline') ?></h4>
+					<h4><?php the_sub_field('benefits_headline') ?></h4>
 				</div>
 				<div class="card-body mb-0 border-0">
 					<p class="text-muted"><?php the_sub_field('benefits_text') ?></p>
