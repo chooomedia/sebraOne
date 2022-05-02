@@ -29,7 +29,7 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 jQuery(function($) {
-    let $submitDataButton = $('#masterdata-button');
+    let $submitDataButton = $('forn#address #masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet() {
