@@ -36,17 +36,16 @@ jQuery(function($) {
 
     function httpGet(theUrl) {
         xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-        console.log(xmlHttpReq.responseText);
-        return xmlHttpReq.responseText;
+        if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
+            let dataResponse = JSON.parse(xmlHttpReq.responseText);
+            $toasterToast.toast('show');
+            $toasterToast('.toast-body').innerHTML(dataResponse.responseText);
+        };
     }
 
     $submitDataButton.on('click', function() {
         httpGet();
-        if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
-            let dataResponse = JSON.parse(xmlHttpReq.responseText);
-            $toasterToast.toast('show');
-            $toasterToast.innerHTML(dataResponse.responseText);
-        };
     });
 });
 </script>
+
