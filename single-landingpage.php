@@ -147,8 +147,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				'id' => 'customerBenefits',
 				'class' => 'row text-center mb-5 pb-5',
 				'data'  => array(
-					'headline' => get_field('headline'),
-					'subline' => get_field('subline'),
+					'headline' => the_sub_field('headline'),
+					'subline' => the_sub_field('subline'),
 				))
 			);
 			?>
