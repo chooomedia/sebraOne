@@ -137,8 +137,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php while( have_rows('benefits') ): the_row(); ?>
 		<div class="container">
 			<div class="text-center">
-				<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('benfits_headline') ?></b></h2><!-- Welche Vorteile? -->
-				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('benfits_headline') ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
+				<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('benefits_headline') ?></b></h2><!-- Welche Vorteile? -->
+				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('benefits_headline') ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 			</div>
 			<?php /**
 			* Customer reviews Section-Module
