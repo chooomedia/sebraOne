@@ -37,6 +37,7 @@ jQuery(function($) {
     function httpGet(theUrl) {
         xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
         if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
+            console.log(JSON.parse(xmlHttpReq.responseText));
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
             $toasterToast.toast('show');
             $toasterToast('.toast-body').innerHTML(dataResponse.responseText);
