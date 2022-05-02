@@ -91,7 +91,7 @@ $role = array_shift($u->roles);
 								<div class="input-field fifth-wrap col-12">
 									<!--ADVICE COMMENT-->
 									<!-- Do not change #masterdata-button. -->
-									<button id="masterdata-button" class="btn btn-signup bg-primary" type="submit">
+									<button id="masterdata-button" class="btn btn-signup bg-primary btn-address" type="submit">
 										<i class="fa fa-check pr-2" aria-hidden="true"></i>Stammdaten
 										ändern</button>
 								</div>
