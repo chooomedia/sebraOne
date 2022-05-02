@@ -59,7 +59,7 @@ jQuery(function($) {
         $("#masterdata-button").click(function () {
 		$.ajax({
 			type: "GET",
-			url: "insert.php",
+			url: "https://sebra1.com/wp-admin/admin-ajax.php",
 			data: $('form[name=masterdata-form]').serialize(),
 
 			success: function (data) {
