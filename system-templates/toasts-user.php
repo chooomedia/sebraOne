@@ -31,7 +31,7 @@ $page_title = $wp_query->post->post_title;
 <script>
 document.addEventListener("DOMContentLoaded", function() { 
     let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
-    let $submitDataButton = document.querySelector('#masterdata-button, #settings-button');
+    let $submitDataButton = document.querySelector('.btn-signup[type=submit]');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return xmlHttpReq.responseText;
     }
 
-    $submitDataButton.onClick = function() {
+    $submitDataButton.onclick = function() {
         httpGet();
         if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
