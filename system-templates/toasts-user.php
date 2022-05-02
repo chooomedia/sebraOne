@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-let $submitDataButton = document.querySelector('#masterdata-button');
+let $submitDataButton1 = document.querySelector('#masterdata-button');
 let $toasterToastBody = document.querySelector('#toaster-wrapper .toast .toast-boddy');
 
 function httpGet() {
@@ -43,7 +43,7 @@ function httpGet() {
     xhttp.send();
 }
 
-$submitDataButton.onclick = function() {
+$submitDataButton1.onclick = function() {
     httpGet();
 };
 </script>
