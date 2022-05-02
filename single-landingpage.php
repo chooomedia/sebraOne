@@ -95,14 +95,13 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							</a>
 						
 							<a class="btn btn-primary py-3 px-3 mx-md-2" style="min-width:68px;" id="nav-searchbox-tab" data-toggle="tab" href="#nav-searchbox" role="tab" aria-controls="nav-searchbox" aria-selected="fals">
-								<?php echo $heroCtaTitle?> <img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
+								<img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
 							</a>
 						
-							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="https://www.google.com/maps/place/Pfando+-+Kfz-Pfandleihhaus+Berlin/@52.503445,13.255485,11z/data=!4m8!1m2!2m1!1skfz+ankauf+berlin!3m4!1s0x47a850e613dcd7ef:0x60ac154a71bb52cb!8m2!3d52.5122106!4d13.3123085">
-								Terminanfrage <i class="fab fa-google"></i> Maps 
+							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php echo $heroCtaLink ?>">
+								<?php echo $heroCtaTitle?>
 							</a>
-					</div>
-					<!--<img src="<?php echo get_field('heroImage') ?>'" alt="Sebra1 black car and white smal car"/>-->
+					</div>	
 				</div>
 			</div>
 		</div>
