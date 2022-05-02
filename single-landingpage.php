@@ -132,32 +132,25 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<!-- Benefits section -->
 	<section id="landingpage-benefits" class="page-section jumbotron">
-		<div class="container">
-			<div class="text-center">
-				<h2 class="section-heading text-uppercase mt-md-0"><b>Welche Vorteile?</b></h2>
-				<h3 class="section-subheading text-accent mb-5"><b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten</h3>
-			</div>
-			<?php if( have_rows('landingpageBenefitsArray') ) : ?>
-				<?php /**
-				* Customer reviews Section-Module
-				* Pass specific Data into data array
-				* @param string:icon Icon Benefits
-				* @param string:headline Headline Benefits
-				* @param string:text Text Benefits
-				*/
+		<?php if( have_rows('landingpageBenefitsArray') ) : ?>
+			<?php /**
+			* Customer reviews Section-Module
+			* Pass specific Data into data array
+			* @param string:icon Icon Benefits
+			* @param string:headline Headline Benefits
+			* @param string:text Text Benefits
+			*/
 
-				get_template_part( 'loop-templates/content-benefits', null, array(
-					'id' => 'customerBenefits',
-					'class' => 'row text-center mb-5 pb-5',
-					'data'  => array(
-						'icon' => get_field('landingpageBenefitsIcon'),
-						'headline' => get_field('landingpageBenefitsHeadline'),
-						'text' => get_field('landingpageBenefitsText')
-					))
-				);
-				?>
-			<?php endif; ?>
-		</div>
+			get_template_part( 'loop-templates/content-benefits', null, array(
+				'id' => 'customerBenefits',
+				'class' => 'row text-center mb-5 pb-5',
+				'data'  => array(
+					'headline' => get_field('landingpageBenefitsHeaderHeadline'),
+					'footline' => get_field('landingpageBenefitsHeaderFootline')
+				))
+			);
+			?>
+		<?php endif; ?>
 	</section>
 
 	<!-- Sell car steps -->
