@@ -60,15 +60,16 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<div id="nav-tabContent" class="tab-content card col-md-7 col-10 mb-5 mx-auto mx-md-0 px-0 mb-md-0 mt-md-3 mt-0 box-shadow-lg">
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
-							<?php $hero = get_field('hero');
-							if( $hero ): ?>
-								<h2 class="mt-3 mt-md-0">Angebote in <b><?php get_sub_field('zipcity') ?>,</b><BR>
-									in der Nähe von <b><?php get_sub_field('street') ?></b>
+							<?php if( have_rows('hero') ): ?>
+								<?php while( have_rows('hero') ): the_row(); ?>
+								<h2 class="mt-3 mt-md-0">Angebote in <b><?php the_sub_field('zipcity') ?>,</b><BR>
+									in der Nähe von <b><?php the_sub_field('street') ?></b>
 								</h2>
 								<p>
-								Verkaufe jetzt dein Auto in der Nähe von <b><?php get_sub_field('street') ?></b>.<br>
+								Verkaufe jetzt dein Auto in der Nähe von <b><?php the_sub_field('street') ?></b>.<br>
 								</p>
 								<p>
+								<?php endwhile; ?>
 							<?php endif; ?>
 							<?php the_content(); ?>
 						</div>
