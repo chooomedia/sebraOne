@@ -35,13 +35,18 @@ jQuery(function($) {
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
+        let xmlHttpReq = new XMLHttpRequest();
         xmlHttpReq.open('GET', theUrl, true);
-        if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
-            console.log(JSON.parse(xmlHttpReq.responseText));
+
+
+        xmlHttpReq.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
             $toasterToast.toast('show');
             $('.toast-body').innerHTML(dataResponse.responseText);
-        };
+        }
+    };
     }
 
     $submitDataButton.on('click', function() {
