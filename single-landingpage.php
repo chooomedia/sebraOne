@@ -60,18 +60,13 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<div id="nav-tabContent" class="tab-content card col-md-7 col-10 mb-5 mx-auto mx-md-0 px-0 mb-md-0 mt-md-3 mt-0 box-shadow-lg">
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
-							<?php if( have_rows('hero')) : ?>
-								<?php
-									$heroBoxZipCityName = get_sub_field('heroBoxZipCityname');
-									$heroBoxStreet = get_sub_field('heroBoxStreet');
-									$heroCtaLink = get_sub_field('buttonLink');
-									$heroCtaTitle = get_sub_field('buttonTitle');	
-								?>
-								<h2 class="mt-3 mt-md-0">Angebote in <b><?php $heroBoxZipCityName ?>,</b><BR>
-									in der Nähe von <b><?php $heroBoxStreet ?></b>
+							<?php $hero = get_field('hero');
+							if( have_rows('hero')) : ?>
+								<h2 class="mt-3 mt-md-0">Angebote in <b><?php $hero['zipcity'] ?>,</b><BR>
+									in der Nähe von <b><?php $hero['street'] ?></b>
 								</h2>
 								<p>
-								Verkaufe jetzt dein Auto in der Nähe von <b><?php $heroBoxStreet ?></b>.<br>
+								Verkaufe jetzt dein Auto in der Nähe von <b><?php $hero['street'] ?></b>.<br>
 								</p>
 								<p>
 							<?php endif; ?>
@@ -102,8 +97,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 								<img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
 							</a>
 						
-							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php echo $heroCtaLink ?>">
-								<?php echo $heroCtaTitle?>
+							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php echo $hero['link']['url'] ?>">
+								<?php echo $hero['linktitle'] ?>
 							</a>
 						</div>	
 					</div>
