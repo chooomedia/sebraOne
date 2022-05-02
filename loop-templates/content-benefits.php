@@ -19,23 +19,18 @@ if ( $args['data'] ) {
     <div class="<?php echo $benefitsClass ?>">
         <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('benefitsArray') ) : the_row(); ?>
-                <?php 
-                    $sub_icon = the_sub_field('benefits_icon');
-                    $sub_Headline = the_sub_field('benefits_headline');
-                    $sub_Text = the_sub_field('benefits_text'); 
-                ?>
                 <?php $c++; ?>
                     <div class="col-md-4 px-md-3 py-md-0 my-3">
                         <span class="negative-margin fa-stack fa-3x">
-                            <i class="<?php echo $sub_icon ?> fa-stack-2x text-primary"></i>
+                            <i class="<?php the_sub_field('benefits_icon') ?> fa-stack-2x text-primary"></i>
                         </span>
                         <div class="card px-0 mx-3 box-shadow-lg">
                             <div class="card-header">
                                 <br>
-                                <h4><?php echo $sub_Headline ?></h4>
+                                <h4><?php echo the_sub_field('benefits_headline') ?></h4>
                             </div>
                             <div class="card-body mb-0 border-0">
-                                <p class="text-muted"><?php echo $sub_Text ?></p>
+                                <p class="text-muted"><?php the_sub_field('benefits_text') ?></p>
                             </div>
                         </div>
                     </div>
