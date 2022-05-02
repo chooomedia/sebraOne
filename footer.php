@@ -18,12 +18,6 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 <?php wp_footer(); ?>
 
-<div class="position-fixed">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bug-issue-form-modal">
-		Fehler melden
-	</button>
-</div>
-
 <div id="bug-issue-form-modal-wrapper">
 <!-- Modal -->
 <div class="modal fade" id="bug-issue-form-modal" tabindex="-1" role="dialog" aria-labelledby="bug-issue-form-modal-ModalCenterTitle" aria-hidden="true">
@@ -41,6 +35,26 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div>
 	</div>
 </div>
+
+<?php if( have_rows('sectionfaqs') ): ?>
+<div id="contact-form-modal-wrapper">
+<!-- Modal -->
+<div class="modal fade" id="contact-issue-form-modal" tabindex="-1" role="dialog" aria-labelledby="contact-issue-form-modal-ModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="contact-issue-form-modal-ModalLongTitle"><b>Schreiben</b> Sie uns</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<?php echo do_shortcode( '[contact-form-7 id="639" title="contact-corm"]' ); ?>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
 
 </body>
 </html>
