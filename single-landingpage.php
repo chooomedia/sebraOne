@@ -140,13 +140,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('headline') ?></b></h2><!-- Welche Vorteile? -->
 				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('subline') ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 			</div>
-			<?php /**
-			* Customer reviews Section-Module
-			* Pass specific Data into data array
-			* @param string:headline Headline Benefits
-			* @param string:subline 2. Headline Benefits
-			*/
-
+			<?php
 			get_template_part( 'loop-templates/content-benefits', null, array(
 				'id' => 'customerBenefits'
 				)
@@ -161,66 +155,21 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<section id="landingpage-steps" class="jumbotron page-section bg-light pt-5 pb-2">
 		<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
 			<div class="text-center mb-5">
-				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b>Wie der Verkauf abläuft</b></h2>
-				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0">Schritt für Schritt <b>zur Anfrage</b></h3>
-			</div>
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-3 col-sm-6 mb-4 box-shadow-lg p-0 mb-5">
-					<!-- Portfolio item 1-->
-					<div class="portfolio-item text-center">
-						<div class="card">
-							<img class="card-img-top" src="https://via.placeholder.com/320x220" alt="Placeholder">
-							<ul class="list-group list-group-flush">
-								<div class="rounded-circle bg-white box-shadow">
-								<div class="text-accent step-number"><b>1</b></div>
-								</div>
-							</ul>
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="step-arrow step-1 col-md-1 d-md-flex justify-content-center d-none" style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
-				<div class="col-lg-3 col-sm-6 mb-4 transform-minus-top box-shadow-lg p-0 mb-5">
-					<!-- Portfolio item 1-->
-					<div class="portfolio-item text-center">
-						<div class="card">
-							<img class="card-img-top" src="https://via.placeholder.com/320x220" alt="Placeholder">
-							<ul class="list-group list-group-flush">
-								<div class="rounded-circle bg-white box-shadow">
-									<div class="text-accent step-number"><b>2</b></div>
-								</div>
-							</ul>
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="step-arrow step-2 col-md-1 d-md-flex justify-content-center d-none" style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
-				<div class="col-lg-3 col-sm-6 mb-4 box-shadow-lg p-0 mb-5">
-					<!-- Portfolio item 1-->
-					<div class="portfolio-item text-center">
-						<div class="card">
-							<img class="card-img-top" src="https://via.placeholder.com/320x220" alt="Placeholder">
-							<ul class="list-group list-group-flush">
-								<div class="rounded-circle bg-white box-shadow">
-								<div class="text-accent step-number"><b>3</b></div>
-								</div>
-							</ul>
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Copy Zebra Pattern <a href='https://www.freepik.com/vectors/background'>Background vector created by Vectorium - www.freepik.com</a> -->
+				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
+				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
 			</div>
 		</div>
+
+		<?php if( have_rows('salesprocess') ): ?>
+		<?php while( have_rows('salesprocess') ): the_row(); ?>
+			<?php
+			get_template_part( 'loop-templates/content-salesprocess', null, array(
+				'id' => 'salesProcess'
+				)
+			);
+			?>
+		<?php endwhile; ?>
+		<?php endif; ?>
 	</section>
 
 	<!-- FAQs --> 
