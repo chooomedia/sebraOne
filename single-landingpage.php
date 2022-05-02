@@ -328,6 +328,24 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		);
 		?>
 	<?php endif; ?>
+
+	<script>
+	jQuery(function($) {
+		if (window.matchMedia("(min-width: 471px)").matches) {
+			$('[data-toggle="tooltip"]').tooltip();
+		}
+
+		if($('#nav-searchbox-tab')) {
+
+			$('#nav-searchbox-tab').on('change', function() {
+				$('#nav-searchbox').removeClass('active');
+			});
+			$('#nav-home-tab').on('change', function() {
+				$('#nav-home').removeClass('active');
+			});
+		};
+	});
+	</script>
 </main>
 
 <?php
