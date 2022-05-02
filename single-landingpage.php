@@ -105,7 +105,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php echo $heroCtaLink ?>">
 								<?php echo $heroCtaTitle?>
 							</a>
-					</div>	
+						</div>	
+					</div>
 				</div>
 			</div>
 		</div>
