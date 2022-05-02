@@ -29,7 +29,6 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 jQuery(function($) {
-    let $submitDataButton = $('form#address #masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet() {
@@ -45,32 +44,5 @@ jQuery(function($) {
         }
     };
     }
-
-    $submitDataButton.on('click', function() {
-        httpGet();
-    });
 });
 </script>
-
-<!--<script>
-	jQuery(function ($) {
-		$("#masterdata-button").click(function () {
-			$.ajax({
-				type: "GET",
-				url: "https://sebra1.com/wp-admin/admin-ajax.php",
-
-				success: function (textStatus, xhr) {
-					console.log(xhr.status);
-				},
-				complete: function (xhr, textStatus) {
-					console.log(xhr.status);
-				},
-				error: function () {
-					alert("Error");
-				}
-			});
-			return false;
-		});
-	});
-
-</script>-->
