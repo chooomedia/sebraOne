@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Landingpage Template
+ * Template Post Type: landingpage
  *
  * High performance landing page for generating districts within 
  * a city. With the help of custom post types, advertisements are 
