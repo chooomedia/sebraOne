@@ -27,7 +27,7 @@ $page_title = $wp_query->post->post_title;
 	</div>
 </div>
 
-<script>
+<script await>
 jQuery(function($) {
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
