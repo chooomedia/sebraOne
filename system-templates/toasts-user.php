@@ -40,7 +40,7 @@ jQuery(function($) {
             console.log(JSON.parse(xmlHttpReq.responseText));
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
             $toasterToast.toast('show');
-            $toasterToast('.toast-body').innerHTML(dataResponse.responseText);
+            $('.toast-body').innerHTML(dataResponse.responseText);
         };
     }
 
