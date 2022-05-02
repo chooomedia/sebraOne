@@ -6,11 +6,11 @@
  */
 
 if ( $args['data'] ) {
-    $benefitsClass = $args['class'];
     $benefitsHeadline = $args['data']['headline'];
     $benefitsSubline = $args['data']['subline'];
 }
 ?>
+
 <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
 <?php while( have_rows('benefitsArray') ) : the_row(); ?>
 <div class="container">
@@ -20,7 +20,7 @@ if ( $args['data'] ) {
 		<h3 class="section-subheading text-accent mb-5"><?php $benefitsSubline ?></h3>
 		<!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 	</div>
-	<div class="<?php echo $benefitsClass ?>">
+	<div class="row text-center mb-5 pb-5">
 		<?php $c++; ?>
 		<div class="col-md-4 px-md-3 py-md-0 my-3">
 			<span class="negative-margin fa-stack fa-3x">
