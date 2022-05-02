@@ -24,7 +24,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="bug-issue-form-modal-ModalLongTitle">Fehler melden</h5>
+					<h5 class="modal-title" id="bug-issue-form-modal-ModalLongTitle"><b>Fehler melden</b></h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
