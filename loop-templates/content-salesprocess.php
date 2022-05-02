@@ -7,8 +7,8 @@
 ?>
 
 <div class="row d-flex justify-content-center">
-<?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
-	<?php while( have_rows('benefitsArray') ) : the_row(); ?>
+<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
+	<?php while( have_rows('sellsArray') ) : the_row(); ?>
 	<?php $c++; ?>
 	<div class="col-lg-3 col-sm-6 mb-4 <?php if ($c == 1) : ?>transform-minus-top<?php endif; ?> box-shadow-lg p-0 mb-5">
 		<!-- Portfolio item 1-->
