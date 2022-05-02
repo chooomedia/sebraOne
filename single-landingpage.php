@@ -167,9 +167,9 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			</div>
 
 			<?php
-			get_template_part( 'loop-templates/content-salesprocess', null, array(
-				'id' => 'salesProcess'
-			));
+				get_template_part( 'loop-templates/content-salesprocess', null, array(
+					'id' => 'salesProcess'
+				));
 			?>
 		</div>
 		<?php endwhile; ?>
@@ -178,133 +178,23 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<!-- FAQs --> 
 	<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+		<?php if( have_rows('sectionfaqs') ): ?>
+		<?php while( have_rows('sectionfaqs') ): the_row(); ?>
 		<div class="container py-md-4 my-5 pt-md-3">
 			<div class="text-center">
-				<h2 class="section-heading text-uppercase text-white"><b>Meist</b> gestellte <b>Fragen</b></h2>
-				<h3 class="section-subheading text-accent mb-5"><b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns</h3>
+				<h2 class="section-heading text-uppercase text-white"><?php the_sub_field('faqs_headline') ?></h2><!-- <b>Meist</b> gestellte <b>Fragen</b> -->
+				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('faqs_headline') ?></h3><!-- <b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns -->
 			</div>
 			<div class="col-12 mb-4">
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent1" role="button" aria-expanded="false" aria-controls="collapseFaqContent1">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-0">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent1">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 py-3"></div>
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent2" role="button" aria-expanded="false" aria-controls="collapseFaqContent2">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-1">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent2">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 py-3"></div>
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent3" role="button" aria-expanded="false" aria-controls="collapseFaqContent3">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-2">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent3">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 py-3"></div>
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent4" role="button" aria-expanded="false" aria-controls="collapseFaqContent4">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-3">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent4">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 py-3"></div>
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent5" role="button" aria-expanded="false" aria-controls="collapseFaqContent5">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-4">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent5">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 py-3"></div>
-				<div class="col-md-12 col-12 p-0">
-					<div class="card">
-						<div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent6" role="button" aria-expanded="false" aria-controls="collapseFaqContent6">
-							<b>Frage</b>
-							<a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-								<div id="carbrand-arrow-5">
-									<i class="fas fa-chevron-down text-white"></i>
-								</div>
-							</a>
-						</div>
-						<div class="collapse" id="collapseFaqContent6">
-							<div class="card card-body">
-								<div class="card-body p-0 py-md-3">
-									Antwort
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php
+					get_template_part( 'loop-templates/content-faqs', null, array(
+						'id' => 'sectionFaqs'
+					));
+				?>
 			</div>
 		</div>
+		<?php endwhile; ?>
+		<?php endif; ?>
 	</section>
 
 	<!-- Why customers love us -->
