@@ -30,13 +30,12 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 jQuery(function($) {
-    let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
     let xmlHttpReq = new XMLHttpRequest();
     let $submitDataButton = $('.btn-signup[type=submit]');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
-        xmlHttpReq.open('GET', theUrl, false); 
+        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', false); 
         xmlHttpReq.send(null);
         return xmlHttpReq.responseText;
     }
