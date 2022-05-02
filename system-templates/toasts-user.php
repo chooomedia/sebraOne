@@ -28,14 +28,14 @@ $page_title = $wp_query->post->post_title;
     </div>
 </div>
 
-<!--<script>
+<script>
 jQuery(function($) {
-    let xmlHttpReq = new XMLHttpRequest();
+    let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
     let $submitDataButton = $('.btn-signup[type=submit]');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
-        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+        xmlHttpReq.open('GET', theUrl, true);
         if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
             console.log(JSON.parse(xmlHttpReq.responseText));
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
@@ -48,21 +48,5 @@ jQuery(function($) {
         httpGet();
     });
 });
-</script>-->
-
-<script>
-var objXMLHttpRequest = new XMLHttpRequest();
-objXMLHttpRequest.onreadystatechange = function() {
-  if(objXMLHttpRequest.readyState === 4) {
-    if(objXMLHttpRequest.status === 200) {
-          alert(objXMLHttpRequest.responseText);
-    } else {
-          alert('Error Code: ' +  objXMLHttpRequest.status);
-          alert('Error Message: ' + objXMLHttpRequest.statusText);
-    }
-  }
-}
-objXMLHttpRequest.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-objXMLHttpRequest.send();
 </script>
 
