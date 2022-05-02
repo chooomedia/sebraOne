@@ -8,14 +8,14 @@
 ?>
 
 <div class="col-md-12 col-12 p-0">
-<?php if( have_rows('faqsarray') ): $c = 0; $s = 0; $class = ''; ?>
+<?php if( have_rows('faqsarray') ): $c = 0; $class = ''; ?>
 	<?php while( have_rows('faqsarray') ) : the_row(); ?>
 	<?php $c++; ?>
     <div class="card">
         <div id="faqs-<?php echo $c ?>" class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
             <b><?php the_sub_field('faqs_question'); ?></b>
-            <a class="pull-right-arrow" data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block">
-                <div id="carbrand-arrow-0">
+            <a class="pull-right-arrow" data-toggle="collapse" href="#faqs-arrow" aria-expanded="true" aria-controls="faqs-arrow">
+                <div id="carbrand-arrow-<?php echo $c ?>">
                     <i class="fas fa-chevron-down text-white"></i>
                 </div>
             </a>
@@ -33,7 +33,7 @@
     <script>
     jQuery(function($) {
         $("#faqs-<?php echo $c ?>").on( "click", function() {
-            $("#carbrand-arrow-<?php echo $s ?>").toggleClass('chevron-rotate','');
+            $("#carbrand-arrow-<?php echo $c ?>").toggleClass('chevron-rotate','');
         });
     });
     </script>
