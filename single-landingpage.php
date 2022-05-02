@@ -149,7 +149,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 			get_template_part( 'loop-templates/content-benefits', null, array(
 				'id' => 'customerBenefits'
-			);
+			));
 			?>
 		</div>
 		<?php endwhile; ?>
@@ -169,8 +169,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			<?php
 			get_template_part( 'loop-templates/content-salesprocess', null, array(
 				'id' => 'salesProcess'
-				)
-			);
+			));
 			?>
 		<?php endwhile; ?>
 		<?php endif; ?>
