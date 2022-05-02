@@ -134,7 +134,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<!-- Benefits section -->
 	<section id="landingpage-benefits" class="page-section jumbotron">
 		<?php if( have_rows('benefits') ): ?>
-		<?php while( have_rows('benefits') ): the_row(); ?>
+
 			<?php /**
 			* Customer reviews Section-Module
 			* Pass specific Data into data array
@@ -152,7 +152,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				))
 			);
 			?>
-		<?php endwhile; ?>
+		
 		<?php endif; ?>
 	</section>
 
