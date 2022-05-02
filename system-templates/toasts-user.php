@@ -33,7 +33,7 @@ jQuery(function($) {
         let $submitDataButton = $('form#address #masterdata-button');
         let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
-        $submitDataButton.on('click', function() {
+        $submitDataButton.click(function() {
             httpGetReq();
         });
 
