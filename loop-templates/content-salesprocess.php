@@ -32,7 +32,7 @@
     <?php endwhile; ?>
 	<?php endif; ?>
     <style>
-    #landingpage-steps > div > div.row.d-flex.justify-content-center > div:nth-child(6) {
+    .step-3 {
         display: none!important;
     }
     </style>
