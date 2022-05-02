@@ -8,8 +8,8 @@
 ?>
 
 <div class="col-md-12 col-12 p-0">
-<?php if( have_rows('sectionfaqs') ): $c = 0; $class = ''; ?>
-	<?php while( have_rows('sectionfaqs') ) : the_row(); ?>
+<?php if( have_rows('faqsarray') ): $c = 0; $class = ''; ?>
+	<?php while( have_rows('faqsarray') ) : the_row(); ?>
 	<?php $c++; ?>
     <div class="card">
         <div class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
