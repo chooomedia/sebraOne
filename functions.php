@@ -268,7 +268,7 @@ function custom_post_type() {
 		'query_var'             => 'post_landingpage',
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
-		'show_in_rest'          => true,
+		'show_in_rest'          => false,
 		'rest_controller_class' => 'WP_REST_Landingpage_Controller',
 	);
 	register_post_type( 'landingpage', $args );
