@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
+    <div class="col-12 py-3"></div>
     <?php endwhile; ?>
 	<?php endif; ?>
 </div>
-<div class="col-12 py-3"></div>
