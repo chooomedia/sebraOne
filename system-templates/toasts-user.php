@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
     </div>
 </div>
 
-<script await>
+<script>
 let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
 let $submitDataButton = document.querySelector('.btn-signup[type=submit]');
 let $toasterToast = document.querySelector('#toaster-wrapper .toast');
