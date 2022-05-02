@@ -36,7 +36,7 @@ jQuery(function($) {
 
     function httpGet(theUrl) {
         let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open('GET', theUrl, true);
+        xmlHttpReq.open('GET', theUrl, false);
 
 
         xmlHttpReq.onreadystatechange = function() {
