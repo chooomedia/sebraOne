@@ -287,17 +287,19 @@ $role = array_shift($u->roles);
 	</script>
 
 	<script>
-	let toasterXmlHttpReq = new XMLHttpRequest();
-	let submitDataButtonEl = document.querySelector('#masterdata-button');
+	jQuery(function($) {
+		let toasterXmlHttpReq = new XMLHttpRequest();
+		let submitDataButtonEl = $('form#address #masterdata-button');
 
-	submitDataButtonEl.onclick = function() {
-		toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-		
-		if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
-			let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
-			alert(dataAnfrage);
+		submitDataButtonEl.onclick = function() {
+			toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+			
+			if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
+				let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
+				alert(dataAnfrage);
+			};
 		};
-	};
+	});
 	</script>
 
 	<div id="profile-edit-content" class="container m-0 pt-3 pb-3 vw-100">
