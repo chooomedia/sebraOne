@@ -137,8 +137,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php while( have_rows('benefits') ): the_row(); ?>
 		<div class="container">
 			<div class="text-center">
-				<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('headline') ?></b></h2><!-- Welche Vorteile? -->
-				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('headline') ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
+				<h2 class="section-heading text-uppercase mt-md-0"><b><?php the_sub_field('benfits_headline') ?></b></h2><!-- Welche Vorteile? -->
+				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('benfits_headline') ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
 			</div>
 			<?php /**
 			* Customer reviews Section-Module
@@ -162,8 +162,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php while( have_rows('salesprocess') ): the_row(); ?>
 		<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
 			<div class="text-center mb-5">
-				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
-				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
+				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('sales_headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
+				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
 			</div>
 
 			<?php
@@ -171,9 +171,9 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				'id' => 'salesProcess'
 			));
 			?>
+		</div>
 		<?php endwhile; ?>
 		<?php endif; ?>
-		</div>
 	</section>
 
 	<!-- FAQs --> 
