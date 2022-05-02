@@ -55,23 +55,26 @@ jQuery(function($) {
 </script>-->
 
 <script>
-	jQuery(function($) {
-        $("#masterdata-button").click(function () {
-		$.ajax({
-			type: "GET",
-			url: "https://sebra1.com/wp-admin/admin-ajax.php",
-			data: this.status,
+	jQuery(function ($) {
+		$("#masterdata-button").click(function () {
+			$.ajax({
+				type: "GET",
+				url: "https://sebra1.com/wp-admin/admin-ajax.php",
+				data: this.status,
 
-			success: function (data) {
-				alert(data);
-                $('.toast-body').html(data);
-			},
+				success: function (data, textStatus, xhr) {
+					console.log(xhr.status);
+				},
+				complete: function (xhr, textStatus) {
+					console.log(xhr.status);
+				}
 
-			error: function () {
-				alert("Error");
-			}
+				error: function () {
+					alert("Error");
+				}
+			});
+			return false;
 		});
-		return false;
-	    });
-    });
+	});
+
 </script>
