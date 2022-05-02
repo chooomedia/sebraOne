@@ -31,7 +31,7 @@ $page_title = $wp_query->post->post_title;
 <script>
 jQuery(function($) {
     let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
-    let $submitDataButton = $('.btn-signup[type=submit]');
+    let $submitDataButton = $('#masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
