@@ -102,7 +102,7 @@ $role = array_shift($u->roles);
 
 				<script>
 				let toasterXmlHttpReq = new XMLHttpRequest();
-				let $submitDataButton = document.querySelector('form#address #masterdata-button');
+				let $submitDataButton = document.querySelector('#masterdata-button');
 					toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
 				$submitDataButton.onclick = function() {
