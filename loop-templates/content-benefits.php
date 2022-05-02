@@ -20,9 +20,9 @@ if ( $args['data'] ) {
         <?php if( have_rows('landingpageBenefitsArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('landingpageBenefitsArray') ) : the_row(); ?>
                  <?php 
-                    $sub_icon = get_field('landingpageBenefitsIcon');
-                    $sub_Headline = get_field('landingpageBenefitsHeadline');
-                    $sub_Text = get_field('landingpageBenefitsText'); 
+                    $sub_icon = get_sub_field('landingpageBenefitsIcon');
+                    $sub_Headline = get_sub_field('landingpageBenefitsHeadline');
+                    $sub_Text = get_sub_field('landingpageBenefitsText'); 
                 ?>
                 <?php $c++; ?>
                     <div class="col-md-4 px-md-3 py-md-0 my-3">
