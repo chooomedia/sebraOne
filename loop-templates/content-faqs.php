@@ -31,10 +31,8 @@
     <div class="col-12 py-3"></div>
     <script>
     jQuery(function($) {
-        $.each($(".card-header[data-toggle='collapse']"), function(index) {
-            $(this).on( "click", function() {
-                $("#carbrand-arrow-"+ index +"").toggleClass('chevron-rotate','');
-            });
+        $(".card-header[data-toggle='collapse']").on( "click", function() {
+            $("#carbrand-arrow-<?php echo $c ?>").toggleClass('chevron-rotate','');
         });
     });
     </script>
