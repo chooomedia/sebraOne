@@ -29,24 +29,26 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 jQuery(function($) {
-    let $submitDataButton = $('form#address #masterdata-button');
-    let $toasterToast = document.querySelector('#toaster-wrapper .toast');
+    $(document).ready(function() {
+        let $submitDataButton = $('form#address #masterdata-button');
+        let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
-    function httpGet() {
-        let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+        function httpGet() {
+            let xmlHttpReq = new XMLHttpRequest();
+            xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
-        xmlHttpReq.onreadystatechange = function() {
-        if (this.status >= 200 && this.status < 400) {
-            console.log(this.responseText);
-            let dataResponse = JSON.parse(xmlHttpReq.responseText);
-            $toasterToast.toast('show');
-            $('.toast-body').innerHTML(dataResponse.responseText);
+            xmlHttpReq.onreadystatechange = function() {
+            if (this.status >= 200 && this.status < 400) {
+                console.log(this.responseText);
+                let dataResponse = JSON.parse(xmlHttpReq.responseText);
+                $toasterToast.toast('show');
+                $('.toast-body').innerHTML(dataResponse.responseText);
+            }
+        };
         }
-    };
-    }
-    $('form#address').on('submit', function() {
-        httpGet();
-    })
+        $('form#address').on('submit', function() {
+            httpGet();
+        })
+    });
 });
 </script>
