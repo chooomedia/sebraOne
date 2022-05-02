@@ -37,7 +37,7 @@ $role = array_shift($u->roles);
 						<!--ADVICE COMMENT-->
 						<!-- Do not change #address. -->
 						<!-- Do not change the following input names: new_user_street_number, new_user_zip_city. -->
-						<form action="#" method="POST" name="masterdata-form" id="address" role="form" onsubmit="getApiStatus()">
+						<form action="#" method="POST" name="masterdata-form" id="address" role="form">
 							<label class="sr-only"
 								for="user-form"><?php esc_html_e( 'Edit master data', 'SebraOne' ); ?></label>
 							<p class="register-message" style="display:none"></p>
@@ -285,12 +285,12 @@ $role = array_shift($u->roles);
 			});
 		});
 	</script>
-
+WP_Query( array( 'post_type' => 'product', 'term' => 'disk' ) )
 	<script>
 	jQuery(function($) {
 		let toasterXmlHttpReq = new XMLHttpRequest();
 
-		function getApiStatus() {
+		function getDataStatus() {
 			toasterXmlHttpReq.open('GET', wp_deal.url, true);
 			
 			if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
