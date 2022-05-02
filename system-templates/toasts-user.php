@@ -29,7 +29,7 @@ $page_title = $wp_query->post->post_title;
 
 <script>
 let toasterXmlHttpReq = new XMLHttpRequest();
-let $submitDataButton = $('form#address #masterdata-button');
+let $submitDataButton = document.querySelector('form#address #masterdata-button');
     toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
 $submitDataButton.onclick = function() {
