@@ -13,8 +13,8 @@ if ( $args['data'] ) {
 ?>
 <div class="container">
     <div class="text-center">
-        <h2 class="section-heading text-uppercase mt-md-0"><b><?php echo $benefitsHeadline ?></b></h2><!-- Welche Vorteile? -->
-        <h3 class="section-subheading text-accent mb-5"><?php echo $benefitsSubline ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
+        <h2 class="section-heading text-uppercase mt-md-0"><b><?php $benefitsHeadline ?></b></h2><!-- Welche Vorteile? -->
+        <h3 class="section-subheading text-accent mb-5"><?php $benefitsSubline ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
     </div>
     <div class="<?php echo $benefitsClass ?>">
         <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
