@@ -62,7 +62,7 @@ objXMLHttpRequest.onreadystatechange = function() {
     }
   }
 }
-objXMLHttpRequest.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php');
+objXMLHttpRequest.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 objXMLHttpRequest.send();
 </script>
 
