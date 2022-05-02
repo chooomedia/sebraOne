@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
     </div>
 </div>
 
-<script>
+<!--<script>
 jQuery(function($) {
     let xmlHttpReq = new XMLHttpRequest();
     let $submitDataButton = $('.btn-signup[type=submit]');
@@ -48,5 +48,21 @@ jQuery(function($) {
         httpGet();
     });
 });
+</script>-->
+
+<script>
+var objXMLHttpRequest = new XMLHttpRequest();
+objXMLHttpRequest.onreadystatechange = function() {
+  if(objXMLHttpRequest.readyState === 4) {
+    if(objXMLHttpRequest.status === 200) {
+          alert(objXMLHttpRequest.responseText);
+    } else {
+          alert('Error Code: ' +  objXMLHttpRequest.status);
+          alert('Error Message: ' + objXMLHttpRequest.statusText);
+    }
+  }
+}
+objXMLHttpRequest.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php');
+objXMLHttpRequest.send();
 </script>
 
