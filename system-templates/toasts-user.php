@@ -28,28 +28,15 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-jQuery(function($) {
-    $(document).ready(function() {
-        let $submitDataButton = $('form#address #masterdata-button');
-        let $toasterToast = document.querySelector('#toaster-wrapper .toast');
+let toasterXmlHttpReq = new XMLHttpRequest();
+let $submitDataButton = $('form#address #masterdata-button');
+    toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
-        $submitDataButton.click(function() {
-            httpGetReq();
-        });
+$submitDataButton.onclick = function() {
+    if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
+      let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
+      alert(dataAnfrage);
+    };
+};
 
-        function httpGetReq() {
-            let xmlHttpReq = new XMLHttpRequest();
-            xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-
-            xmlHttpReq.onreadystatechange = function() {
-            if (this.status >= 200 && this.status < 400) {
-                console.log(this.responseText);
-                let dataResponse = JSON.parse(xmlHttpReq.responseText);
-                $toasterToast.toast('show');
-                $('.toast-body').innerHTML(dataResponse.responseText);
-            }
-        };
-        }
-    });
-});
 </script>
