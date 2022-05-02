@@ -34,9 +34,9 @@ jQuery(function($) {
     let $submitDataButton = $('#masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
-    function httpGet(theUrl) {
+    function httpGet() {
         let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open('GET', theUrl, false);
+        xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', false);
 
 
         xmlHttpReq.onreadystatechange = function() {
