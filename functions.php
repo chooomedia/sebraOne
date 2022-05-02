@@ -212,7 +212,6 @@ function my_acf_init_block_types() {
 /*Add Landingpage Custom Post Type */
 // Register Custom Post Type
 function custom_post_type() {
-
 	$labels = array(
 		'name'                  => _x( 'Landingpages', 'Post Type General Name', 'autoverkaufen' ),
 		'singular_name'         => _x( 'Landingpage', 'Post Type Singular Name', 'autoverkaufen' ),
