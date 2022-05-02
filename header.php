@@ -130,7 +130,7 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 					</button>
 
 					<!-- The WordPress Menu goes here -->
-					<?php if ($pageslug != "page-landingpage.php") : ?>
+					<?php if (get_post_type() != "landingpage") : ?>
 					<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'primary',
