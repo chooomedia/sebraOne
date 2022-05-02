@@ -29,16 +29,22 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(event) { 
-    let toasterQuery = new XMLHttpRequest();
+document.addEventListener("DOMContentLoaded", function() { 
+    let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
     let $submitDataButton = document.querySelector('#masterdata-button, #settings-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
-    toasterQuery.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+    function httpGet(theUrl) {
+        let xmlHttpReq = new XMLHttpRequest();
+        xmlHttpReq.open("GET", theUrl, false); 
+        xmlHttpReq.send(null);
+        return xmlHttpReq.responseText;
+    }
 
-    $submitDataButton.onclick = function() {
-        if (toasterQuery.status >= 200 && toasterQuery.status < 400) {
-            let dataResponse = JSON.parse(toasterQuery.responseText);
+    $submitDataButton.onClick = function() {
+        httpGet();
+        if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
+            let dataResponse = JSON.parse(xmlHttpReq.responseText);
             $toasterToast.toast('show');
             $toasterToast.innerHTML(dataResponse.responseText);
         };
