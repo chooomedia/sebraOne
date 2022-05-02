@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let dataResponse = JSON.parse(toasterQuery.responseText);
             $toasterToast.toast('show');
             $toasterToast.innerHTML(dataResponse.responseText);
-         });
+        };
     };
 });
 </script>
