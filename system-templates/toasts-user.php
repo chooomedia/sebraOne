@@ -60,15 +60,13 @@ jQuery(function($) {
 			$.ajax({
 				type: "GET",
 				url: "https://sebra1.com/wp-admin/admin-ajax.php",
-				data: this.status,
 
 				success: function (data, textStatus, xhr) {
 					console.log(xhr.status);
 				},
 				complete: function (xhr, textStatus) {
 					console.log(xhr.status);
-				}
-
+				},
 				error: function () {
 					alert("Error");
 				}
