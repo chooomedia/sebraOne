@@ -46,7 +46,7 @@ jQuery(function($) {
             }
         };
         }
-        $('form#address').on('click', function() {
+        $('form#address #masterdata-button').on('click', function() {
             httpGet();
         })
     });
