@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
     </div>
 </div>
 
-<script>
+<script async>
 let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
 let $submitDataButton = document.querySelector('.btn-signup[type=submit]');
 let $toasterToast = document.querySelector('#toaster-wrapper .toast');
@@ -40,12 +40,12 @@ function httpGet(theUrl) {
     return xmlHttpReq.responseText;
 }
 
-$submitDataButton.onclick = function() {
+$submitDataButton.onclick(function() {
     httpGet();
     if (xmlHttpReq.status >= 200 && xmlHttpReq.status < 400) {
         let dataResponse = JSON.parse(xmlHttpReq.responseText);
         $toasterToast.toast('show');
         $toasterToast.innerHTML(dataResponse.responseText);
     };
-};
+});
 </script>
