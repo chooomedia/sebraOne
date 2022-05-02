@@ -60,9 +60,9 @@ jQuery(function($) {
 			$.ajax({
 				type: "GET",
 				url: "https://sebra1.com/wp-admin/admin-ajax.php",
-                data: data,
+                data: xhr.status,
 
-				success: function (data, textStatus, xhr) {
+				success: function (textStatus, xhr) {
 					console.log(xhr.status);
 				},
 				complete: function (xhr, textStatus) {
