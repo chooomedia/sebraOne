@@ -29,15 +29,15 @@
         </div>
     </div>
     <div class="col-12 py-3"></div>
+    <script>
+    jQuery(function($) {
+        $.each($(".card-header[data-toggle='collapse']"), function(index) {
+            $(this).on( "click", function() {
+                $("#carbrand-arrow-"+ index +"").toggleClass('chevron-rotate','');
+            });
+        });
+    });
+    </script>
     <?php endwhile; ?>
 	<?php endif; ?>
 </div>
-<script>
-jQuery(function($) {
-	$.each($(".card-header[data-toggle='collapse']"), function(index) {
-		$(this).on( "click", function() {
-			$("#carbrand-arrow-"+ index +"").toggleClass('chevron-rotate','');
-		});
-	});
-});
-</script>
