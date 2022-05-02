@@ -242,62 +242,20 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<!-- Carbrands Logo list -->
 	<section id="carbrand-iconlisting" class="mvh-100 py-5">
+	<?php if( have_rows('sectioncarbrands') ): ?>
+		<?php while( have_rows('sectioncarbrands') ): the_row(); ?>
 		<div class="container py-5 my-5">
 		<div class="text-center">
-				<h2 class="section-heading text-uppercase mb-5">Sebra1 Top <b>Kfz-Marken</b></h2>
+				<h2 class="section-heading text-uppercase mb-5"><?php the_sub_field('carbrands_headline') ?></h2> <!-- Sebra1 Top <b>Kfz-Marken</b> -->
 			</div>
-			<div class="row align-items-center">
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-						alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-				<div class="col-12 py-4 d-none d-md-block"></div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-						alt="..." />
-					</a>
-				</div>
-				<div class="col-md-3 col-6 my-3">
-					<a href="#!">
-						<img class="img-fluid img-brand d-block mx-auto" src="https://via.placeholder.com/180x60"
-							alt="..." />
-					</a>
-				</div>
-			</div>
+			<?php
+					get_template_part( 'loop-templates/content-carbrands', null, array(
+						'id' => 'sectionCarbrands'
+					));
+				?>
 		</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
 	</section>
 
 	<!-- CTA Footer -->
