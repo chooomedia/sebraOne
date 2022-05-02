@@ -28,37 +28,13 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(event) { 
-    let $toasterToastBody = document.querySelector('#toaster-wrapper .toast .toast-boddy');
-
-    document.querySelector('form#address #masterdata-button').onclick = function() {
-        httpGet();
-    };
-
-    function httpGet() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                $toasterToastBody.innerHTML =
-                this.responseText;
-        }
-        };
-        xhttp.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-        xhttp.send();
-    }
-});
-</script>
-
-<!--<script>
 jQuery(function($) {
-    let theUrl = 'https://sebra1.com/wp-admin/admin-ajax.php';
     let $submitDataButton = $('#masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet() {
         let xmlHttpReq = new XMLHttpRequest();
         xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
-
 
         xmlHttpReq.onreadystatechange = function() {
         if (this.status >= 200 && this.status < 400) {
@@ -74,7 +50,7 @@ jQuery(function($) {
         httpGet();
     });
 });
-</script>-->
+</script>
 
 <!--<script>
 	jQuery(function ($) {
