@@ -40,7 +40,7 @@ jQuery(function($) {
 
 
         xmlHttpReq.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.status >= 200 && this.status < 400) {
             console.log(this.responseText);
             let dataResponse = JSON.parse(xmlHttpReq.responseText);
             $toasterToast.toast('show');
