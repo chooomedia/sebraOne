@@ -27,14 +27,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="step-arrow step-1 col-md-1 d-md-flex justify-content-center d-none"
+	<div class="step-arrow step-<?php echo $c ?> col-md-1 d-md-flex justify-content-center d-none"
 		style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
     <?php endwhile; ?>
 	<?php endif; ?>
+    <style>
+    #landingpage-steps > div > div.row.d-flex.justify-content-center > div:nth-child(6) {
+        display: none!important;
+    }
+    </style>
 </div>
-
-<style>
-#landingpage-steps > div > div.row.d-flex.justify-content-center > div:nth-child(6) {
-    display: none;
-}
-</style>
