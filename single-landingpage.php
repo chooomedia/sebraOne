@@ -137,32 +137,25 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<h2 class="section-heading text-uppercase mt-md-0"><b>Welche Vorteile?</b></h2>
 				<h3 class="section-subheading text-accent mb-5"><b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten</h3>
 			</div>
-			<div class="row text-center mb-5 pb-5">
-			<?php if( have_rows('landingpageBenefitsArray') ): $c = 0; $class = ''; ?>
-				<?php while( have_rows('landingpageBenefitsArray') ) : the_row(); ?>
-					<?php
-						$benefits_icon = get_sub_field('landingpageBenefitsIcon');
-						$benefits_headline = get_sub_field('landingpageBenefitsHeadline');
-						$benefits_text = get_sub_field('landingpageBenefitsText');
-					?>
-					<?php $c++; ?>
-						<div class="col-md-4 px-md-3 py-md-0 my-3">
-							<span class="negative-margin fa-stack fa-3x">
-								<i class="<?php echo $benefits_icon ?> fa-stack-2x text-primary"></i>
-							</span>
-							<div class="card px-0 mx-3 box-shadow-lg">
-								<div class="card-header">
-									<br>
-									<h4><?php echo $benefits_headline ?></h4>
-								</div>
-								<div class="card-body mb-0 border-0">
-									<p class="text-muted"><?php echo $benefits_text ?></p>
-								</div>
-							</div>
-						</div>
-				<?php endwhile; ?>
+			<?php if( have_rows('landingpageBenefitsArray') ) : ?>
+				<?php /**
+				* Customer reviews Section-Module
+				* Pass specific Data into data array
+				* @param string:icon Icon Benefits
+				* @param string:headline Headline Benefits
+				* @param string:text Text Benefits
+				*/
+
+				get_template_part( 'loop-templates/content-benefits', null, array(
+					'class' => 'row text-center mb-5 pb-5',
+					'data'  => array(
+						'icon' => get_field('landingpageBenefitsIcon'),
+						'headline' => get_field('landingpageBenefitsHeadline'),
+						'text' => get_field('landingpageBenefitsText')
+					))
+				);
+				?>
 			<?php endif; ?>
-			</div>
 		</div>
 	</section>
 
