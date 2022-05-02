@@ -27,8 +27,9 @@ $page_title = $wp_query->post->post_title;
 	</div>
 </div>
 
-<script await>
+<script>
 jQuery(function($) {
+    let $submitDataButton = $('form#address #masterdata-button');
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet() {
@@ -44,5 +45,8 @@ jQuery(function($) {
         }
     };
     }
+    $('form#address').on('submit', function() {
+        httpGet();
+    })
 });
 </script>
