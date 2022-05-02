@@ -46,7 +46,7 @@ jQuery(function($) {
             }
         };
         }
-        $('form#address').on('submit', function() {
+        $('form#address').on('click', function() {
             httpGet();
         })
     });
