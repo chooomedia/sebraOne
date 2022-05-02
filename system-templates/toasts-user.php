@@ -33,7 +33,11 @@ jQuery(function($) {
         let $submitDataButton = $('form#address #masterdata-button');
         let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
-        function httpGet() {
+        $('form#address #masterdata-button').on('click', function() {
+            httpGetReq();
+        });
+
+        function httpGetReq() {
             let xmlHttpReq = new XMLHttpRequest();
             xmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
 
@@ -46,9 +50,6 @@ jQuery(function($) {
             }
         };
         }
-        $('form#address #masterdata-button').on('click', function() {
-            httpGet();
-        })
     });
 });
 </script>
