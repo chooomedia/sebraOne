@@ -74,11 +74,11 @@
             .input-field.second-wrap,
             .input-field.third-wrap,
             .input-field.fourth-wrap,
-            .input-field.fifth-wrap {
+            .input-field.fifth-wrap,
+            .input-field.power-wrap {
                 width: 100%;
             }
-        }
-
+        } 
         @media screen and (max-width:$sm) {
             .inner-form {
                 padding-right: 0px!important;
