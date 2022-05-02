@@ -56,22 +56,21 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
 	<section id="hero-main" class="mvh-100 container-fluid px-0 bg-turquoise-gradient" style="background: linear-gradient(#ffffff00 -10%,#08a9e8 100%), url('<?php echo $thumb['0'];?>')!important;background-size:cover, cover!important;background-position:center center,center center;">	
 		<div class="jumbotron container bg-transparent">
+		<?php if( have_rows('hero') ): ?>
+		<?php while( have_rows('hero') ): the_row(); ?>
 			<div class="row p-md-0 text-white">
 				<div id="nav-tabContent" class="tab-content card col-md-7 col-10 mb-5 mx-auto mx-md-0 px-0 mb-md-0 mt-md-3 mt-0 box-shadow-lg">
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
-							<?php if( have_rows('hero') ): ?>
-								<?php while( have_rows('hero') ): the_row(); ?>
-								<h2 class="mt-3 mt-md-0">Angebote in <b><?php the_sub_field('zipcity') ?>,</b><BR>
-									in der Nähe von <b><?php the_sub_field('street') ?></b>
-								</h2>
-								<p>
-								Verkaufe jetzt dein Auto in der Nähe von <b><?php the_sub_field('street') ?></b>.<br>
-								</p>
-								<p>
-								<?php endwhile; ?>
-							<?php endif; ?>
+							<h2 class="mt-3 mt-md-0">Angebote in <b><?php the_sub_field('zipcity') ?>,</b><BR>
+								in der Nähe von <b><?php the_sub_field('street') ?></b>
+							</h2>
+							<p>
+							Verkaufe jetzt dein Auto in der Nähe von <b><?php the_sub_field('street') ?></b>.<br>
+							</p>
+							<p>
 							<?php the_content(); ?>
+							</p>
 						</div>
 					</div>
 					<div role="tabpanel" id="nav-searchbox" class="tab-pane card-body border-0">
@@ -98,13 +97,15 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 								<img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
 							</a>
 						
-							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php echo $hero['link']['url'] ?>">
-								<?php echo $hero['linktitle'] ?>
+							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php the_subfield('link') ?>">
+								<?php the_sub_field('linktitle') ?>
 							</a>
 						</div>	
 					</div>
 				</div>
 			</div>
+			<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</section>
 
