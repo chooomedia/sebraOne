@@ -208,3 +208,70 @@ function my_acf_init_block_types() {
         ));
     }
 }
+
+/*Add Landingpage Custom Post Type */
+// Register Custom Post Type
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Landingpages', 'Post Type General Name', 'autoverkaufen' ),
+		'singular_name'         => _x( 'Landingpage', 'Post Type Singular Name', 'autoverkaufen' ),
+		'menu_name'             => __( 'Landingpages', 'autoverkaufen' ),
+		'name_admin_bar'        => __( 'Landingpage', 'autoverkaufen' ),
+		'archives'              => __( 'Item Archives', 'autoverkaufen' ),
+		'attributes'            => __( 'Item Attributes', 'autoverkaufen' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'autoverkaufen' ),
+		'all_items'             => __( 'All Items', 'autoverkaufen' ),
+		'add_new_item'          => __( 'Add New Item', 'autoverkaufen' ),
+		'add_new'               => __( 'Neue hinzufügen', 'autoverkaufen' ),
+		'new_item'              => __( 'New item', 'autoverkaufen' ),
+		'edit_item'             => __( 'Edit Item', 'autoverkaufen' ),
+		'update_item'           => __( 'Update Item', 'autoverkaufen' ),
+		'view_item'             => __( 'View Item', 'autoverkaufen' ),
+		'view_items'            => __( 'View Items', 'autoverkaufen' ),
+		'search_items'          => __( 'Search Item', 'autoverkaufen' ),
+		'not_found'             => __( 'nicht gefunden', 'autoverkaufen' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'autoverkaufen' ),
+		'featured_image'        => __( 'Featured Image', 'autoverkaufen' ),
+		'set_featured_image'    => __( 'Set featured image', 'autoverkaufen' ),
+		'remove_featured_image' => __( 'Remove featured image', 'autoverkaufen' ),
+		'use_featured_image'    => __( 'Use as featured image', 'autoverkaufen' ),
+		'insert_into_item'      => __( 'Insert into item', 'autoverkaufen' ),
+		'uploaded_to_this_item' => __( 'Uploaden', 'autoverkaufen' ),
+		'items_list'            => __( 'Items list', 'autoverkaufen' ),
+		'items_list_navigation' => __( 'Items list navigation', 'autoverkaufen' ),
+		'filter_items_list'     => __( 'Filter items list', 'autoverkaufen' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'autoverkaufen',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Landingpage', 'autoverkaufen' ),
+		'description'           => __( 'Landingpages für organischen Traffik', 'autoverkaufen' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'trackbacks', 'custom-fields', 'page-attributes' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'query_var'             => 'post_landingpage',
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+		'rest_controller_class' => 'WP_REST_Landingpage_Controller',
+	);
+	register_post_type( 'landingpage', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
