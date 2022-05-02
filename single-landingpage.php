@@ -61,7 +61,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
 							<?php $hero = get_field('hero');
-							if( have_rows('hero')) : ?>
+							if( $hero ): ?>
 								<h2 class="mt-3 mt-md-0">Angebote in <b><?php $hero['zipcity'] ?>,</b><BR>
 									in der Nähe von <b><?php $hero['street'] ?></b>
 								</h2>
