@@ -285,7 +285,7 @@ $role = array_shift($u->roles);
 			});
 		});
 	</script>
-WP_Query( array( 'post_type' => 'product', 'term' => 'disk' ) )
+
 	<script>
 	jQuery(function($) {
 		let toasterXmlHttpReq = new XMLHttpRequest();
