@@ -60,11 +60,11 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<div id="nav-tabContent" class="tab-content card col-md-7 col-10 mb-5 mx-auto mx-md-0 px-0 mb-md-0 mt-md-3 mt-0 box-shadow-lg">
 					<div role="tabpanel" id="nav-home" class="tab-pane fade card-body show active">
 						<div class="text-primary pt-md-4 pt-md-2 pt-2 pb-2">
-							<h2 class="mt-3 mt-md-0">Angebote in <b><?php the_field('heroBoxZipCityname'); ?>,</b><BR>
+							<h2 class="mt-3 mt-md-0">Angebote in <b><?php get_sub_field('heroBoxZipCityname'); ?>,</b><BR>
 								in der Nähe von <b><?php the_field('heroBoxStreet'); ?></b>
 							</h2>
 							<p>
-							Verkaufe jetzt dein Auto in der Nähe von <b><?php the_field('heroBoxStreet'); ?></b>.<br>
+							Verkaufe jetzt dein Auto in der Nähe von <b><?php get_sub_field('heroBoxStreet'); ?></b>.<br>
 							</p>
 							<p>
 							<?php the_content(); ?>
@@ -145,8 +145,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				'id' => 'customerBenefits',
 				'class' => 'row text-center mb-5 pb-5',
 				'data'  => array(
-					'headline' => get_field('landingpageBenefitsHeaderHeadline'),
-					'footline' => get_field('landingpageBenefitsHeaderFootline')
+					'headline' => get_sub_field('landingpageBenefitsHeaderHeadline'),
+					'footline' => get_sub_field('landingpageBenefitsHeaderFootline')
 				))
 			);
 			?>
