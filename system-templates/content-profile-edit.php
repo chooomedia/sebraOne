@@ -37,7 +37,7 @@ $role = array_shift($u->roles);
 						<!--ADVICE COMMENT-->
 						<!-- Do not change #address. -->
 						<!-- Do not change the following input names: new_user_street_number, new_user_zip_city. -->
-						<form action="#" method="POST" name="masterdata-form" id="address" role="form">
+						<form action="#" method="POST" name="masterdata-form" id="address" role="form" onsubmit="return getApiStatus()">
 							<label class="sr-only"
 								for="user-form"><?php esc_html_e( 'Edit master data', 'SebraOne' ); ?></label>
 							<p class="register-message" style="display:none"></p>
@@ -289,10 +289,9 @@ $role = array_shift($u->roles);
 	<script>
 	jQuery(function($) {
 		let toasterXmlHttpReq = new XMLHttpRequest();
-		let submitDataButtonEl = $('form#address #masterdata-button');
 
-		submitDataButtonEl.onclick = function() {
-			toasterXmlHttpReq.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
+		function getApiStatus() {
+			toasterXmlHttpReq.open('GET', wp_deal.url, true);
 			
 			if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
 				let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
