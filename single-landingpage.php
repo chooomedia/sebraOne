@@ -69,7 +69,6 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							Verkaufe jetzt dein Auto in der Nähe von <b><?php the_sub_field('street') ?></b>.<br>
 							</p>
 							<p>
-								<?php echo get_post_type() ?>
 							<?php the_content(); ?>
 							</p>
 						</div>
