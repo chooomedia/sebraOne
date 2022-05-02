@@ -8,21 +8,21 @@
 if ( $args['data'] ) {
     $benefitsClass = $args['class'];
     $benefitsHeadline = $args['data']['headline'];
-    $benefitsFootline = $args['data']['footline'];
+    $benefitsSubline = $args['data']['subline'];
 }
 ?>
 <div class="container">
     <div class="text-center">
         <h2 class="section-heading text-uppercase mt-md-0"><b><?php echo $benefitsHeadline ?></b></h2><!-- Welche Vorteile? -->
-        <h3 class="section-subheading text-accent mb-5"><?php echo $benefitsFootline ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
+        <h3 class="section-subheading text-accent mb-5"><?php echo $benefitsSubline ?></h3> <!-- <b>Einfach & fair</b> den <b>besten Verkaufspreis</b> erhalten -->
     </div>
     <div class="<?php echo $benefitsClass ?>">
-        <?php if( have_rows('landingpageBenefitsArray') ): $c = 0; $class = ''; ?>
-            <?php while( have_rows('landingpageBenefitsArray') ) : the_row(); ?>
+        <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
+            <?php while( have_rows('benefitsArray') ) : the_row(); ?>
                 <?php 
-                    $sub_icon = get_sub_field('landingpageBenefitsIcon');
-                    $sub_Headline = get_sub_field('landingpageBenefitsHeadline');
-                    $sub_Text = get_sub_field('landingpageBenefitsText'); 
+                    $sub_icon = the_sub_field('benefits_icon');
+                    $sub_Headline = the_sub_field('benefits_headline');
+                    $sub_Text = the_sub_field('benefits_text'); 
                 ?>
                 <?php $c++; ?>
                     <div class="col-md-4 px-md-3 py-md-0 my-3">

@@ -133,7 +133,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<!-- Benefits section -->
 	<section id="landingpage-benefits" class="page-section jumbotron">
-		<?php if( have_rows('landingpageBenefitsArray') ) : ?>
+		<?php if( have_rows('benefits') ): ?>
+		<?php while( have_rows('benefits') ): the_row(); ?>
 			<?php /**
 			* Customer reviews Section-Module
 			* Pass specific Data into data array
@@ -146,11 +147,12 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				'id' => 'customerBenefits',
 				'class' => 'row text-center mb-5 pb-5',
 				'data'  => array(
-					'headline' => get_sub_field('landingpageBenefitsHeaderHeadline'),
-					'footline' => get_sub_field('landingpageBenefitsHeaderFootline')
+					'headline' => the_sub_field('headline'),
+					'subline' => the_sub_field('subline')
 				))
 			);
 			?>
+		<?php endwhile; ?>
 		<?php endif; ?>
 	</section>
 
