@@ -4,13 +4,9 @@
  *
  * @package SebraOne
  */
-
-if ( $args['data'] ) {
-    $benefitsClass = $args['class'];
-}
 ?>
 
-<div class="<?php echo $benefitsClass ?>">
+<div class="row text-center mb-5 pb-5">
     <?php if( have_rows('benefitsArray') ): $c = 0; $class = ''; ?>
         <?php while( have_rows('benefitsArray') ) : the_row(); ?>
             <?php $c++; ?>

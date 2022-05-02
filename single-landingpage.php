@@ -148,8 +148,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			*/
 
 			get_template_part( 'loop-templates/content-benefits', null, array(
-				'id' => 'customerBenefits',
-				'class' => 'row text-center mb-5 pb-5'
+				'id' => 'customerBenefits'
 				)
 			);
 			?>
