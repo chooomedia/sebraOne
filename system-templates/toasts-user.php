@@ -60,15 +60,11 @@ jQuery(function($) {
 		$.ajax({
 			type: "GET",
 			url: "https://sebra1.com/wp-admin/admin-ajax.php",
-			data: $('form[name=masterdata-form]').serialize(),
+			data: params,
 
 			success: function (data) {
 				alert(data);
                 $('.toast-body').html(data);
-				setTimeout(function () {
-					$('.toast-body').addClass('hide');
-					$('.close').trigger('click'); // NOTICE THIS CHANGE HERE.
-				}, 5000);
 			},
 
 			error: function () {
