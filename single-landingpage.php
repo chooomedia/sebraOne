@@ -330,32 +330,5 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	<?php endif; ?>
 </main>
 
-<script>
-jQuery(function($) {
-	$.each($(".card-header[data-toggle='collapse']"), function(index) {
-		$(this).on( "click", function() {
-			$("#carbrand-arrow-"+ index +"").toggleClass('chevron-rotate','');
-		});;
-	});
-
-	if (window.matchMedia("(min-width: 471px)").matches) {
-		$('[data-toggle="tooltip"]').tooltip();
-	}
-
-	if($('#nav-searchbox-tab')) {
-
-		$('#nav-searchbox-tab').on('change', function() {
-			$('#nav-searchbox').removeClass('active');
-		});
-
-		$('#nav-home-tab').on('change', function() {
-			$('#nav-home').removeClass('active');
-		});
-
-	};
-
-});
-</script>
-
 <?php
 get_footer();
