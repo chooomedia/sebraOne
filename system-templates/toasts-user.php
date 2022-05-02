@@ -28,8 +28,12 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-let $submitDataButton1 = document.querySelector('#masterdata-button');
+let $submitDataButton = document.querySelector('#masterdata-button');
 let $toasterToastBody = document.querySelector('#toaster-wrapper .toast .toast-boddy');
+
+$submitDataButton.onclick = function() {
+    httpGet();
+};
 
 function httpGet() {
     var xhttp = new XMLHttpRequest();
@@ -42,10 +46,6 @@ function httpGet() {
     xhttp.open('GET', 'https://sebra1.com/wp-admin/admin-ajax.php', true);
     xhttp.send();
 }
-
-$submitDataButton1.onclick = function() {
-    httpGet();
-};
 </script>
 
 <!--<script>
