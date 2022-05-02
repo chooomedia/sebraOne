@@ -36,7 +36,7 @@ jQuery(function($) {
     let $toasterToast = document.querySelector('#toaster-wrapper .toast');
 
     function httpGet(theUrl) {
-        xmlHttpReq.open("GET", theUrl, false); 
+        xmlHttpReq.open('GET', theUrl, false); 
         xmlHttpReq.send(null);
         return xmlHttpReq.responseText;
     }
