@@ -26,3 +26,26 @@ $page_title = $wp_query->post->post_title;
 		<?php echo $toastBodyMessage ?>
 	</div>
 </div>
+
+<script type="text/javascript">
+	jQuery('form#address #masterdata-button').on('click', function (e) {
+		e.preventDefault();
+		jQuery.ajax({
+			type: "POST",
+			url: "<?php echo admin_url('admin-ajax.php'); ?>",
+			data: {
+				action: "register_user_front_end",
+				new_user_email: newUserEmail,
+				new_user_password: newUserPassword
+			},
+			success: function (results) {
+				console.log(results);
+				jQuery('.register-message').text(results).show();
+			},
+			error: function (results) {
+				jQuery(".card-body").addClass('ahashakeheartache');
+			}
+		});
+	});
+</script>
+
