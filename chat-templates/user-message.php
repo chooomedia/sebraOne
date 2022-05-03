@@ -19,7 +19,6 @@
 		<button id="sendMessage" class="bg-dark text-light"><i class="fas fa-paper-plane"></i></button>
 	</div>
 </div>
-<div id="log"></div>
 
 <style>
 	#sendMessage:disabled {
