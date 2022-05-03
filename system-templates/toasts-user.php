@@ -45,4 +45,3 @@ $page_title = $wp_query->post->post_title;
 		});
 	});
 </script>
-
