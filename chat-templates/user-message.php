@@ -10,7 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" data-toggle="tooltip" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen..." autofocus>
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
@@ -28,7 +28,7 @@
 </style>
 <script>
 	jQuery(function ($) {
-		var bannedWords = ["www", "handynummer", +49, @, "ficken", "wixxer", "nutte", "mobil", "telefonnummer", "nummer"];
+		var bannedWords = ["www", "handynummer", "@", "+49", "01", "ficken", "wixxer", "nutte", "mobil", "telefonnummer", "nummer"];
 		var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
 
 		$("#messageContent").on("input", function (e) {
