@@ -10,7 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" pattern="/^[\w\._ -]+$/" required maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" oninput="this.value = this.value.replace(/^[\w\._ -]+$/g, '').replace(/(\..*)\./g, '$1');" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
