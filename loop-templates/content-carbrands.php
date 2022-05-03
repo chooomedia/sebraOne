@@ -13,7 +13,7 @@ if( $images ): ?>
     <?php foreach( $images as $image ): ?>
 	<div class="col-md-3 col-6 my-3">
 		<a href="<?php echo $image['url']; ?>">
-            <img loading="lazy" class="img-fluid img-brand d-block mx-auto" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img loading="lazy" class="img-fluid img-brand d-block mx-auto" src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>" />
 		</a>
 	</div>
     <?php endforeach; ?>
