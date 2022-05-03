@@ -270,6 +270,14 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		?>
 	<?php endif; ?>
 
+	<style>
+		@media screen and (max-width:471px) {
+			.btn.btn-primary.nav-link {
+				transform: scale(.8);
+			}
+		}
+	</style>
+
 	<script>
 	jQuery(function($) {
 		if (window.matchMedia("(min-width: 471px)").matches) {
