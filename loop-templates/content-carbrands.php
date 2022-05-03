@@ -8,7 +8,7 @@
 
 <div class="row align-items-center">
 <?php 
-$images = get_field('carbrandsArray');
+$images = the_sub_field('carbrandsArray');
 if( $images ): ?>
     <?php foreach( $images as $image ): ?>
     <?php $carbrandsImage = get_field('carbrandsArray'); ?>
