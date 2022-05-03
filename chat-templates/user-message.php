@@ -19,6 +19,7 @@
 		<button id="sendMessage" class="bg-dark text-light"><i class="fas fa-paper-plane"></i></button>
 	</div>
 </div>
+<div id="log"></div>
 
 <style>
 	#sendMessage:disabled {
@@ -33,11 +34,7 @@
 
 		$("#messageContent").on("input", function () {
 			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
-			if(invalid) {
-				$("#sendMessage").attr('disabled', 'disabled');
-			} else {
-				$("#sendMessage").attr('disabled', '');
-			}
+			$('#sendMessage').attr(invalid ? 'disabled', 'disabled' : 'disbaled', '');
 		});
 		$("#messageContent").trigger("input").focus();
 
