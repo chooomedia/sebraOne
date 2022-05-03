@@ -27,11 +27,10 @@ $page_title = $wp_query->post->post_title;
 	</div>
 </div>
 
-<script type="text/javascript">
+<script>
 	jQuery('form#address .btn-masterdata').on('click', function() {
 		jQuery.ajax({
 			type: 'GET',
-			cache: false,
 			url: 'https://sebra1.com/wp-admin/admin-ajax.php',
 			complete: function (req, textStatus) {
 				console.log(textStatus);
