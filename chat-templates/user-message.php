@@ -23,6 +23,7 @@
 <style>
 	#sendMessage:disabled {
 		opacity: 0.3;
+		transition: .3s;
 	}
 
 </style>
