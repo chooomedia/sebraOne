@@ -32,15 +32,15 @@
 		var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte"];
 		var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
 
-		$("#messageContent").on("keyup", function () {
+		$("#messageContent").on("input", function () {
 			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
-			if (!invalid) {
-				$('#sendMessage').attr('disabled');
-			} else {
+			if (invalid) {
 				$('#sendMessage').attr('disabled', 'disabled');
+			} else {
+				$('#sendMessage').attr('disabled', '');
 			}
 		});
-		$("#messageContent").trigger("keyup").focus();
+		$("#messageContent").trigger("input").focus();
 
 		function dashPaddedWords(str) {
 			return '-' + str.replace(/./g, wordCharOrDash) + '-';
