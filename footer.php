@@ -36,6 +36,14 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div>
 	</div>
 </div>
+<script>
+    window.onload = function() {
+        const $ = jQuery;
+        document.addEventListener( 'wpcf7submit', function( event ) {
+                $("#bug-issue-form-modal").modal('hide');
+            }, false );
+    }
+</script>
 
 <?php if( have_rows('sectionfaqs') ): ?>
 <div id="contact-form-modal-wrapper">
@@ -56,6 +64,14 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div>
 	</div>
 </div>
+<script>
+    window.onload = function() {
+        const $ = jQuery;
+        document.addEventListener( 'wpcf7submit', function( event ) {
+                $("#contact-issue-form-modal").modal('hide');
+            }, false );
+    }
+</script>
 <?php endif; ?>
 
 </body>
