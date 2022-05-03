@@ -33,7 +33,7 @@
 
 		$("#messageContent").on("input", function (e) {
 			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
-			$('#sendMessage').attr('disabled', invalid ? 'disabled' : '' );
+			$('#sendMessage').attr('disabled', invalid ? '' : 'disabled' );
 		});
 		$("#messageContent").trigger("input").focus();
 
