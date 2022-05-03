@@ -13,8 +13,8 @@ if ( $args['data'] ) {
 
 <div id="<?php echo esc_html($consumerReviewId) ?>" class="container pt-md-4 text-white">
     <div class="<?php echo esc_html($consumerReviewClass) ?> slider pb-md-4 pb-md-5 pb-3" id="customerReviews">				
-        <?php if( have_rows('customersReviewArray') ): $c = 0; $class = ''; ?>
-            <?php while( have_rows('customersReviewArray') ) : the_row(); ?>
+        <?php if( have_rows('review_array') ): $c = 0; $class = ''; ?>
+            <?php while( have_rows('review_array') ) : the_row(); ?>
                 <?php $c++; ?>
                 <div class="col-md-4 col-12 mb-md-5 mx-0 mb-5 bg-transparent border-0">
                     <div class="customer-review card-body text-center arrow-bottom">
