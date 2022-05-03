@@ -27,7 +27,7 @@ if ( $args['data'] ) {
                 <p class="text-white section-subheading mb-md-4"><?php echo $cta_text ?><!--Stellen Sie heute noch eine Anfrage und bekommen Sie den besten Preis für Ihr Fahrzeug. --></p>
             </div>
             <div class="pb-md-5 col-12 d-flex justify-content-center">
-                <a id="cta-button" class="btn btn-lg bg-gradient text-white" href="<?php echo $cta_link ?>" style="padding-left:5rem;padding-right:5rem;"><?php echo $cta_btn_text ?><!-- Jetzt Fahrzeug verkaufen --></a>
+                <a id="cta-button" class="btn btn-lg bg-gradient text-white py-3" href="<?php echo $cta_link ?>"><?php echo $cta_btn_text ?><!-- Jetzt Fahrzeug verkaufen --></a>
             </div>
         </div>
     </section>
