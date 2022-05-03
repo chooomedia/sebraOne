@@ -10,7 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" maxlength="120" onkeyup="responseCheck()" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" maxlength="120" onkeypress="responseCheck()" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
