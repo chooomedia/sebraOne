@@ -40,10 +40,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
     window.onload = function() {
         const $ = jQuery;
         document.addEventListener( 'wpcf7submit', function( event ) {
-			setTimeout(function() {
-				$("#bug-issue-form-modal").modal('hide');
-			}, 3000);
-		}, false );
+			setTimeout( "$('#bug-issue-form-modal').modal('hide');", 3000);
     }
 </script>
 
@@ -69,9 +66,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 <script>
     window.onload = function() {
         const $ = jQuery;
-        setTimeout(function() {
-				$("#contact-issue-form-modal").modal('hide');
-			}, 3000);
+        setTimeout( "$('#contact-issue-form-modal').modal('hide');", 3000);
     }
 </script>
 <?php endif; ?>
