@@ -11,7 +11,7 @@
 $images = get_sub_field('carbrandsArray');
 if( $images ): ?>
     <?php foreach( $images as $image ): ?>
-	<div class="col-md-4 col-6 my-3">
+	<div class="col-md-3 col-6 my-3">
 		<a href="<?php echo $image['url']; ?>">
             <img loading="lazy" class="img-fluid img-brand d-block mx-auto" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
 		</a>
