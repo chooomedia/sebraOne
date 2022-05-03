@@ -5,12 +5,13 @@
 		<!--ADVICE COMMENT-->
 		<!-- Do not change #sendDatetime. -->
 		<button id="sendDatetime" class="text-light" data-toggle="tooltip" data-placement="top"
-				title="Kalenderfunktion">
+			title="Kalenderfunktion">
 			<i class="far fa-calendar-check"></i>
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" oninput="this.value = this.value.replace(/^[\w\._ -]+$/g, '').replace(/(\..*)\./g, '$1');" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" maxlength="120"
+			title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
@@ -23,4 +24,30 @@
 	#sendMessage:disabled {
 		opacity: 0.3;
 	}
+
 </style>
+<script>
+	var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte" ];
+	var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
+
+	$(function () {
+		$("#messageContent").on("input", function () {
+			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
+			$('#log').html(invalid ? 'bad' : 'good');
+		});
+		$("#messageContent").trigger("input").focus();
+
+		function dashPaddedWords(str) {
+			return '-' + str.replace(/./g, wordCharOrDash) + '-';
+		};
+
+		function wordCharOrDash(ch) {
+			return isWordChar(ch) ? ch : '-'
+		};
+
+		function isWordChar(ch) {
+			return ch.toUpperCase() != ch.toLowerCase();
+		};
+	});
+
+</script>
