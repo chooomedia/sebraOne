@@ -10,7 +10,7 @@
 <?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 	<?php while( have_rows('sellsArray') ) : the_row(); ?>
 	<?php $c++; ?>
-	<div class="col-lg-2 col-md-2 col-sm-6 mb-4 <?php if ($c == 2 or 4) : ?>transform-minus-top<?php endif; ?> box-shadow-lg p-0 mb-5">
+	<div class="col-lg-2 col-md-2 col-sm-6 mb-4 <?php if ($c == 2 || 4) : ?>transform-minus-top<?php endif; ?> box-shadow-lg p-0 mb-5">
 		<!-- Portfolio item 1-->
 		<div class="portfolio-item text-center">
 			<div class="card">
