@@ -136,7 +136,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<div class="row y-4">
 					<div class="col-8 mx-auto">
 						<div class="row d-flex justify-content-center align-items-center">
-							<div class="col-12 mx-auto text-center mt-3">
+							<div class="col-12 mx-auto text-center mt-2">
 								<h4 class="large text-white"><?php the_sub_field('reviews_footer') ?></h4>
 							</div>
 						</div>
