@@ -57,3 +57,4 @@ phpcs.xml
 dist/
 dist-product/
 **/img
+admin-ajax.php
