@@ -28,15 +28,14 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-	jQuery('form#address').submit(function() {
+	jQuery('#address').submit(function() {
 		event.preventDefault();
-		var form = jQuery("#formRangeYStand").serialize();
+		var form = jQuery("#address").serialize();
         var formData = new FormData;
         formData.append('action', 'testiram');
         formData.append('testiram', form);
 		jQuery.ajax({
 			type: 'GET',
-			action: 'wp_deal_save_address',
 			url: 'https://sebra1.com/wp-admin/admin-ajax.php',
 			dataType : "json",
 			data: formData,
