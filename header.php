@@ -80,25 +80,6 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 			<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark position-fixed vw-100"
 				aria-labelledby="main-nav-label">
 
-				<!-- Toasts -->
-				<div id="toaster-wrapper" class="position-relative" aria-live="polite" aria-atomic="true">
-					<div class="toast-container position-fixed p-3 right-end col-md-auto col-12">
-					<?php /**
-							* Request results
-							* Pass specific Data into the Template
-							* @param string:header-status Shows Status (saved, update)
-							* @param string:body-message Shows individual Message with Emoji
-							*/
-							get_template_part( 'system-templates/toasts-user', null, array(
-								'data'  => array(
-									'header-status' => 'gespeichert',
-									'body-message' => 'Erfolgreich gespeichert'
-								))
-							);
-					?>
-					</div>
-				</div>
-
 				<h2 id="main-nav-label" class="sr-only">
 					<?php esc_html_e( 'Main Navigation', 'SebraOne' ); ?>
 				</h2>
@@ -130,7 +111,7 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 					</button>
 
 					<!-- The WordPress Menu goes here -->
-					<?php if ($pageslug != "page-landingpage.php") : ?>
+					<?php if (get_post_type() != "landingpage") : ?>
 					<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'primary',

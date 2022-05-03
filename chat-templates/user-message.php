@@ -15,13 +15,14 @@
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
 		<!-- Do not change #sendMessage. -->
-		<button id="sendMessage" class="bg-dark text-light" disabled="disabled"><i class="fas fa-paper-plane"></i></button>
+		<button id="sendMessage" class="bg-dark text-light"><i class="fas fa-paper-plane"></i></button>
 	</div>
 </div>
 
 <script>
 /* Bann Words for Chat Message Input */
-function responseCheck() {
+document.getElementById('messageContent').onkeyup = function(e) {
+	e.preventDefault();
 	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	var textvalue = document.getElementById('messageContent').value;
 	for(var i=0; i<banned_words.length; i++) {
@@ -34,3 +35,8 @@ function responseCheck() {
 }
 </script>
 
+<style>
+	#sendMessage:disabled {
+		opacity: 0.3;
+	}
+</style>

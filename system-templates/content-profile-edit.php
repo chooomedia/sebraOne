@@ -91,7 +91,7 @@ $role = array_shift($u->roles);
 								<div class="input-field fifth-wrap col-12">
 									<!--ADVICE COMMENT-->
 									<!-- Do not change #masterdata-button. -->
-									<button id="masterdata-button" class="btn btn-signup bg-primary" type="submit">
+									<button id="masterdata-button" class="btn btn-signup bg-primary btn-masterdata" type="submit">
 										<i class="fa fa-check pr-2" aria-hidden="true"></i>Stammdaten
 										ändern</button>
 								</div>
@@ -284,7 +284,21 @@ $role = array_shift($u->roles);
 				});
 			});
 		});
+	</script>
 
+	<script>
+	jQuery(function($) {
+		let toasterXmlHttpReq = new XMLHttpRequest();
+
+		function getDataStatus() {
+			toasterXmlHttpReq.open('GET', wp_deal.url, true);
+			
+			if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
+				let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
+				alert(dataAnfrage);
+			};
+		};
+	});
 	</script>
 
 	<div id="profile-edit-content" class="container m-0 pt-3 pb-3 vw-100">

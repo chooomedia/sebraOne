@@ -50,19 +50,17 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			<div class="row mt-5">
 				<div class="container">
 					<main class="site-main" id="main">
-
 						<?php
-                while ( have_posts() ) {
-                    the_post();
-                    get_template_part( 'loop-templates/content', 'front' );
+						while ( have_posts() ) {
+							the_post();
+							get_template_part( 'loop-templates/content', 'front' );
 
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) {
-                        comments_template();
-                    }
-                }
-                ?>
-
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) {
+								comments_template();
+							}
+						}
+						?>
 					</main><!-- #main -->
 				</div>
 
@@ -70,55 +68,134 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 		</div><!-- #content -->
 
+		<!-- Sell car steps -->
+		<div id="page-landingpage-wrapper">
+		<section id="landingpage-steps" class="jumbotron page-section bg-light pt-5 pb-2">
+			<?php if( have_rows('salesprocess') ): ?>
+			<?php while( have_rows('salesprocess') ): the_row(); ?>
+			<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
+				<div class="text-center mb-5">
+					<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('sales_headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
+					<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
+				</div>
+
+				<?php
+					get_template_part( 'loop-templates/content-salesprocess', null, array(
+						'id' => 'salesProcess'
+					));
+				?>
+			</div>
+			<?php endwhile; ?>
+			<?php endif; ?>
+		</section>
+		</div>
+
+		<!-- Carbrands Logo list -->
+		<?php if( have_rows('sectioncarbrands') ): ?>
+		<section id="carbrand-iconlisting" class="mvh-100 py-5">
+			<?php while( have_rows('sectioncarbrands') ): the_row(); ?>
+			<div class="container py-5 my-5">
+			<div class="text-center">
+					<h2 class="section-heading text-uppercase mb-5"><?php the_sub_field('carbrands_headline') ?></h2> <!-- Sebra1 Top <b>Kfz-Marken</b> -->
+				</div>
+				<?php
+						get_template_part( 'loop-templates/content-carbrands', null, array(
+							'id' => 'sectionCarbrands'
+						));
+					?>
+			</div>
+			<?php endwhile; ?>
+		</section>
+		<?php endif; ?>
+
+		<!-- FAQs --> 
+		<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+			<?php if( have_rows('sectionfaqs') ): ?>
+			<?php while( have_rows('sectionfaqs') ): the_row(); ?>
+			<div class="container py-md-4 my-5 pt-md-3">
+				<div class="text-center">
+					<h2 class="section-heading text-uppercase text-white"><?php the_sub_field('faqs_headline') ?></h2><!-- <b>Meist</b> gestellte <b>Fragen</b> -->
+					<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('faqs_subline') ?></h3><!-- <b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns -->
+				</div>
+				<div class="col-12 mb-4">
+					<?php
+						get_template_part( 'loop-templates/content-faqs', null, array(
+							'id' => 'sectionFaqs'
+						));
+					?>
+				</div>
+			</div>
+			<?php endwhile; ?>
+			<?php endif; ?>
+		</section>
+
 		<!-- Section: Customer reviews slider -->
+		<?php if( have_rows('sectionreviews') ): ?>
 		<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
-		<?php if( have_rows('customersReviewArray') ) : ?>
+			<?php while( have_rows('sectionreviews') ): the_row(); ?>
+			<div class="container py-md-4 pt-md-3">
+				<div class="text-center">
+					<div class="rounded-circle text-white">
+						<i class="fas fa-4x fa-quote-left"></i>
+					</div>
+					<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5 text-white"><?php the_sub_field('reviews_headline') ?></h2>
+				</div>
+
+				<div class="col-12 mb-0">
+					<?php
+						get_template_part( 'loop-templates/content-reviewslider', null, array(
+							'id' => 'customerReviews',
+							'class' => 'container'
+							)
+						);
+					?>
+				</div>
+			</div>
+			<div id="trusted-logos" class="container-fluid px-md-5">
+				<div class="container py-4">
+					<div class="row y-4">
+						<div class="col-8 mx-auto">
+							<div class="row d-flex justify-content-center align-items-center">
+								<div class="col-12 mx-auto text-center mt-2">
+									<h4 class="large text-white"><?php the_sub_field('reviews_footer') ?></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php endwhile; ?>
+		</section>
+		<?php endif; ?>
+
+		<!-- CTA Footer -->
+		<?php $footerCta = get_field('sectionCta');
+		if( $footerCta ): ?>
 			<?php /**
-			* Customer reviews Section-Module
-			* Pass specific Data into Seller details page header
-			* @param string:class Max-width: container, half: col-md-6
-			* @param string:title Headline customer reviews slider section
+			* CTA Section-Module
+			* Pass specific Data into data array
+			* @param string:cta-background-color Hex Color i.e. #111
+			* @param string:cta-spacing Top/Bottom Spacing in px i.e. 100px
+			* @param string:cta-headline Headline of the CTA Module
+			* @param string:cta-text Text CTA Module
+			* @param string:cta-link-name Text of button
+			* @param string:cta-link Link i.e. /impress
 			*/
-			get_template_part( 'loop-templates/content-reviewslider', null, array(
-				'id' => 'customerReviews',
+
+			get_template_part( 'page-templates/footer-cta', null, array(
+				'id' => 'section-cta',
 				'class' => 'container',
 				'data'  => array(
-					'headline' => get_field('customerReviewHeadline'),
-					'footline' => get_field('customerReviewFootline'),
+					'ctabackgroundcolor' => $footerCta['sectionFooterCtaBackgroundColor'],
+					'ctaspacing' => $footerCta['sectionFooterCtaSpacing'],
+					'ctaheadline' => $footerCta['sectionFooterCtaHeadline'],
+					'ctatext' => $footerCta['sectionFooterCtaText'],
+					'ctalinkname' => $footerCta['sectionFooterCtaLinkTitle'],
+					'ctalink' => $footerCta['sectionFooterCtaLink'],
 				))
 			);
 			?>
 		<?php endif; ?>
-		</section>
-
-	<!-- CTA Footer -->
-	<?php $footerCta = get_field('sectionCta');
-	if( $footerCta ): ?>
-		<?php /**
-		* CTA Section-Module
-		* Pass specific Data into data array
-		* @param string:cta-background-color Hex Color i.e. #111
-		* @param string:cta-spacing Top/Bottom Spacing in px i.e. 100px
-		* @param string:cta-headline Headline of the CTA Module
-		* @param string:cta-text Text CTA Module
-		* @param string:cta-link-name Text of button
-		* @param string:cta-link Link i.e. /impress
-		*/
-
-		get_template_part( 'page-templates/footer-cta', null, array(
-			'id' => 'section-cta',
-			'class' => 'container',
-			'data'  => array(
-				'ctabackgroundcolor' => $footerCta['sectionFooterCtaBackgroundColor'],
-				'ctaspacing' => $footerCta['sectionFooterCtaSpacing'],
-				'ctaheadline' => $footerCta['sectionFooterCtaHeadline'],
-				'ctatext' => $footerCta['sectionFooterCtaText'],
-				'ctalinkname' => $footerCta['sectionFooterCtaLinkTitle'],
-				'ctalink' => $footerCta['sectionFooterCtaLink'],
-			))
-		);
-		?>
-	<?php endif; ?>
 
 	</div><!-- #page-wrapper -->
 <section>

@@ -77,7 +77,7 @@ function sebraone_menu_items($items, $args) {
 add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
 function add_search_box_to_menu( $items, $args ) {
     if( $args->theme_location == 'primary' )
-        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><i style='width:28px;' class='fa fa-search pr-2 text-white' aria-hidden='true'></i><input type='text' name='s' id='search' placeholder='Finde einen Händler'></form></li>";
+        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><i style='width:28px;' class='fa fa-search pr-2 text-white' aria-hidden='true'></i><input type='text' name='s' id='search' placeholder='Suche und Finde'></form></li>";
 
     return $items;
 }
@@ -90,6 +90,13 @@ function sebraone_login_stylesheet() {
 
 // This loads the function above on the login page
 add_action( 'login_enqueue_scripts', 'sebraone_login_stylesheet' );
+
+//Ajax send json success
+add_action('wp_ajax_testiram', 'testiram');
+add_action('wp_ajax_nopriv_testiram', 'testiram');
+function testiram() {
+    wp_send_json_success();
+}
 
 // Ajax User Registration Script
 add_action('wp_ajax_register_user_front_end', 'register_user_front_end', 0);
@@ -183,12 +190,6 @@ function custom_ajax_logout_func(){
     wp_send_json_success();
 }
 
-add_action('wp_ajax_testiram', 'testiram');
-add_action('wp_ajax_nopriv_testiram', 'testiram');
-function testiram() {
-    wp_send_json_success();
-}
-
 /*require_once( get_template_directory() . '/inc/custom-ajax-auth.php' );*/
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {
@@ -208,3 +209,69 @@ function my_acf_init_block_types() {
         ));
     }
 }
+
+/*Add Landingpage Custom Post Type */
+// Register Custom Post Type
+function custom_post_type() {
+	$labels = array(
+		'name'                  => _x( 'Landingpages', 'Post Type General Name', 'autoverkaufen' ),
+		'singular_name'         => _x( 'Landingpage', 'Post Type Singular Name', 'autoverkaufen' ),
+		'menu_name'             => __( 'Landingpages', 'autoverkaufen' ),
+		'name_admin_bar'        => __( 'Landingpage', 'autoverkaufen' ),
+		'archives'              => __( 'Item Archives', 'autoverkaufen' ),
+		'attributes'            => __( 'Item Attributes', 'autoverkaufen' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'autoverkaufen' ),
+		'all_items'             => __( 'Alle', 'autoverkaufen' ),
+		'add_new_item'          => __( 'Neue hinzu', 'autoverkaufen' ),
+		'add_new'               => __( 'Neue hinzufügen', 'autoverkaufen' ),
+		'new_item'              => __( 'Neu', 'autoverkaufen' ),
+		'edit_item'             => __( 'Bearbeiten', 'autoverkaufen' ),
+		'update_item'           => __( 'Ändern', 'autoverkaufen' ),
+		'view_item'             => __( 'Anschauen', 'autoverkaufen' ),
+		'view_items'            => __( 'Alle anschauen', 'autoverkaufen' ),
+		'search_items'          => __( 'Search Item', 'autoverkaufen' ),
+		'not_found'             => __( 'nicht gefunden', 'autoverkaufen' ),
+		'not_found_in_trash'    => __( 'Nichts im Papierkorb gefundeh', 'autoverkaufen' ),
+		'featured_image'        => __( 'Hintergrundbild', 'autoverkaufen' ),
+		'set_featured_image'    => __( 'Set featured image', 'autoverkaufen' ),
+		'remove_featured_image' => __( 'Hintergrundbild entfernen', 'autoverkaufen' ),
+		'use_featured_image'    => __( 'Als Hintergrundbild verwenden', 'autoverkaufen' ),
+		'insert_into_item'      => __( 'Insert into item', 'autoverkaufen' ),
+		'uploaded_to_this_item' => __( 'Uploaden', 'autoverkaufen' ),
+		'items_list'            => __( 'Items list', 'autoverkaufen' ),
+		'items_list_navigation' => __( 'Items list navigation', 'autoverkaufen' ),
+		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'autoverkaufen',
+		'with_front'            => false,
+		'pages'                 => false,
+		'feeds'                 => false,
+	);
+	$args = array(
+		'label'                 => __( 'Landingpage', 'autoverkaufen' ),
+		'description'           => __( 'Landingpages für SEO', 'autoverkaufen' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes' ), //'trackbacks',
+		'taxonomies'            => array( 'category', 'post_tag', 'topic' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'query_var'             => 'post_landingpage',
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+		'show_in_rest'          => false,
+		'rest_controller_class' => 'WP_REST_Landingpage_Controller',
+	);
+	register_post_type( 'landingpage', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
