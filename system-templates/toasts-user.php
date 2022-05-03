@@ -33,7 +33,7 @@ $page_title = $wp_query->post->post_title;
 		jQuery.ajax({
 			type: 'GET',
 			cache: false,
-			url: "<?php echo admin_url('admin-ajax.php'); ?>",
+			url: "https://sebra1.com/admin-ajax.php",
 			complete: function (req, textStatus) {
 			var dateString = req.getResponseHeader('Date');
 			if (dateString.indexOf('GMT') === -1) {
