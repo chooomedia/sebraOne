@@ -26,61 +26,6 @@ $user_id = $current_user_id = get_current_user_id();
 	<div class="container vw-100 p-0">
 		<div class="row">
 			<div id="messages-history" class="col-md-4 col-12">
-
-				<!--ADVICE COMMENT-->
-				<!-- In the block with #chat-block, render the template from the folder: chat-templates/chat-toast.php  -->
-				<!-- Do not change #chat-block. -->
-				<div id="chat-block">
-					<?php /**
-						* Chatbox
-						* Pass specific Data into the Template
-						* @param chat-box-id Number: Generate unique id for id-element
-						* @param string:chat-requester-name String: Pass anonymized name of Requester
-						* @param string:chat-date String: Show Date of Request (d-M-Y) um HH:MM
-						* @param string:car-status String: Show status of request-type in chatbox
-						* @param bool:chat-active Helperclass to change visibility
-						*/
-						get_template_part( 'chat-templates/chat-toast', null, array(
-							'data'  => array(
-								'chat-link' => '/#213132?s',
-								'chat-box-id' => '1236',
-								'chat-requester-name' => 'SELLER-183519',
-								'chat-date' => '22.02.2022 um 02:23',
-								'chat-status' => '1',
-								'chat-checked' => true
-								))
-						);
-					?>
-					<?php /**
-						* Chatbox
-						* Pass specific Data into the Template
-						* @param chat-box-id Number: Generate unique id for id-element
-						* @param string:chat-requester-name String: Pass anonymized name of Requester
-						* @param string:chat-date String: Show Date of Request (d-M-Y) um HH:MM
-						* @param string:car-status String: Show status of request-type in chatbox
-						* @param bool:chat-active Helperclass to change visibility
-						*/
-						get_template_part( 'chat-templates/chat-toast', null, array(
-							'data'  => array(
-								'chat-link' => '/#213132?s',
-								'chat-box-id' => '2421',
-								'chat-requester-name' => 'SELLER-23420',
-								'chat-date' => '13.02.2022 um 14:53',
-								'chat-status' => '3',
-								'chat-checked' => true
-								))
-						);
-					?>
-				</div>
-			</div>
-			<div id="messages-main" class="col-md-8 col-12 tile tile-alt" >
-
-				<!--ADVICE COMMENT-->
-				<!-- In the block with #chat-wrapper, render the template from the folder: chat-templates/calendar-left(right).php or chat-templates/user-left(right).php  -->
-				<div id="chat-wrapper" style="" class="col-12 px-0">
-					
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

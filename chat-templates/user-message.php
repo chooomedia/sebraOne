@@ -28,6 +28,9 @@
 </style>
 <script>
 	jQuery(function ($) {
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
 		var bannedWords = ["www", "handynummer", "@", "+49", "01", "ficken", "wixxer", "nutte", "mobil", "telefonnummer", "nummer"];
 		var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
 
