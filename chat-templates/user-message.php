@@ -10,7 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" data-toggle="tooltip" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen..." autofocus>
+		<input id="messageContent" type="text" data-toggle="tooltip" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails angeben" placeholder="Etwas mitteilen..." autofocus>
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
