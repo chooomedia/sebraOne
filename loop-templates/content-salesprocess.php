@@ -35,5 +35,8 @@
     .step-4 {
         display: none!important;
     }
+	.step-3 {
+		transform: scale(.5) translateY(280px) rotate(26deg);
+	}
     </style>
 </div>
