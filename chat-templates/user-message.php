@@ -10,8 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" maxlength="120"
-			title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" maxlength="120" title="Bitte keine Domains, Telefonnummern oder E-Mails eingeben" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
