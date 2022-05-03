@@ -41,7 +41,7 @@ jQuery(function($) {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 	setTimeout(function() {
 			$('#bug-issue-form-modal').modal('hide')
-		}, 3000);
+		}, 2000);
 	}, false );
 });
 </script>
@@ -74,7 +74,7 @@ jQuery(function($) {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 	setTimeout(function() {
 			$('#contact-issue-form-modal').modal('hide')
-		}, 3000);
+		}, 2000);
 	}, false );
 });
 </script>
