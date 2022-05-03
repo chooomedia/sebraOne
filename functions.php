@@ -91,6 +91,13 @@ function sebraone_login_stylesheet() {
 // This loads the function above on the login page
 add_action( 'login_enqueue_scripts', 'sebraone_login_stylesheet' );
 
+//Ajax send json success
+add_action('wp_ajax_testiram', 'testiram');
+add_action('wp_ajax_nopriv_testiram', 'testiram');
+function testiram() {
+    wp_send_json_success();
+}
+
 // Ajax User Registration Script
 add_action('wp_ajax_register_user_front_end', 'register_user_front_end', 0);
 add_action('wp_ajax_nopriv_register_user_front_end', 'register_user_front_end');

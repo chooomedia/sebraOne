@@ -28,13 +28,25 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-	jQuery('form#address .btn-masterdata').on('click', function() {
+	jQuery('form#address').on('submit', function() {
+		event.preventDefault();
+		var form = jQuery("#formRangeYStand").serialize();
+        var formData = new FormData;
+        formData.append('action', 'testiram');
+        formData.append('testiram', form);
 		jQuery.ajax({
 			type: 'GET',
 			action: 'wp_deal_save_address',
 			url: 'https://sebra1.com/wp-admin/admin-ajax.php',
-			complete: function (req, textStatus) {
-				console.log(textStatus);
+			dataType : "json",
+			data: formData,
+			contentType: false,
+    		processData: false,
+			success: function (result) {
+				alert(result);
+			},
+			error: function (error) {
+				console.log(error);
 			}
 		});
 	});
