@@ -71,8 +71,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div><!-- #content -->
 
 		<!-- Carbrands Logo list -->
-		<section id="carbrand-iconlisting" class="mvh-100 py-5">
 		<?php if( have_rows('sectioncarbrands') ): ?>
+		<section id="carbrand-iconlisting" class="mvh-100 py-5">
 			<?php while( have_rows('sectioncarbrands') ): the_row(); ?>
 			<div class="container py-5 my-5">
 			<div class="text-center">
@@ -85,8 +85,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					?>
 			</div>
 			<?php endwhile; ?>
-		<?php endif; ?>
 		</section>
+		<?php endif; ?>
 
 		<!-- FAQs --> 
 		<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
