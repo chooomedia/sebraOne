@@ -115,10 +115,10 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php while( have_rows('sectionreviews') ): the_row(); ?>
 		<div class="container py-md-4 my-5 pt-md-3">
 			<div class="text-center">
-				<div class="rounded-circle">
+				<div class="rounded-circle text-white">
 					<i class="fas fa-4x fa-quote-left"></i>
 				</div>
-				<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5"><?php the_sub_field('reviews_headline') ?></h2>
+				<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5 text-white"><?php the_sub_field('reviews_headline') ?></h2>
 			</div>
 
 			<div class="col-12 mb-4">

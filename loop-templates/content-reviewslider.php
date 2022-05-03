@@ -16,9 +16,9 @@ if ( $args['data'] ) {
         <?php if( have_rows('customersReviewArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('customersReviewArray') ) : the_row(); ?>
                 <?php 
-                    $sub_text = get_sub_field('customerReviewText');
-                    $sub_name = get_sub_field('customerReviewName');
-                    $sub_stars = get_sub_field('customerReviewStars'); 
+                    $sub_text = the_sub_field('customerReviewText');
+                    $sub_name = the_sub_field('customerReviewName');
+                    $sub_stars = the_sub_field('customerReviewStars');
                 ?>
 
                 <?php $c++; ?>
