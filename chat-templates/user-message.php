@@ -15,7 +15,7 @@
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
 		<!-- Do not change #sendMessage. -->
-		<button id="sendMessage" class="bg-dark text-light" disabled=""><i class="fas fa-paper-plane"></i></button>
+		<button id="sendMessage" class="bg-dark text-light"><i class="fas fa-paper-plane"></i></button>
 	</div>
 </div>
 
