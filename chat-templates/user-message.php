@@ -21,8 +21,8 @@
 
 <script>
 /* Bann Words for Chat Message Input */
-document.getElementById('#messageContent').onkeyup = responseCheck(event) {
-	event.preventDefault();
+document.getElementById('#messageContent').onkeyup = function(e) {
+	e.preventDefault();
 	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	var textvalue = document.getElementById('messageContent').value;
 	for(var i=0; i<banned_words.length; i++) {
