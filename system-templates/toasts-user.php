@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script type="text/javascript">
-	jQuery('form#address #masterdata-button').on('click', function (e) {
+	jQuery('.btn-masterdata').on('click', function (e) {
 		e.preventDefault();
 		jQuery.ajax({
 			type: "GET",
