@@ -110,26 +110,30 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	</section>
 
 	<!-- Section: Customer reviews slider -->
-	<section id="customer-reviews" class="page-section bg-turquoise pt-5 pt-md-0 pb-0">
-	<?php if( have_rows('customersReviewArray') ) : ?>
-		<?php /**
-		* Customer reviews Section-Module
-		* Pass specific Data into data array
-		* @param string:headline Headline customer review slider
-		* @param string:footline Text Footer customer review slider
-		*/
+	<?php if( have_rows('sectionreviews') ): ?>
+	<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
+		<?php while( have_rows('sectionreviews') ): the_row(); ?>
+		<div class="container py-md-4 my-5 pt-md-3">
+			<div class="text-center">
+				<div class="rounded-circle">
+					<i class="fas fa-4x fa-quote-left"></i>
+				</div>
+				<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5"><?php the_sub_field('reviews_headline') ?></h2>
+			</div>
 
-		get_template_part( 'loop-templates/content-reviewslider', null, array(
-			'id' => 'customerReviews',
-			'class' => 'container pt-md-5',
-			'data'  => array(
-				'headline' => get_field('customerReviewHeadline'),
-				'footline' => get_field('customerReviewFootline'),
-			))
-		);
-		?>
-	<?php endif; ?>
+			<div class="col-12 mb-4">
+				<?php
+					get_template_part( 'loop-templates/content-reviewslider', null, array(
+						'id' => 'customerReviews',
+						'class' => 'container'
+						)
+					);
+				?>
+			</div>
+		</div>
+		<?php endwhile; ?>
 	</section>
+	<?php endif; ?>
 
 	<!-- Benefits section -->
 	<section id="landingpage-benefits" class="page-section jumbotron">
