@@ -12,7 +12,7 @@
     <?php $carbrandsImage = the_field('carbrandsArray_image'); ?>
 	<div class="col-md-3 col-6 my-3">
 		<a href="#">
-			<img loading="lazy" class="img-fluid img-brand d-block mx-auto" src="<?php echo $carbrandsImage['url'] ?>" alt="<?php echo $carbrandsImage['alt'] ?>" />
+			<img loading="lazy" class="img-fluid img-brand d-block mx-auto" src="<?php $carbrandsImage['url'] ?>" alt="<?php $carbrandsImage['alt'] ?>" />
 		</a>
 	</div>
     <?php endwhile; ?>
