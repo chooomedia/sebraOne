@@ -92,7 +92,7 @@ $user_id = $current_user_id = get_current_user_id();
 							</button>
 						</div>
 						<div class="col-md-10 col-8 m-0 p-0">
-							<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen..." onkeyup="responseCheck()">
+							<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen...">
 						</div>
 						<div class="col-md col-2 chat-submit">
 							<button id="sendMessage" class="bg-dark text-light" data-toggle="tooltip" data-placement="top"
@@ -104,21 +104,6 @@ $user_id = $current_user_id = get_current_user_id();
 		</div>
 	</div>
 </div>
-
-<script>
-/* Bann Words for Chat Message Input */
-function responseCheck() {
-	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-	var textvalue = document.getElementById('messageContent').value;
-	for(var i=0; i<banned_words.length; i++) {
-		if (~textvalue.indexOf(banned_words[i])){
-			document.getElementById('sendMessage').disabled = true;
-		} else {
-			document.getElementById('sendMessage').disabled = false;
-		}
-	}
-}
-</script>
 
 <script>
 /* Save/check status of chat rules infobox in localstorge */
