@@ -14,7 +14,7 @@
 		<!-- Portfolio item 1-->
 		<div class="portfolio-item text-center">
 			<div class="card border-0">
-				<img class="card-img-top" src="<?php the_sub_field('sells_image'); ?>" alt="sales_process_step_<?php echo $c ?>"> <!-- https://via.placeholder.com/320x220 -->
+				<img class="card-img-top pb-4" src="<?php the_sub_field('sells_image'); ?>" alt="sales_process_step_<?php echo $c ?>"> <!-- https://via.placeholder.com/320x220 -->
 				<ul class="list-group list-group-flush">
 					<div class="rounded-circle bg-white box-shadow">
 						<div class="text-accent step-number"><b><?php echo $c ?></b></div>
