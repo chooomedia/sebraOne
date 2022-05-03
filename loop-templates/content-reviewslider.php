@@ -12,7 +12,7 @@ if ( $args['data'] ) {
 ?>
 
 <div id="<?php echo esc_html($consumerReviewId) ?>" class="container pt-md-4 text-white">
-    <div class="<?php echo esc_html($consumerReviewClass) ?> slider pb-md-4 pb-md-5 pb-3" id="customerReviews">				
+    <div class="<?php echo esc_html($consumerReviewClass) ?> slider pb-md-4 pb-3" id="customerReviews">				
         <?php if( have_rows('reviews_array') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('reviews_array') ) : the_row(); ?>
                 <?php $c++; ?>

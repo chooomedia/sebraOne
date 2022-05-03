@@ -131,7 +131,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php if( have_rows('sectionreviews') ): ?>
 		<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
 			<?php while( have_rows('sectionreviews') ): the_row(); ?>
-			<div class="container py-md-4 my-5 pt-md-3">
+			<div class="container py-md-4 pt-md-3">
 				<div class="text-center">
 					<div class="rounded-circle text-white">
 						<i class="fas fa-4x fa-quote-left"></i>
@@ -139,7 +139,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 					<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5 text-white"><?php the_sub_field('reviews_headline') ?></h2>
 				</div>
 
-				<div class="col-12 mb-4">
+				<div class="col-12 mb-0">
 					<?php
 						get_template_part( 'loop-templates/content-reviewslider', null, array(
 							'id' => 'customerReviews',
