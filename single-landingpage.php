@@ -272,7 +272,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<style>
 		@media screen and (max-width:471px) {
-			.btn.btn-primary.nav-link {
+			.bg-transparent.fixed-bottom.scroll-spy .nav-item {
 				transform: scale(.8);
 			}
 		}
