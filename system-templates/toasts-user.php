@@ -31,16 +31,16 @@ $page_title = $wp_query->post->post_title;
 	jQuery('form#address .btn-masterdata').on('click', function (e) {
 		e.preventDefault();
 		jQuery.ajax({
-			type: "GET",
+			type: 'GET',
+			cache: false,
 			url: "<?php echo admin_url('admin-ajax.php'); ?>",
-			data: {
-				action: "fetch-list"
-			},
-			success: function (results) {
-				console.log(results);
-			},
-			error: function (results) {
-				console.log(results);
+			complete: function (req, textStatus) {
+			var dateString = req.getResponseHeader('Date');
+			if (dateString.indexOf('GMT') === -1) {
+				dateString += ' GMT';
+			}
+			var date = new Date(dateString);
+			console.log(date);
 			}
 		});
 	});
