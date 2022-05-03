@@ -8,20 +8,10 @@
 if ( $args['data'] ) {
     $consumerReviewId = $args['id'];
     $consumerReviewClass = $args['class'];
-    $consumerReviewHeadline = $args['data']['headline'];
-    $consumerReviewFootline = $args['data']['footline'];
 }
 ?>
 
 <div id="<?php echo esc_html($consumerReviewId) ?>" class="container pt-md-4 text-white">
-    <div class="text-center">
-        <div class="rounded-circle">
-                <i class="fas fa-4x fa-quote-left"></i>
-            </div>
-            <h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5"><?php echo $consumerReviewHeadline ?></h2>
-        </div>
-    </div>
-
     <div class="<?php echo esc_html($consumerReviewClass) ?> slider pb-md-4 pb-md-5 pb-3" id="customerReviews">				
         <?php if( have_rows('customersReviewArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('customersReviewArray') ) : the_row(); ?>

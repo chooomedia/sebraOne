@@ -128,25 +128,30 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</section>
 
 		<!-- Section: Customer reviews slider -->
+		<?php if( have_rows('sectionreviews') ): ?>
 		<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
-		<?php if( have_rows('customersReviewArray') ) : ?>
-			<?php /**
-			* Customer reviews Section-Module
-			* Pass specific Data into Seller details page header
-			* @param string:class Max-width: container, half: col-md-6
-			* @param string:title Headline customer reviews slider section
-			*/
-			get_template_part( 'loop-templates/content-reviewslider', null, array(
-				'id' => 'customerReviews',
-				'class' => 'container',
-				'data'  => array(
-					'headline' => get_field('customerReviewHeadline'),
-					'footline' => get_field('customerReviewFootline'),
-				))
-			);
-			?>
-		<?php endif; ?>
+			<?php while( have_rows('sectionreviews') ): the_row(); ?>
+			<div class="container py-md-4 my-5 pt-md-3">
+				<div class="text-center">
+					<div class="rounded-circle">
+						<i class="fas fa-4x fa-quote-left"></i>
+					</div>
+					<h2 class="section-heading text-uppercase mt-md-0 mb-md-5 mb-5"><?php the_sub_field('reviews_headline') ?></h2>
+				</div>
+
+				<div class="col-12 mb-4">
+					<?php
+						get_template_part( 'loop-templates/content-reviewslider', null, array(
+							'id' => 'customerReviews',
+							'class' => 'container'
+							)
+						);
+					?>
+				</div>
+			</div>
+			<?php endwhile; ?>
 		</section>
+		<?php endif; ?>
 
 		<!-- CTA Footer -->
 		<?php $footerCta = get_field('sectionCta');
