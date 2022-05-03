@@ -36,6 +36,26 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div>
 	</div>
 </div>
+
+<!-- Toasts -->
+<div id="toaster-wrapper" class="position-relative" aria-live="polite" aria-atomic="true">
+	<div class="toast-container position-fixed p-3 right-end col-md-auto col-12">
+	<?php /**
+			* Request results
+			* Pass specific Data into the Template
+			* @param string:header-status Shows Status (saved, update)
+			* @param string:body-message Shows individual Message with Emoji
+			*/
+			get_template_part( 'system-templates/toasts-user', null, array(
+				'data'  => array(
+					'header-status' => 'gespeichert',
+					'body-message' => 'Erfolgreich gespeichert'
+				))
+			);
+	?>
+	</div>
+</div>
+
 <script>
 jQuery(function($) {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -44,10 +64,6 @@ jQuery(function($) {
 		}, 2000);
 	}, false );
 });
-</script>
-
-<script type="text/javascript">
-	
 </script>
 
 <?php if( have_rows('sectionfaqs') ): ?>
