@@ -28,7 +28,7 @@ $page_title = $wp_query->post->post_title;
 </div>
 
 <script>
-	jQuery('form#address').on('submit', function() {
+	jQuery('form#address').submit(function() {
 		event.preventDefault();
 		var form = jQuery("#formRangeYStand").serialize();
         var formData = new FormData;
