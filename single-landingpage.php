@@ -110,8 +110,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	</section>
 
 	<!-- Section: Customer reviews slider -->
-	<?php if( have_rows('sectionreviews') ): ?>
 	<section class="page-section bg-danger pt-5 pb-0" id="customer-reviews">
+	<?php if( have_rows('sectionreviews') ): ?>
 		<?php while( have_rows('sectionreviews') ): the_row(); ?>
 		<div class="container py-md-4 my-5 pt-md-3">
 			<div class="text-center">
@@ -132,8 +132,8 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			</div>
 		</div>
 		<?php endwhile; ?>
-	</section>
 	<?php endif; ?>
+	</section>
 
 	<!-- Benefits section -->
 	<section id="landingpage-benefits" class="page-section jumbotron">
