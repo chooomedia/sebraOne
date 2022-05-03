@@ -18,9 +18,9 @@ if ( $args['data'] ) {
                 <?php $c++; ?>
                 <div class="col-md-4 col-12 mb-md-5 mx-0 mb-5 bg-transparent border-0">
                     <div class="customer-review card-body text-center arrow-bottom">
-                        <p class="text-white title-large"><q><?php the_sub_field('customerReviewText') ?></q></p>
-                        <div class="text-white"><?php the_sub_field('customerReviewName') ?></div>
-                        <h4 class="my-3 text-white"><b><?php the_sub_field('customerReviewStars') ?></b></h4>
+                        <p class="text-white title-large"><q><?php echo get_sub_field('customerReviewText') ?></q></p>
+                        <div class="text-white"><?php echo get_sub_field('customerReviewName') ?></div>
+                        <h4 class="my-3 text-white"><b><?php echo get_sub_field('customerReviewStars') ?></b></h4>
                     </div>
                 </div>
             <?php endwhile; ?>
