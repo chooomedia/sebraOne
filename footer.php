@@ -40,8 +40,11 @@ $container = get_theme_mod( 'SebraOne_container_type' );
     window.onload = function() {
         const $ = jQuery;
         document.addEventListener( 'wpcf7submit', function( event ) {
-			setTimeout( "$('#bug-issue-form-modal').modal('hide');", 3000);
-    }
+			setTimeout(function() {
+				$('#bug-issue-form-modal').modal('hide');
+			}, 3000);
+    	});
+	};
 </script>
 
 <?php if( have_rows('sectionfaqs') ): ?>
@@ -64,10 +67,14 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	</div>
 </div>
 <script>
-    window.onload = function() {
+window.onload = function() {
         const $ = jQuery;
-        setTimeout( "$('#contact-issue-form-modal').modal('hide');", 3000);
-    }
+        document.addEventListener( 'wpcf7submit', function( event ) {
+			setTimeout(function() {
+				$('#contact-issue-form-modal').modal('hide');
+			}, 3000);
+    	});
+	};
 </script>
 <?php endif; ?>
 
