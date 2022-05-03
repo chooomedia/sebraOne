@@ -10,7 +10,7 @@
 		</button>
 	</div>
 	<div class="col-md-10 col-8 m-0 p-0">
-		<input id="messageContent" type="text" maxlength="120" onkeyup="responseCheck()" placeholder="Etwas mitteilen...">
+		<input id="messageContent" type="text" maxlength="120" placeholder="Etwas mitteilen...">
 	</div>
 	<div class="col-md col-2 chat-submit">
 		<!--ADVICE COMMENT-->
@@ -21,7 +21,7 @@
 
 <script>
 /* Bann Words for Chat Message Input */
-function responseCheck(event) {
+document.getElementById('#messageContent').onkeyup = responseCheck(event) {
 	event.preventDefault();
 	var banned_words = ['www', '@', 'handynummer', 'rufnummer', 'nummer', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	var textvalue = document.getElementById('messageContent').value;
