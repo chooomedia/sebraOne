@@ -18,6 +18,7 @@
 		<!-- Do not change #sendMessage. -->
 		<button id="sendMessage" class="bg-dark text-light"><i class="fas fa-paper-plane"></i></button>
 	</div>
+	<div id="log"></div>
 </div>
 
 <style>
@@ -27,10 +28,10 @@
 
 </style>
 <script>
-	var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte"];
-	var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
-
 	jQuery(function ($) {
+		var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte"];
+		var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
+
 		$("#messageContent").on("input", function () {
 			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
 			$('#log').html(invalid ? 'bad' : 'good');
