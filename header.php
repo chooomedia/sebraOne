@@ -24,48 +24,7 @@ $pageslug = get_page_template_slug( get_queried_object_id() );
 	<?php wp_head(); ?>
 </head>
 
-<?php if(is_page('account')) : ?>
-<script>
-	jQuery(function ($) {
-		let headerNavChatEl = $('#ex4 > span > a');
-		headerNavChatEl.attr({
-			'href': '/account/#2',
-			'target': '_self'
-		});
 
-		if (window.location.hash) {
-			$(window).on('load', function () {
-				var number = window.location.hash.replace(/^\D+/g, '');
-				console.log(number);
-			});
-		} else {
-			$('.type-company.item:not(#ex4)').on('click', 'a', function (event) {
-				event.preventDefault();
-
-				// `this` is the clicked <a> tag
-				// `$.index()` returns the position of `this` relative to its sibling elements
-				var target = $(this).index();
-				$('#main').carousel(target);
-			});
-		}
-	});
-
-</script>
-<?php else : ?>
-<script>
-	jQuery(function ($) {
-		$('.type-company.item').on('click', 'a', function (event) {
-			event.preventDefault();
-
-			// `this` is the clicked <a> tag
-			// `$.index()` returns the position of `this` relative to its sibling elements
-			var target = $(this).index();
-			$('#main').carousel(target);
-		});
-	});
-
-</script>
-<?php endif; ?>
 
 <body <?php body_class(); ?> <?php SebraOne_body_attributes(); ?> data-spy="scroll" data-target=".scroll-spy" data-offset="80">
 	<?php do_action( 'wp_body_open' );?>
