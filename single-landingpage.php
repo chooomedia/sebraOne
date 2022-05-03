@@ -131,6 +131,22 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				?>
 			</div>
 		</div>
+		<div id="trusted-logos" class="container-fluid px-md-5">
+			<div class="container py-4">
+				<div class="row y-4">
+					<div class="col-8 mx-auto">
+						<div class="row d-flex justify-content-center align-items-center">
+							<div class="col-lg-3 col-12">
+								<img loading="lazy" class="filter-brightness" src="<?php echo get_template_directory_uri() ?>/src/img/trustpilot-logo-sebra1.png" alt="Trusitpilot Sebra1 5 Stars Rating" />
+							</div>
+							<div class="col-lg-9 col-12 mx-auto text-center">
+								<h4 class="large text-white"><?php the_sub_field('reviews_footer') ?></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php endwhile; ?>
 	<?php endif; ?>
 	</section>
