@@ -13,7 +13,7 @@
 	<div class="col-lg-2 col-md-2 col-sm-6 mb-4 <?php if (($c == 2 ) || ($c == 4 )) : ?>transform-minus-top<?php endif; ?> box-shadow-lg p-0 mb-5">
 		<!-- Portfolio item 1-->
 		<div class="portfolio-item text-center">
-			<div class="card">
+			<div class="card border-0">
 				<img class="card-img-top" src="<?php the_sub_field('sells_image'); ?>" alt="sales_process_step_<?php echo $c ?>"> <!-- https://via.placeholder.com/320x220 -->
 				<ul class="list-group list-group-flush">
 					<div class="rounded-circle bg-white box-shadow">
