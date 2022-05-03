@@ -27,10 +27,10 @@
 
 </style>
 <script>
-	var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte" ];
+	var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte"];
 	var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
 
-	$(function () {
+	jQuery(function ($) {
 		$("#messageContent").on("input", function () {
 			var invalid = bannedWordsRegex.test(dashPaddedWords(this.value));
 			$('#log').html(invalid ? 'bad' : 'good');
@@ -49,5 +49,4 @@
 			return ch.toUpperCase() != ch.toLowerCase();
 		};
 	});
-
 </script>
