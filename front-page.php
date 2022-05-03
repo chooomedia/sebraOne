@@ -70,6 +70,24 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 		</div><!-- #content -->
 
+		<!-- Carbrands Logo list -->
+		<section id="carbrand-iconlisting" class="mvh-100 py-5">
+		<?php if( have_rows('sectioncarbrands') ): ?>
+			<?php while( have_rows('sectioncarbrands') ): the_row(); ?>
+			<div class="container py-5 my-5">
+			<div class="text-center">
+					<h2 class="section-heading text-uppercase mb-5"><?php the_sub_field('carbrands_headline') ?></h2> <!-- Sebra1 Top <b>Kfz-Marken</b> -->
+				</div>
+				<?php
+						get_template_part( 'loop-templates/content-carbrands', null, array(
+							'id' => 'sectionCarbrands'
+						));
+					?>
+			</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		</section>
+
 		<!-- FAQs --> 
 		<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
 			<?php if( have_rows('sectionfaqs') ): ?>
