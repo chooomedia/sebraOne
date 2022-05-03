@@ -15,21 +15,14 @@ if ( $args['data'] ) {
     <div class="<?php echo esc_html($consumerReviewClass) ?> slider pb-md-4 pb-md-5 pb-3" id="customerReviews">				
         <?php if( have_rows('customersReviewArray') ): $c = 0; $class = ''; ?>
             <?php while( have_rows('customersReviewArray') ) : the_row(); ?>
-                <?php 
-                    $sub_text = the_sub_field('customerReviewText');
-                    $sub_name = the_sub_field('customerReviewName');
-                    $sub_stars = the_sub_field('customerReviewStars');
-                ?>
-
                 <?php $c++; ?>
                 <div class="col-md-4 col-12 mb-md-5 mx-0 mb-5 bg-transparent border-0">
                     <div class="customer-review card-body text-center arrow-bottom">
-                        <p class="text-white title-large"><q><?php echo $sub_text ?></q></p>
-                        <div class="text-white"><?php echo $sub_name ?></div>
-                        <h4 class="my-3 text-white"><b><?php echo $sub_stars ?></b></h4>
+                        <p class="text-white title-large"><q><?php the_sub_field('customerReviewText') ?></q></p>
+                        <div class="text-white"><?php the_sub_field('customerReviewName') ?></div>
+                        <h4 class="my-3 text-white"><b><?php the_sub_field('customerReviewStars') ?></b></h4>
                     </div>
                 </div>
-
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
