@@ -31,19 +31,16 @@ $page_title = $wp_query->post->post_title;
 	jQuery('form#address #masterdata-button').on('click', function (e) {
 		e.preventDefault();
 		jQuery.ajax({
-			type: "POST",
+			type: "GET",
 			url: "<?php echo admin_url('admin-ajax.php'); ?>",
 			data: {
-				action: "register_user_front_end",
-				new_user_email: newUserEmail,
-				new_user_password: newUserPassword
+				action: "fetch-list"
 			},
 			success: function (results) {
 				console.log(results);
-				jQuery('.register-message').text(results).show();
 			},
 			error: function (results) {
-				jQuery(".card-body").addClass('ahashakeheartache');
+				console.log(results);
 			}
 		});
 	});
