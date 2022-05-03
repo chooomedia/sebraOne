@@ -28,7 +28,7 @@
 </style>
 <script>
 	jQuery(function ($) {
-		var bannedWords = ["www", "@", "+49", "ficken", "wixxer", "nutte"];
+		var bannedWords = ["www", "handynummer", +49, @, "ficken", "wixxer", "nutte", "mobil", "telefonnummer", "nummer"];
 		var bannedWordsRegex = new RegExp('-' + bannedWords.join("-|-") + '-', 'i');
 
 		$("#messageContent").on("input", function (e) {
