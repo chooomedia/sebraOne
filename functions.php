@@ -276,16 +276,14 @@ function custom_post_type() {
 }
 add_action( 'init', 'custom_post_type', 0 );
 
-add_filter('post_type_link', 'cj_update_permalink_structure', 10, 2);
-function cj_update_permalink_structure( $post_link, $post )
-{
-    if ( false !== strpos( $post_link, '%custom-taxonomy-name%' ) ) {
-        $taxonomy_terms = get_the_terms( $post->ID, 'custom-taxonomy-name' );
-        foreach ( $taxonomy_terms as $term ) { 
-            if ( ! $term->parent ) {
-                $post_link = str_replace( '%custom-taxonomy-name%', $term->slug, $post_link );
-            }
-        } 
+function wpa_course_post_link( $post_link, $id = 0 ){
+    $post = get_post($id);  
+    if ( is_object( $post ) ){
+        $terms = wp_get_object_terms( $post->ID, 'custom-taxonomy-name' );
+        if( $terms ){
+            return str_replace( '%custom-taxonomy-name%' , $terms[0]->slug , $post_link );
+        }
     }
-    return $post_link;
+    return $post_link;  
 }
+add_filter( 'post_type_link', 'wpa_course_post_link', 1, 3 );
