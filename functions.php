@@ -286,3 +286,4 @@ function landingpage_update_permalink_structure( $post_link, $id = 0 ){
     }
     return $post_link;  
 }
+
