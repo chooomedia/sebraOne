@@ -278,7 +278,7 @@ add_action( 'init', 'landingpage_custom_post_type', 0 );
 function landingpage_category_post_link( $post_link, $id = 0 ){
     $post = get_post($id);  
     if ( is_object( $post ) ){
-        $terms = wp_get_object_terms( $post->ID, 'landingpage' );
+        $terms = wp_get_object_terms( $post->ID, 'autoverkaufen' );
         if( $terms ){
             return str_replace( '%citycategory%' , $terms[0]->slug , $post_link );
         }
