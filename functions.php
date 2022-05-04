@@ -212,7 +212,7 @@ function my_acf_init_block_types() {
 
 /*Add Landingpage Custom Post Type */
 // Register Custom Post Type
-function landingpage_custom_post_type() {
+function custom_post_type() {
 	$labels = array(
 		'name'                  => _x( 'Landingpages', 'Post Type General Name', 'autoverkaufen' ),
 		'singular_name'         => _x( 'Landingpage', 'Post Type Singular Name', 'autoverkaufen' ),
@@ -243,7 +243,7 @@ function landingpage_custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'autoverkaufen',
+		'slug'                  => 'auto-verkaufen',
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,
@@ -253,7 +253,7 @@ function landingpage_custom_post_type() {
 		'description'           => __( 'Landingpages für SEO', 'autoverkaufen' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes' ), //'trackbacks',
-		'taxonomies'            => array( 'topic', 'category', 'post_tag' ),
+		'taxonomies'            => array( 'category', 'post_tag', 'topic' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -268,9 +268,10 @@ function landingpage_custom_post_type() {
 		'query_var'             => 'post_landingpage',
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
-		'show_in_rest'          => false
+		'show_in_rest'          => false,
+		'rest_controller_class' => 'WP_REST_Landingpage_Controller',
 	);
 	register_post_type( 'landingpage', $args );
 
 }
-add_action( 'init', 'landingpage_custom_post_type', 0 );
+add_action( 'init', 'custom_post_type', 0 );
