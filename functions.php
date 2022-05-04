@@ -243,7 +243,7 @@ function landingpage_custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'auto-verkaufen/%custom-taxonomy-name%',
+		'slug'                  => 'auto-verkaufen',
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,
@@ -253,7 +253,7 @@ function landingpage_custom_post_type() {
 		'description'           => __( 'Landingpages für SEO', 'autoverkaufen' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes' ), //'trackbacks',
-		'taxonomies'            => array( 'category', 'post_tag', 'topic' ),
+		'taxonomies'            => array( 'topic', 'category', 'post_tag', ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -274,16 +274,3 @@ function landingpage_custom_post_type() {
 
 }
 add_action( 'init', 'landingpage_custom_post_type', 0 );
-
-add_filter('post_type_link', 'landingpage_update_permalink_structure', 1, 3);
-function landingpage_update_permalink_structure( $post_link, $id = 0 ){
-    $post = get_post($id);  
-    if ( is_object( $post ) ){
-        $terms = wp_get_object_terms( $post->ID, 'custom-taxonomy-name' );
-        if( $terms ){
-            return str_replace( '%custom-taxonomy-name%' , $terms[0]->slug , $post_link );
-        }
-    }
-    return $post_link;  
-}
-
