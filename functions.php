@@ -253,7 +253,7 @@ function landingpage_custom_post_type() {
 		'description'           => __( 'Landingpages für SEO', 'autoverkaufen' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes' ), //'trackbacks',
-		'taxonomies'            => array( 'topic', 'category', 'post_tag', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
