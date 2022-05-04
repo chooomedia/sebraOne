@@ -71,6 +71,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							<p>
 							<?php the_content(); ?>
 							</p>
+							<p><?php echo $post->ID ?></p>
 						</div>
 					</div>
 					<div role="tabpanel" id="nav-searchbox" class="tab-pane card-body border-0">
