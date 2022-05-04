@@ -212,7 +212,7 @@ function my_acf_init_block_types() {
 
 /*Add Landingpage Custom Post Type */
 // Register Custom Post Type
-function custom_post_type() {
+function landingpage_custom_post_type() {
 	$labels = array(
 		'name'                  => _x( 'Landingpages', 'Post Type General Name', 'autoverkaufen' ),
 		'singular_name'         => _x( 'Landingpage', 'Post Type Singular Name', 'autoverkaufen' ),
@@ -243,7 +243,7 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'autoverkaufen',
+		'slug'                  => 'auto-verkaufen/%citycategory%',
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,
@@ -268,10 +268,21 @@ function custom_post_type() {
 		'query_var'             => 'post_landingpage',
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
-		'show_in_rest'          => false,
-		'rest_controller_class' => 'WP_REST_Landingpage_Controller',
+		'show_in_rest'          => false
 	);
 	register_post_type( 'landingpage', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'landingpage_custom_post_type', 0 );
+
+function landingpage_category_post_link( $post_link, $id = 0 ){
+    $post = get_post($id);  
+    if ( is_object( $post ) ){
+        $terms = wp_get_object_terms( $post->ID, 'landingpage' );
+        if( $terms ){
+            return str_replace( '%citycategory%' , $terms[0]->slug , $post_link );
+        }
+    }
+    return $post_link;  
+}
+add_filter( 'post_type_link', 'landingpage_category_post_link', 1, 3 );
