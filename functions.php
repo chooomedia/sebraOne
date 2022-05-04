@@ -243,7 +243,7 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'auto-verkaufen',
+		'slug'                  => 'auto-verkaufen/%custom-taxonomy-name%',
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,
@@ -275,3 +275,17 @@ function custom_post_type() {
 
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+add_filter('post_type_link', 'cj_update_permalink_structure', 10, 2);
+function cj_update_permalink_structure( $post_link, $post )
+{
+    if ( false !== strpos( $post_link, '%custom-taxonomy-name%' ) ) {
+        $taxonomy_terms = get_the_terms( $post->ID, 'custom-taxonomy-name' );
+        foreach ( $taxonomy_terms as $term ) { 
+            if ( ! $term->parent ) {
+                $post_link = str_replace( '%custom-taxonomy-name%', $term->slug, $post_link );
+            }
+        } 
+    }
+    return $post_link;
+}
