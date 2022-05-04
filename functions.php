@@ -243,7 +243,7 @@ function landingpage_custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'auto-verkaufen/%custom-taxonomy-name%',
+		'slug'                  => '%custom-taxonomy-name%/auto-verkaufen', 'with_front' => true,
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,
