@@ -16176,9 +16176,6 @@ footer#wrapper-footer .images-gellary ul li a {
 @media screen and (max-width: 768px) {
   #main-nav .navbar-brand {
     max-width: 200px;
-    -webkit-transform: translateX(-45px);
-            transform: translateX(-45px);
-  }
 }
 
 @media screen and (max-width: 768px) {

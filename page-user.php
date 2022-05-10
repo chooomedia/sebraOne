@@ -48,7 +48,7 @@ $currentUser = $current_user->display_name;
 					</a>
 				</div>
 				<div class="type-company item">
-					<a role="button" data-target="#main" data-slide-to="2" class="active">
+					<a role="button" data-target="#main" data-slide-to="2">
 						<div class="type-info">
 							<i class="fas fa-comment mr-2"></i>
 							<h4>Benachrichtigungen</h4>

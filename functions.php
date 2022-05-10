@@ -243,7 +243,7 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filtern', 'autoverkaufen' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'autoverkaufen',
+		'slug'                  => 'auto-verkaufen',
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,

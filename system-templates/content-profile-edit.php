@@ -286,21 +286,6 @@ $role = array_shift($u->roles);
 		});
 	</script>
 
-	<script>
-	jQuery(function($) {
-		let toasterXmlHttpReq = new XMLHttpRequest();
-
-		function getDataStatus() {
-			toasterXmlHttpReq.open('GET', wp_deal.url, true);
-			
-			if (toasterXmlHttpReq.status >= 200 && toasterXmlHttpReq.status < 400) {
-				let dataAnfrage = JSON.parse(toasterXmlHttpReq.responseText);
-				alert(dataAnfrage);
-			};
-		};
-	});
-	</script>
-
 	<div id="profile-edit-content" class="container m-0 pt-3 pb-3 vw-100">
 		<div class="card">
 			<div class="card-body p-0 p-md-3">
