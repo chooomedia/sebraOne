@@ -244,7 +244,6 @@ function custom_post_type() {
 	);
 	$rewrite = array(
 		'slug'                  => 'auto-verkaufen',
-		'hierarchical' 			=> true,
 		'with_front'            => false,
 		'pages'                 => false,
 		'feeds'                 => false,

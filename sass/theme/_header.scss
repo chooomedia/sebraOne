@@ -81,11 +81,6 @@
 
 	.navbar-brand {
 		max-width: 260px;
-
-		@media screen and (max-width: $md) {
-			max-width: 200px;
-			transform: translateX(-45px);
-		}
 	}
 
 	@media screen and (max-width:$md) {
