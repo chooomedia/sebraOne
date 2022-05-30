@@ -21,6 +21,6 @@ defined( 'ABSPATH' ) || exit;
 	<div class="card-body text-center pt-0">
 		<h2 class="card-title"><b><?php echo $noResultHeadline ?></b></h2>
 		<p class="card-text"><?php echo $noResultContent ?></p>
-		<a href="https://www.sebra1.com/#main-search" class="btn bg-primary text-white col-12 py-3">Jetzt erneut suchen</a>
+		<a href="https://sebra1.com/#main-search" class="btn bg-primary text-white col-12 py-3">Jetzt erneut suchen</a>
 	</div>
 </div>
