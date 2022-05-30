@@ -15236,7 +15236,7 @@ input.error::placeholder {
 input[type="checkbox"] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  margin-right: 0.8rem !important;
+  margin-right: 5px !important;
   width: calc(1rem * 1.2);
   height: calc(1rem * 1.2);
 }

@@ -1080,7 +1080,7 @@ input {
 
 input[type="checkbox"] {
 	filter: grayscale(1);
-	margin-right: .8rem!important;
+	margin-right: 5px!important;
 	width: calc(#{$spacer} * 1.2);
 	height: calc(#{$spacer} * 1.2);
 }
