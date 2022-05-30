@@ -23,7 +23,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row px-3">
 
 			<main class="site-main" id="main">
 
