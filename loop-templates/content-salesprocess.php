@@ -6,8 +6,8 @@
  */
 ?>
 
-<div class="row">
-	<div class="row-scroll-x d-flex justify-content-center">
+<div class="row overflow-hidden">
+	<div class="row-scroll-x d-flex">
 		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 		<?php while( have_rows('sellsArray') ) : the_row(); ?>
 		<?php $c++; ?>
@@ -39,8 +39,8 @@
 				display: none !important;
 			}
 
-			.step-3 {
-				transform: scale(.5) translateY(280px) rotate(26deg);
+			.step-2 {
+				transform: rotate(-27deg) scaleY(-1)!important;
 			}
 		</style>
 	</div>
