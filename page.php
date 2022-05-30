@@ -44,6 +44,9 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		</div><!-- .row -->
 
 	</div><!-- #content -->
+	
+
+	
 
 	<!-- Faqs -->
 	<?php if( have_rows('sectionfaqs') ): ?>
