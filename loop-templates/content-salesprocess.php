@@ -34,14 +34,24 @@
 			style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
 		<?php endwhile; ?>
 		<?php endif; ?>
-		<style>
-			.step-4 {
-				display: none !important;
-			}
-
-			.step-2 {
-				transform: rotate(-27deg) scaleY(-1)!important;
-			}
-		</style>
 	</div>
 </div>
+
+<style>
+	.step-4 {
+		display: none !important;
+	}
+
+	.step-2 {
+		transform: rotate(-27deg) scaleY(-1)!important;
+	}
+</style>
+
+<script>
+const scrollContainer = document.querySelector(".row-scroll-x");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
+</script>
