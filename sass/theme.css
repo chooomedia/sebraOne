@@ -15797,6 +15797,16 @@ input[type="checkbox"] {
   background-size: cover;
 }
 
+#page-landingpage-wrapper #landingpage-steps > .container > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#page-landingpage-wrapper #landingpage-steps > .container > .row > .col-lg-2 {
+  display: inline-block;
+  float: none;
+}
+
 @media screen and (max-width: 576px) {
   #page-landingpage-wrapper #landingpage-steps {
     width: calc(100vw + 3px) !important;
