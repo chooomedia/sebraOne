@@ -6,63 +6,71 @@
  */
 ?>
 
-<div class="row">
-	<div id="scrollHorizontal"> <!-- class="row-scroll-x d-flex" -->
-		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
-		<?php while( have_rows('sellsArray') ) : the_row(); ?>
-		<?php $c++; ?>
-		<div
-			class="col-lg-2 col-md-2 col-sm-6 mb-4 <?php if (($c == 2 ) || ($c == 4 )) : ?>transform-minus-top<?php endif; ?> box-shadow-lg p-0 mb-5">
-			<!-- Portfolio item 1-->
-			<div class="portfolio-item text-center">
-				<div class="card border-0">
-					<img style="filter:grayscale(1);" class="card-img-top" src="<?php the_sub_field('sells_image'); ?>"
-						alt="sales_process_step_<?php echo $c ?>"> <!-- https://via.placeholder.com/320x220 -->
-					<ul class="list-group list-group-flush">
-						<div style="z-index:1080;position:relative;" class="rounded-circle bg-white box-shadow">
-							<div class="text-accent step-number"><b><?php echo $c ?></b></div>
-						</div>
-					</ul>
-					<div class="card-body">
-						<h5 class="card-title"><?php the_sub_field('sells_headline'); ?></h5>
-						<p class="card-text"><?php the_sub_field('sells_text'); ?></p>
+
+<div id="scrollHorizontal">
+	<!-- class="row-scroll-x d-flex" -->
+	<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
+	<?php while( have_rows('sellsArray') ) : the_row(); ?>
+	<?php $c++; ?>
+	<div style="min-width:22vw"
+		class="col-lg-2 col-md-2 col-sm-6 mb-4 <?php if (($c == 2 ) || ($c == 4 )) : ?>transform-minus-top<?php endif; ?>box-shadow-lg p-0 mb-5">
+		<!-- Portfolio item 1-->
+		<div class="portfolio-item text-center">
+			<div class="card border-0">
+				<img style="filter:grayscale(1);" class="card-img-top" src="<?php the_sub_field('sells_image'); ?>"
+					alt="sales_process_step_<?php echo $c ?>"> <!-- https://via.placeholder.com/320x220 -->
+				<ul class="list-group list-group-flush">
+					<div style="z-index:1080;position:relative;" class="rounded-circle bg-white box-shadow">
+						<div class="text-accent step-number"><b><?php echo $c ?></b></div>
 					</div>
+				</ul>
+				<div class="card-body">
+					<h5 class="card-title"><?php the_sub_field('sells_headline'); ?></h5>
+					<p class="card-text"><?php the_sub_field('sells_text'); ?></p>
 				</div>
 			</div>
 		</div>
-		<div class="step-arrow step-<?php echo $c ?> col-md-1 d-md-flex justify-content-center d-none"
-			style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
-		<?php endwhile; ?>
-		<?php endif; ?>
-		<style>
-			.step-4 {
-				display: none !important;
-			}
-
-			.step-2 {
-				transform: rotate(-27deg) scaleY(-1)!important;
-			}
-			#scrollHorizontal {
-				display:flex;
-				flex-direction: row;
-			}
-		</style>
 	</div>
+	<div class="step-arrow step-<?php echo $c ?> col-md-1 d-md-flex justify-content-center d-none"
+		style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
+	<?php endwhile; ?>
+	<?php endif; ?>
 </div>
 
+<style>
+	.step-4 {
+		display: none !important;
+	}
+
+	.step-2 {
+		transform: rotate(-27deg) scaleY(-1) !important;
+	}
+
+	#scrollHorizontal {
+		display: flex;
+		flex-direction: row;
+	}
+
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type="text/javascript">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+	type="text/javascript"></script>
 
 <script>
-var controller = new ScrollMagic.Controller();
+	var controller = new ScrollMagic.Controller();
 
-var scrollHorizontal = new TimelineLite()
-  scrollHorizontal.to("#scrollHorizontal", 1, {x:'-100%'})
+	var scrollHorizontal = new TimelineLite()
+	scrollHorizontal.to("#scrollHorizontal", 1, {
+		x: '-100%'
+	})
 
-var horizontalScroll = new ScrollMagic.Scene({
-      triggerElement: "#scrollHorizontal",
-      triggerHook: 'onLeave',
-      duration: 3000
-    }).setPin("#scrollHorizontal").setTween(scrollHorizontal).addTo(controller);
+	var horizontalScroll = new ScrollMagic.Scene({
+		triggerElement: "#scrollHorizontal",
+		triggerHook: 'onLeave',
+		duration: 3000
+	}).setPin("#scrollHorizontal").setTween(scrollHorizontal).addTo(controller);
+
 </script>
