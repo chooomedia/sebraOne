@@ -6,8 +6,8 @@
  */
 ?>
 
-<div class="row" style="overflow-x: auto;">
-	<div class="row-scroll-x d-flex">
+<div class="row">
+	<div id="scrollHorizontal"> <!-- class="row-scroll-x d-flex" -->
 		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 		<?php while( have_rows('sellsArray') ) : the_row(); ?>
 		<?php $c++; ?>
@@ -42,6 +42,27 @@
 			.step-2 {
 				transform: rotate(-27deg) scaleY(-1)!important;
 			}
+			#scrollHorizontal {
+				display:flex;
+				flex-direction: row;
+			}
 		</style>
 	</div>
 </div>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" type="text/javascript"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type="text/javascript"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" type="text/javascript"></script>
+
+<script>
+var controller = new ScrollMagic.Controller();
+
+var scrollHorizontal = new TimelineLite()
+  scrollHorizontal.to("#scrollHorizontal", 1, {x:'-100%'})
+
+var horizontalScroll = new ScrollMagic.Scene({
+      triggerElement: "#scrollHorizontal",
+      triggerHook: 'onLeave',
+      duration: 3000
+    }).setPin("#scrollHorizontal").setTween(scrollHorizontal).addTo(controller);
+</script>
