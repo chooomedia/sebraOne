@@ -7,7 +7,7 @@
 ?>
 
 <div class="row" style="overflow-x: auto;">
-	<div class="row-scroll-x d-flex">
+	<div if="scrolls-verticaly" class="row-scroll-x d-flex">
 		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 		<?php while( have_rows('sellsArray') ) : the_row(); ?>
 		<?php $c++; ?>
@@ -48,7 +48,7 @@
 </style>
 
 <script>
-const scrollContainer = document.querySelector(".row-scroll-x");
+const scrollContainer = document.querySelector("#scrolls-verticaly");
 
 scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
