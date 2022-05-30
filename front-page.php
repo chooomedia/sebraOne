@@ -76,7 +76,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 			<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
 				<div class="text-center mb-5">
 					<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('sales_headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
-					<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
+					<h3 class="text-accent section-subheading text-muted pb-md-2 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
 				</div>
 
 				<?php
