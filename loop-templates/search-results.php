@@ -21,7 +21,7 @@ if ( $args['data'] ) {
 ?>
 <!--ADVICE COMMENT-->
 <!-- Do not change #create-deal. -->
-<?php if ( $resultSellerId ) : ?>
+<?php if ( $args['data'] ) : ?>
 <div class="card card-result mb-3" id="create-deal" data-seller-id="<?php echo $resultSellerId ?>">
 	<a href="<?php echo $resultSellerId ?>">
 	<div class="card-img-top bg-turquoise">
