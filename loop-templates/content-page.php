@@ -42,24 +42,23 @@ defined( 'ABSPATH' ) || exit;
 
 </article><!-- #post-## -->
 
-<!-- Sell car steps -->
-<div id="page-landingpage-wrapper">
-	<section id="landingpage-steps" class="jumbotron page-section bg-light pt-5 pb-2">
-		<?php if( have_rows('salesprocess') ): ?>
-		<?php while( have_rows('salesprocess') ): the_row(); ?>
-		<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
-			<div class="text-center mb-5">
-				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('sales_headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
-				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
-			</div>
-
+<?php if( have_rows('sectionfaqs') ): ?>
+<!-- FAQs --> 
+<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+	<?php while( have_rows('sectionfaqs') ): the_row(); ?>
+	<div class="container py-md-4 my-5 pt-md-3">
+		<div class="text-center">
+			<h2 class="section-heading text-uppercase text-white"><?php the_sub_field('faqs_headline') ?></h2><!-- <b>Meist</b> gestellte <b>Fragen</b> -->
+			<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('faqs_subline') ?></h3><!-- <b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns -->
+		</div>
+		<div class="col-12 mb-4">
 			<?php
-				get_template_part( 'loop-templates/content-salesprocess', null, array(
-					'id' => 'salesProcess'
+				get_template_part( 'loop-templates/content-faqs', null, array(
+					'id' => 'sectionFaqs'
 				));
 			?>
 		</div>
-		<?php endwhile; ?>
-		<?php endif; ?>
-	</section>
-</div>
+	</div>
+	<?php endwhile; ?>
+</section>
+<?php endif; ?>
