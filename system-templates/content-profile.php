@@ -50,7 +50,8 @@ $pageTitle = get_the_title();?>
 			'appoints' => '12',
 			'requests' => '3',
 			'payments' => '2',
-			'completed' => '8'
+			'completed' => '8',
+			'demo' => true
 			))
 		);
 	?>
