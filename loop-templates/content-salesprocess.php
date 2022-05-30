@@ -6,8 +6,8 @@
  */
 ?>
 
-<div class="row d-flex justify-content-center">
-	<div class="row-scroll-x">
+<div class="row">
+	<div class="row-scroll-x d-flex justify-content-center">
 		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 		<?php while( have_rows('sellsArray') ) : the_row(); ?>
 		<?php $c++; ?>
