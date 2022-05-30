@@ -115,15 +115,6 @@ $pageTitle = get_the_title();
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					}
-
-					else {
-						get_template_part( 'loop-templates/no-results', null, array(
-							'data' => array(
-								'headline' => 'Nichts gefunden',
-								'content' => 'Hier gibt es leider nichts zu sehen.'
-							)
-						) );
-					}
             	?>
 			</main><!-- #main -->
 
