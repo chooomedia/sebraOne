@@ -17815,12 +17815,13 @@ html .box-shadow {
   background-size: cover;
 }
 
-#landingpage-steps > .container .row {
+#landingpage-steps .row-scroll-x {
   overflow-x: auto;
   white-space: nowrap;
+  min-width: 1700px;
 }
 
-#landingpage-steps > .container > .row .col-lg-2 {
+#landingpage-steps .row-scroll-x .col-lg-2 {
   display: inline-block;
   float: none;
 }
