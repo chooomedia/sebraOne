@@ -20,6 +20,10 @@
 *.min.css
 *.min.css.map
 
+#npm package-json
+package.json
+package-lock.json
+
 # Ignore all files and directories starting with . or ~ or ._ or ending with ~
 .*
 ~*

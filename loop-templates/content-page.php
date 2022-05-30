@@ -41,3 +41,25 @@ defined( 'ABSPATH' ) || exit;
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+
+<!-- Sell car steps -->
+<div id="page-landingpage-wrapper">
+	<section id="landingpage-steps" class="jumbotron page-section bg-light pt-5 pb-2">
+		<?php if( have_rows('salesprocess') ): ?>
+		<?php while( have_rows('salesprocess') ): the_row(); ?>
+		<div class="container bg-white p-5 pt-md-0 rounded-lg mb-5">
+			<div class="text-center mb-5">
+				<h2 class="section-heading text-uppercase mt-md-5 pt-md-5"><b><?php the_sub_field('sales_headline') ?></b></h2><!-- <b>Wie der Verkauf abläuft</b> -->
+				<h3 class="text-accent section-subheading text-muted pb-md-5 pb-0"><?php the_sub_field('sales_subline') ?></h3> <!-- Schritt für Schritt <b>zur Anfrage</b> -->
+			</div>
+
+			<?php
+				get_template_part( 'loop-templates/content-salesprocess', null, array(
+					'id' => 'salesProcess'
+				));
+			?>
+		</div>
+		<?php endwhile; ?>
+		<?php endif; ?>
+	</section>
+</div>
