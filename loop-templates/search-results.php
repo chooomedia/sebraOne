@@ -21,6 +21,7 @@ if ( $args['data'] ) {
 ?>
 <!--ADVICE COMMENT-->
 <!-- Do not change #create-deal. -->
+<?php if ( $queries ) : ?>
 <div class="card card-result mb-3" id="create-deal" data-seller-id="<?php echo $resultSellerId ?>">
 	<a href="<?php echo $resultSellerId ?>">
 	<div class="card-img-top bg-turquoise">
@@ -56,3 +57,14 @@ if ( $args['data'] ) {
 		</div>
 	</div>
 </div>
+
+<?php else : ?>
+<?php get_template_part( 'loop-templates/no-results', null, array(
+	'data' => array(
+		'headline' => 'Nichts gefunden',
+		'content' => 'Hier gibt es leider nichts zu sehen.'
+	)
+	) );
+?>
+
+<?php endif ?>

@@ -105,36 +105,6 @@ $pageTitle = get_the_title();
 					 * @param bool:is-active Helperclass to change visibility
 					 */
 					global $queries;
-					$queries = array(
-						'data' => array(
-							'price-range' => '€€€',
-							'seller-id' => 'SELLER-23245',
-							'seller-proofed' => true,
-							'seller-text' => 'Oldtimer & Raritäten gute Bezahlung',
-							'seller-logo' => 'https://oldtimer-profi.de/data/L_Toms_Club_Service_201026_161700.svg',
-							'seller-kpis' => 'mehr als 40 Käufe',
-							'isactive' => true
-						)
-						,
-						'data' => array(
-							'price-range' => '€€',
-							'seller-id' => 'SELLER-3223',
-							'seller-proofed' => false,
-							'seller-text' => 'Sportwagen',
-							'seller-logo' => 'https://previews.123rf.com/images/saiful007/saiful0071807/saiful007180700157/105107809-sportwagen-mit-drehzahlmesser-logo-auto-performance-logo.jpg',
-							'seller-kpis' => 'mehr als 120 Käufe',
-							'isactive' => true
-						),
-						'data' => array(
-							'price-range' => '€€',
-							'seller-id' => 'SELLER-3223',
-							'seller-proofed' => false,
-							'seller-text' => 'Sportwagen',
-							'seller-logo' => 'https://previews.123rf.com/images/saiful007/saiful0071807/saiful007180700157/105107809-sportwagen-mit-drehzahlmesser-logo-auto-performance-logo.jpg',
-							'seller-kpis' => 'mehr als 120 Käufe',
-							'isactive' => true
-						)
-					);
 
 					while ( have_posts() ) {
 						the_post();
