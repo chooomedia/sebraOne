@@ -6,8 +6,8 @@
  */
 ?>
 
-<div class="row" style="overflow-x: auto;">
-	<div id="scrolls-verticaly" class="row-scroll-x d-flex">
+<div id="scrolls-verticaly"  class="row" style="overflow-x: hidden;">
+	<div class="row-scroll-x d-flex">
 		<?php if( have_rows('sellsArray') ): $c = 0; $class = ''; ?>
 		<?php while( have_rows('sellsArray') ) : the_row(); ?>
 		<?php $c++; ?>
