@@ -45,6 +45,27 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 	</div><!-- #content -->
 
+	<!-- Faqs -->
+	<?php if( have_rows('sectionfaqs') ): ?>
+	<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+		<?php while( have_rows('sectionfaqs') ): the_row(); ?>
+		<div class="container py-md-4 my-5 pt-md-3">
+			<div class="text-center">
+				<h2 class="section-heading text-uppercase text-white"><?php the_sub_field('faqs_headline') ?></h2><!-- <b>Meist</b> gestellte <b>Fragen</b> -->
+				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('faqs_subline') ?></h3><!-- <b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns -->
+			</div>
+			<div class="col-12 mb-4">
+				<?php
+					get_template_part( 'loop-templates/content-faqs', null, array(
+						'id' => 'sectionFaqs'
+					));
+				?>
+			</div>
+		</div>
+		<?php endwhile; ?>
+	</section>
+	<?php endif; ?>
+
 </div><!-- #page-wrapper -->
 
 <?php
