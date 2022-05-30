@@ -1,5 +1,5 @@
 @import "theme/theme_variables"; // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or SebraOne variables here
-@import "assets/bootstrap4"; // <-------- Loads Bootstrap4
+@import "assets/bootstrap4.scss"; // <-------- Loads Bootstrap4
 @import "sebraone/sebraone"; // <-------- Loads the SebraOne defaults. Just a few classes to incorporate BS in WP
 @import "theme/mobile"; // <-------- Loads the mobile media queries
 // @import "sebraone/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
