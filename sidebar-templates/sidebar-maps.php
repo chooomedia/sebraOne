@@ -60,7 +60,7 @@ if ( $args['data'] ) {
 
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhfgFGniLuaniNprEgBFbR8wjRkpNeSPk&callback=initMap&libraries=geometry&v=weekly"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_8JU38a7ZKj3TuM4ev2GGwKW9Lq_2Go&callback=initMap&libraries=geometry&v=weekly"
 	async>
 </script>
 

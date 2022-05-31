@@ -297,5 +297,5 @@ $role = array_shift($u->roles);
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhfgFGniLuaniNprEgBFbR8wjRkpNeSPk&callback=initMap&libraries=&v=weekly"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_8JU38a7ZKj3TuM4ev2GGwKW9Lq_2Go&callback=initMap&libraries=&v=weekly"
 	async></script>
