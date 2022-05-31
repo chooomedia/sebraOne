@@ -19,9 +19,9 @@ get_header();
 $container = get_theme_mod( 'SebraOne_container_type' );
 
 ?>
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="page-contact-wrapper">
 
-<section class="row">
+<section id="fullwidth-images" class="row overflow-hidden">
     <div class="col p-0 m-0">
         <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
