@@ -22,7 +22,7 @@
 				}
 
 				.active {
-					background: #08a9e8;
+					background: $blue;
 					border: transparent;
 				}
 
@@ -135,15 +135,15 @@
 
 .bg-turquoise,
 .bg-danger {
-	background: #08a9e8 !important;
+	background: $blue!important;
 }
 
 .bg-turquoise-gradient {
-	background: linear-gradient(#ffffff00 40%,#08a9e8 100%)!important;
+	background: linear-gradient(#ffffff00 40%,$blue 100%)!important;
 }
 
 .text-accent {
-	color: #08a9e8 !important;
+	color: $blue!important;
 }
 
 /* color: #dc3545 */
