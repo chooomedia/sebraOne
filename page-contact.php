@@ -19,7 +19,7 @@ get_header();
 $container = get_theme_mod( 'SebraOne_container_type' );
 
 ?>
-<div class="wrapper" id="page-contact-wrapper">
+<div class="wrapper overflow-hidden" id="page-contact-wrapper">
 
 <section id="fullwidth-images" class="row overflow-hidden mb-5">
     <div class="col p-0 m-0">
