@@ -22,20 +22,20 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 <div class="wrapper" id="page-wrapper">
 
 <section class="row">
-    <div class="col">
-        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;" alt="lorempixel" />
+    <div class="col p-0 m-0">
+        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
-    <div class="col">
-        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;" alt="lorempixel" />
+    <div class="col p-0 m-0">
+        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
-    <div class="col">
-        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;" alt="lorempixel" />
+    <div class="col p-0 m-0">
+        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
-    <div class="col">
-        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;" alt="lorempixel" />
+    <div class="col p-0 m-0">
+        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
-    <div class="col">
-        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;" alt="lorempixel" />
+    <div class="col p-0 m-0">
+        <img loading="lazy" src="https://picsum.photos/200" style="object-fit:cover;width:100%;" alt="lorempixel" />
     </div>
 </section>
 
