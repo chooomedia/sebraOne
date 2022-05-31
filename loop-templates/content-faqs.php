@@ -35,7 +35,7 @@
     <?php endwhile; ?>
     <?php echo ($c % 5 !== 0) ? '</div>' : '' ?>
 
-    <nav aria-label="Faqs pagination navigation"></nav>
+    <nav aria-label="Faqs pagination navigation">
         <ul class="pagination justify-content-center">
             <li class="page-item active">
                 <a class="page-link" data-toggle="tab" href="#faqs-block-0" aria-controls="faqs-block-0" aria-selected="true">1</a>
