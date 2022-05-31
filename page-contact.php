@@ -69,71 +69,76 @@ $container = get_theme_mod( 'SebraOne_container_type' );
             ?>
 
 
-				<ul class="nav nav-tabs" id="contactFormTabs" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="seller-tab" data-toggle="tab" href="#user-seller" role="tab"
-							aria-controls="home" aria-selected="true"><i class="fas fa-car"></i> <b>Verkäufer</b></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="buyer-tab" data-toggle="tab" href="#user-buyer" role="tab"
-							aria-controls="profile" aria-selected="false"><i class="fas fa-building"></i>
-							<b>Händler</b></a>
-					</li>
-				</ul>
-				<div class="tab-content" id="contactFormTab">
-					<div class="tab-pane fade show active" id="user-seller" role="tabpanel"
-						aria-labelledby="seller-tab">
-						<div class="form-with-args container-fluid row px-2 py-4 m-0">
-							<div class="col-md-8 col-12">
-								<?php echo do_shortcode('[contact-form-7 id="812" title="page-contact-form-user"]'); ?>
-							</div>
-							<div class="col-md-4 col-12">
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihre Anfrage ist kostenlos und unverbindlich</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihre Angaben werden sicher mittels SSL übertragen</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihre Angaben werden 100% datenschutzkonform behandelt</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihr Beitrag hilft uns Sebra1 komfortabler und einfacher zu gestalten</h3>
-									</li>
-								</ul>
+				<div class="py-4">
+					<ul class="nav nav-tabs" id="contactFormTabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="seller-tab" data-toggle="tab" href="#user-seller" role="tab"
+								aria-controls="home" aria-selected="true"><i class="fas fa-car"></i>
+								<b>Verkäufer</b></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="buyer-tab" data-toggle="tab" href="#user-buyer" role="tab"
+								aria-controls="profile" aria-selected="false"><i class="fas fa-building"></i>
+								<b>Händler</b></a>
+						</li>
+					</ul>
+					<div class="tab-content" id="contactFormTab">
+						<div class="tab-pane fade show active" id="user-seller" role="tabpanel"
+							aria-labelledby="seller-tab">
+							<div class="form-with-args container-fluid row px-2 py-4 m-0">
+								<div class="col-md-8 col-12">
+									<?php echo do_shortcode('[contact-form-7 id="812" title="page-contact-form-user"]'); ?>
+								</div>
+								<div class="col-md-4 col-12">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihre Anfrage ist kostenlos und unverbindlich</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihre Angaben werden sicher mittels SSL übertragen</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihre Angaben werden 100% datenschutzkonform behandelt</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihr Beitrag hilft uns Sebra1 komfortabler und einfacher zu gestalten
+											</h3>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade" id="user-buyer" role="tabpanel" aria-labelledby="buyer-tab">
-						<div class="form-with-args container-fluid row px-2 py-4 m-0">
-							<div class="col-md-8 col-12">
-								<?php echo do_shortcode('[contact-form-7 id="813" title="page-contact-form-buyer"]'); ?>
-							</div>
-							<div class="col-md-4 col-12">
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Sie sind selbstständiger Händler und wollen die besten Angebote erhalten
-										</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihre Angaben werden sicher mittels SSL übertragen</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihre Angaben werden 100% datenschutzkonform behandelt</h3>
-									</li>
-									<li class="list-group-item px-0 py-3 d-flex align-items-center">
-										<i class="fas fa-2x fa-check-circle mr-2"></i>
-										<h3>Ihr Beitrag hilft uns Sebra1 komfortabler und einfacher zu gestalten</h3>
-									</li>
-								</ul>
+						<div class="tab-pane fade" id="user-buyer" role="tabpanel" aria-labelledby="buyer-tab">
+							<div class="form-with-args container-fluid row px-2 py-4 m-0">
+								<div class="col-md-8 col-12">
+									<?php echo do_shortcode('[contact-form-7 id="813" title="page-contact-form-buyer"]'); ?>
+								</div>
+								<div class="col-md-4 col-12">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Sie sind selbstständiger Händler und wollen die besten Angebote erhalten
+											</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihre Angaben werden sicher mittels SSL übertragen</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihre Angaben werden 100% datenschutzkonform behandelt</h3>
+										</li>
+										<li class="list-group-item px-0 py-3 d-flex align-items-center">
+											<i class="fas fa-2x fa-check-circle mr-2"></i>
+											<h3>Ihr Beitrag hilft uns Sebra1 komfortabler und einfacher zu gestalten
+											</h3>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
