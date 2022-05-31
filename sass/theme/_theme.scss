@@ -259,8 +259,22 @@ html {
 	.row-scroll-x {
 		overflow-x: auto;
 		white-space: nowrap;
+		scroll-behavior: smooth;
 		min-width: 1860px;
 		padding: 5rem 3rem;
+		scroll-snap-type: x mandatory;
+
+		.card {
+			scroll-snap-align: center;
+		}
+
+		@media screen and (max-width:$sm) {
+		
+			& {
+				min-width: 1680px;
+				padding: 1rem 1rem;
+			}
+		}
 
 		.col-lg-2.box-shadow-lg {
 

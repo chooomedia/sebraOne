@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="step-arrow step-<?php echo $c ?> col-md-1 d-md-flex justify-content-center d-none"
+		<div class="step-arrow step-<?php echo $c ?> col-md-1 d-md-flex justify-content-center"
 			style="background: url('<?php echo get_stylesheet_directory_uri() ?>/src/img/step-arrow-right.png');"></div>
 		<?php endwhile; ?>
 		<?php endif; ?>
