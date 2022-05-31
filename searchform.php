@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php if (!is_page('landingpage')) : ?>
 			<div class="searchbox-inner-comment">
 				<legend class="text-white">Jetzt Auto verkaufen</legend>
-				<p class="text-white text-center">zum besten Preis in deiner Umgebung</p>
+				<p class="text-white text-center">kostenlos zum besten Preis in Ihrer Umgebung</p>
 				</fieldset>
 			</div>
 			<?php endif ?>

@@ -118,6 +118,9 @@ footer#wrapper-footer {
 
 #colophon {
 	@media screen and (max-width:$sm) {
+		& {
+			padding: 1rem 0;
+		}
 		.site-info {
 			text-align: center;
 		}

@@ -50,27 +50,11 @@ $pageTitle = get_the_title();?>
 			'appoints' => '12',
 			'requests' => '3',
 			'payments' => '2',
-			'completed' => '8'
+			'completed' => '8',
+			'demo' => true
 			))
 		);
 	?>
-
-	<div id="charts-section" class="row mb-1">
-		<div class="col-md-6 pl-lg-0 pr-lg-2 mb-3">
-			<div class="card">
-				<div class="card-body">
-					<canvas id="chLine"></canvas>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 pl-lg-2 pr-lg-0 mb-3">
-			<div class="card">
-				<div class="card-body">
-					<canvas id="chBar"></canvas>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="container p-sm-0 mb-4 mt-1">
@@ -101,84 +85,6 @@ profileSwitchEl.on('click', function() {
 });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-<script>
-	/* chart.js chart examples */
-
-	// chart colors
-	var colors = ['#08a9e8', '#000', '#ccc', '#333', '#222', '#dc3545'];
-
-	/* large line chart */
-	var chLine = document.getElementById("chLine");
-	var chartData = {
-		labels: ["S", "M", "T", "W", "T", "F", "S"],
-		datasets: [{
-				data: [589, 445, 483, 503, 689, 692, 634],
-				backgroundColor: 'transparent',
-				borderColor: colors[0],
-				borderWidth: 4,
-				pointBackgroundColor: colors[0]
-			}
-			//   {
-			//     data: [639, 465, 493, 478, 589, 632, 674],
-			//     backgroundColor: colors[3],
-			//     borderColor: colors[1],
-			//     borderWidth: 4,
-			//     pointBackgroundColor: colors[1]
-			//   }
-		]
-	};
-	if (chLine) {
-		new Chart(chLine, {
-			type: 'line',
-			data: chartData,
-			options: {
-				scales: {
-					xAxes: [{
-						ticks: {
-							beginAtZero: false
-						}
-					}]
-				},
-				legend: {
-					display: false
-				},
-				responsive: true
-			}
-		});
-	}
-
-	/* bar chart */
-	var chBar = document.getElementById("chBar");
-	if (chBar) {
-		new Chart(chBar, {
-			type: 'bar',
-			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S"],
-				datasets: [{
-						data: [589, 445, 483, 503, 689, 692, 634],
-						backgroundColor: colors[0]
-					},
-					{
-						data: [639, 465, 493, 478, 589, 632, 674],
-						backgroundColor: colors[1]
-					}
-				]
-			},
-			options: {
-				legend: {
-					display: false
-				},
-				scales: {
-					xAxes: [{
-						barPercentage: 0.4,
-						categoryPercentage: 0.5
-					}]
-				}
-			}
-		});
-	}
-</script>
 <script>
 jQuery(function($) {
 	/* Save/check status of profile functions infobox in localstorge */

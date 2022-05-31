@@ -77,7 +77,7 @@ function sebraone_menu_items($items, $args) {
 add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
 function add_search_box_to_menu( $items, $args ) {
     if( $args->theme_location == 'primary' )
-        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><i style='width:28px;' class='fa fa-search pr-2 text-white' aria-hidden='true'></i><input type='text' name='s' id='search' placeholder='Suche und Finde'></form></li>";
+        return $items."<li class='d-none d-sm-block menu-header-search'><form action='/' id='searchform' method='get'><i style='width:28px;' class='fa fa-search pr-2 text-white' aria-hidden='true'></i><input type='text' name='s' id='search' placeholder='Suchen und Finden'></form></li>";
 
     return $items;
 }
