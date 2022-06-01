@@ -34,8 +34,9 @@
             <?php $c++; echo ($c % 4 == 0) ? '</div>' : '' ?>
         <?php endwhile; ?>
         </div>
-    <?php echo ($c % 4 > 0) ? '</div>
-                                <nav aria-label="Faqs pagination navigation">
+        <?php echo ($c % 4 !== 0) ? '</div>' : '' ?>
+
+    <?php echo ($c > 4) ? '<nav aria-label="Faqs pagination navigation">
                                     <ul class="pagination justify-content-center">
                                         <li class="page-item active">
                                             <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
