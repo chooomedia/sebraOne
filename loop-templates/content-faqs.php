@@ -36,7 +36,7 @@
         </div>
         <?php echo ($c % 4 !== 0) ? '</div>' : '' ?>
 
-        <nav class="<?php echo ($c > 4) ? 'd-none' : '' ?>" aria-label="Faqs pagination navigation">
+        <nav class="<?php echo ($c > 4) ? '' : 'd-none' ?>" aria-label="Faqs pagination navigation">
             <ul class="pagination justify-content-center">
                 <li class="page-item active">
                     <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
