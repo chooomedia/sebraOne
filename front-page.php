@@ -109,7 +109,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 		<?php endif; ?>
 
 		<!-- FAQs --> 
-		<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+		<section id="landingpage-faqs" class="mvh-50 page-section bg-darker">
 			<?php if( have_rows('sectionfaqs') ): ?>
 			<?php while( have_rows('sectionfaqs') ): the_row(); ?>
 			<div class="container py-md-3 my-5 pt-md-4">

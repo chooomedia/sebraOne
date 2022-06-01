@@ -125,6 +125,12 @@
 	align-items: center;
 }
 
+.mvh-50 {
+	min-height: calc(50vh - 88px) !important;
+	display: flex;
+	align-items: center;
+}
+
 .bg-darker {
 	background: #111111 !important
 }
