@@ -307,6 +307,22 @@ html {
 	}
 }
 
+#landingpage-faqs {
+	clear: both;
+
+	#faqs-wrapper {
+		.carousel-inner {
+			.carousel-item {
+				height: 350px;
+
+				@media screen and (max-width:$sm) {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width:$sm) {
 	#landingpage-steps {
 		width: calc(100vw + 3px) !important;
