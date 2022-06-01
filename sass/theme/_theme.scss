@@ -321,6 +321,19 @@ html {
 				}
 			}
 		}
+
+		.page-item.active .page-link {
+			z-index: 3;
+			color: #fff;
+			background-color: #000;
+			border-color: #000;
+		}
+
+		.page-link {
+			background: $blue;
+			border: 1px solid $blue;
+			color: #fff;
+		}
 	}
 }
 
