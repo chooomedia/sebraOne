@@ -10,7 +10,7 @@
 ?>
 
 <div class="col-md-12 col-12 p-0">
-    <div id="faqs-wrapper" class="site-main carousel slide" data-ride="carousel" data-interval="false">
+    <div id="faqs-wrapper" class="site-main carousel slide" data-ride="carousel" data-interval="3500">
         <div class="carousel-inner">
         <?php if( have_rows('faqsarray') ): $counter = 0; $class = ''; ?>
         <?php while( have_rows('faqsarray') ) : the_row(); ?>
