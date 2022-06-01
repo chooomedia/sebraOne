@@ -10,11 +10,11 @@
 <div class="col-md-12 col-12 p-0">
     <div id="faqs-wrapper" class="site-main carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
-        <?php if( have_rows('faqsarray') ): $c = 0; $class = ''; ?>
+        <?php if( have_rows('faqsarray') ): $counter = 0; $class = ''; ?>
         <?php while( have_rows('faqsarray') ) : the_row(); ?>
-            <?php echo ($c == 0 || $c % 4 == 0) ? '<div class="carousel-item' . (($c == 0)?' active':'') . '" id="faqs-block-' . $c . '">' : '' ?>
+            <?php echo ($counter == 0 || $counter % 4 == 0) ? '<div class="carousel-item' . (($counter == 0)?' active':'') . '" id="faqs-block-' . $counter . '">' : '' ?>
             <div class="card faqs-card">
-                <div id="faqs-<?php echo $c ?>" class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $c ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $c ?>">
+                <div id="faqs-<?php echo $counter ?>" class="card-header bg-darker text-white" data-toggle="collapse" href="#collapseFaqContent<?php echo $counter ?>" role="button" aria-expanded="false" aria-controls="collapseFaqContent<?php echo $counter ?>">
                     <b><?php the_sub_field('faqs_question'); ?></b>
                     <a class="pull-right-arrow" data-toggle="collapse" href="#faqs-arrow" aria-expanded="true" aria-controls="faqs-arrow">
                         <div class="btn-chevron-arrow">
@@ -22,7 +22,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="collapseFaqContent<?php echo $c ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $c; ?>">
+                <div id="collapseFaqContent<?php echo $counter ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $counter; ?>">
                     <div class="card card-body pb-1">
                         <div class="card-body p-0">
                             <?php the_sub_field('faqs_answer'); ?>
@@ -31,12 +31,12 @@
                 </div>
             </div>
             <div class="col-12 py-3"></div>
-            <?php $c++; echo ($c % 4 == 0) ? '</div>' : '' ?>
+            <?php $counter++; echo ($counter % 4 == 0) ? '</div>' : '' ?>
         <?php endwhile; ?>
         </div>
-        <?php echo ($c % 4 !== 0) ? '</div>' : '' ?>
+        <?php echo ($counter % 4 !== 0) ? '</div>' : '' ?>
 
-        <nav class="<?php echo ($c >= 4) ? '' : 'd-none' ?>" aria-label="Faqs pagination navigation">
+        <nav class="<?php echo ($counter >= 4) ? '' : 'd-none' ?>" aria-label="Faqs pagination navigation">
             <ul class="pagination justify-content-center">
                 <li class="page-item active">
                     <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
