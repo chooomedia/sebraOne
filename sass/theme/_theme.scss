@@ -313,7 +313,7 @@ html {
 	#faqs-wrapper {
 		.carousel-inner {
 			.carousel-item {
-				height: 350px;
+				min-height: 350px;
 
 				@media screen and (max-width:$sm) {
 					height: auto;
