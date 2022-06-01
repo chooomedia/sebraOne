@@ -34,21 +34,20 @@
             <?php $c++; echo ($c % 4 == 0) ? '</div>' : '' ?>
         <?php endwhile; ?>
         </div>
-    <?php echo ($c % 5 !== 0) ? '</div>' : '' ?>
-
-    <nav aria-label="Faqs pagination navigation">
-        <ul class="pagination justify-content-center">
-            <li class="page-item active">
-                <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="1" aria-selected="false">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="2" aria-selected="false">3</a>
-            </li>
-        </ul>
-    </nav>
+    <?php echo ($c % 4 > 0) ? '</div>
+                                <nav aria-label="Faqs pagination navigation">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="1" aria-selected="false">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="2" aria-selected="false">3</a>
+                                        </li>
+                                    </ul>
+                                </nav>' : '' ?>
 
 	<?php endif; ?>
     </div>
