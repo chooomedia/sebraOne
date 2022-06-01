@@ -11,6 +11,22 @@
     <div id="faqs-wrapper" class="site-main carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
         <?php if( have_rows('faqsarray') ): $counter = 0; $class = ''; ?>
+        <?php
+            if( get_query_var('page') ) {
+                $page = get_query_var( 'page' );
+            } else {
+                $page = 1;
+            }
+
+            // Variables
+            $counter = 0;
+            $faqs_per_block = 4; // How many images to display on each page
+            $faqs = get_field('faqsarray');
+            $total = count( $faqs );
+            $pages = ceil( $total / $faqs_per_block );
+            $min = ( ( $page * $faqs_per_block ) - $faqs_per_block ) + 1;
+            $max = ( $min + $faqs_per_block ) - 1;
+        ?>
         <?php while( have_rows('faqsarray') ) : the_row(); ?>
             <?php echo ($counter == 0 || $counter % 4 == 0) ? '<div class="carousel-item' . (($counter == 0)?' active':'') . '" id="faqs-block-' . $counter . '">' : '' ?>
             <div class="card faqs-card">
@@ -36,21 +52,23 @@
         </div>
         <?php echo ($counter % 4 !== 0) ? '</div>' : '' ?>
 
-        <nav class="<?php echo ($counter >= 4) ? '' : 'd-none' ?>" aria-label="Faqs pagination navigation">
+        <nav class="<?php echo ($counter > 4) ? '' : 'd-none' ?>" aria-label="Faqs pagination navigation">
             <ul class="pagination justify-content-center">
                 <li class="page-item active">
                     <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="0" aria-selected="true">1</a>
                 </li>
-                <li class="page-item">
+                <?php if ($counter > 4) : ?>
+                    <li class="page-item">
                     <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="1" aria-selected="false">2</a>
                 </li>
+                <?php endif; ?>
+                <?php if ($counter > 8) : ?>
                 <li class="page-item">
                     <a class="page-link" href="#faqs-wrapper" data-target="#faqs-wrapper" data-slide-to="2" aria-selected="false">3</a>
                 </li>
+                <?php endif; ?>
             </ul>
         </nav>
-
-
 	<?php endif; ?>
     </div>
 </div>
@@ -74,7 +92,6 @@ jQuery(function($) {
                 if((indx+2)>$('.pagination li').length)
                     indx=-1 //if index exceeds total length of indicators present set it to -1
                 $('.pagination li:nth-child('+(indx+2)+')').addClass('active');//set the respective indicator active
-
             });
     });
 });
