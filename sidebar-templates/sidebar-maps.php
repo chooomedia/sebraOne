@@ -36,7 +36,8 @@ if ( $args['data'] ) {
 		map = new google.maps.Map(document.getElementById("<?php echo esc_html($mapsId) ?>"), {
 			zoom: 10,
 			center: new google.maps.LatLng(52.520008, 13.404954),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			disableDefaultUI: true
 		});
 		var infowindow = new google.maps.InfoWindow();
 

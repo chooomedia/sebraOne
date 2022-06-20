@@ -2,9 +2,6 @@
     background: rgba(0,0,0,0.33);
 
     .main-search-inner {
-        .dropdown-menu.show {
-            max-width: 120px;
-        }
         @media screen and (max-width:$sm) {
             .main-search-inner {
                 position: absolute;

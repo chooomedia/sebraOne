@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 					</optgroup>
 				</select>
 			</div>
-			<div class="input-field first-wrap">
+			<div class="input-field first-wrap d-none">
 				<div class="icon-wrap">
 					<i class="fas fa-car-side"></i>
 				</div>
@@ -64,7 +64,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="icon-wrap">
 					<i class="fa fa-map-marker" aria-hidden="true"></i>
 				</div>
-				<input id="search" type="text" name="userPlace" placeholder="Wohnort / PLZ *" />
+				<input id="search" type="text" name="userPlace" placeholder="Stadt / PLZ *" />
 			</div>
 			<div class="input-field third-wrap">
 				<div class="icon-wrap">
