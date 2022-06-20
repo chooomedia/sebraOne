@@ -62,7 +62,7 @@ const eventHandler = (evt) => {
     scrollContainer.scrollLeft += evt.deltaY;
 
 	const scrollContainerEndPosition = scrollContainer.offsetLeft + scrollContainer.scrollLeft + scrollContainer.offsetWidth;
-	console.log('scrollpos:', scrollContainerEndPosition, 'endPos:', scrollContainerEndpointEl.offsetLeft, 'element:', scrollContainerEndpointEl);	
+	//console.log('scrollpos:', scrollContainerEndPosition, 'endPos:', scrollContainerEndpointEl.offsetLeft, 'element:', scrollContainerEndpointEl);	
 	
 	if(scrollContainerEndPosition >= scrollContainerEndpointEl.offsetLeft) {
 		//scrollContainer.removeEventListener("wheel", eventHandler);

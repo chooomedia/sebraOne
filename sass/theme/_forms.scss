@@ -1033,7 +1033,7 @@ input {
 
 	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
 		width: 100%;
-		max-width: 160px;
+		max-width: 170px;
 	}
   
 	@media screen and (max-width:$sm) {
