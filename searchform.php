@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 					</optgroup>
 				</select>
 			</div>
-			<div class="input-field first-wrap d-none">
+			<div class="input-field first-wrap">
 				<div class="icon-wrap">
 					<i class="fas fa-car-side"></i>
 				</div>
