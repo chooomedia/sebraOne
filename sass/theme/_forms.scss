@@ -1031,9 +1031,10 @@ input {
 	  width: auto !important;
 	}
 
-	/*&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-		width: 160px;
-	}*/
+	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		width: 100%;
+		max-width: 160px;
+	}
   
 	@media screen and (max-width:$sm) {
 		&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
