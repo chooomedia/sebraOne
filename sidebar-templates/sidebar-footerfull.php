@@ -31,7 +31,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 				<?php SebraOne_site_info(); ?>
 			</div><!-- .site-info -->
 			<div class="site-info col-md-6 text-md-right">
-				v0.9.0 - Beta Version <a data-toggle="modal" data-target="#bug-issue-form-modal" href="#bug-request-form">Fehler gefunden?</a>
+				v0.9.1 - Beta Version <a data-toggle="modal" data-target="#bug-issue-form-modal" href="#bug-request-form">Fehler gefunden?</a>
 			</div>
 		</div>
 	</div>
