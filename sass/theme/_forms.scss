@@ -69,7 +69,7 @@
 					}
 				}
 
-				input, button.dropdown-toggle, .btn-search {
+				input, button.dropdown-toggle {
 					padding: 10px 20px 10px 30px;
 					height: 56px;
 					background: #fff;
@@ -116,6 +116,20 @@
 							}
 						}
 					}
+				}
+
+				.btn-search {
+					padding: 10px 11px;
+					height: 56px;
+					background: #fff;
+					border-radius: 0;
+					border: 0;
+					display: block;
+					width: 100%;
+					font-size: 15px;
+					color: #555;
+					font-weight: 400;
+					transition: all .3s;
 				}
 
 				button.dropdown-toggle {
