@@ -94,12 +94,12 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							</a>
 						
 							<a class="btn btn-primary py-3 px-3 mx-md-2" style="min-width:68px;" id="nav-searchbox-tab" data-toggle="tab" href="#nav-searchbox" role="tab" aria-controls="nav-searchbox" aria-selected="fals">
-								<img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
+								Terminanfrage <img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" /> SEBRA1
 							</a>
 						
-							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php the_sub_field('link') ?>">
+							<!--<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php the_sub_field('link') ?>">
 								<?php the_sub_field('linktitle') ?>
-							</a>
+							</a>-->
 						</div>	
 					</div>
 				</div>
