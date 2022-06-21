@@ -69,12 +69,6 @@ const eventHandler = (evt) => {
 	} else {
 		evt.preventDefault();
 	}
-
-	scrollContainer.offsetBottom = scrollContainer.offsetTop + scrollContainer.offsetHeight;
-
-	if(scrollContainer.offsetBottom > 1700) {
-		console.log('end:', scrollContainer.offsetBottom);
-	}
 };
 
 scrollContainer.addEventListener("wheel", eventHandler);
