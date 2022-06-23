@@ -47,7 +47,7 @@ $role = array_shift($u->roles);
                         </figure>
                     </div>
                     <div class="col-md-8 pr-md-0 px-0">
-                        <div class="card mb-4">
+                        <div class="card mb-4 bg-grey">
                             <div class="card-body p-0 p-md-3">
                                 <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
                                 <h5 class="text-muted"><b><?php echo $pageTitle ?></b></h5>
