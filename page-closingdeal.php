@@ -13,8 +13,13 @@ get_header();
 
 $pageTitle = get_the_title();
 $container = get_theme_mod( 'SebraOne_container_type' );
+global $current_user;
 $currentUser = $current_user->display_name;
 $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
+wp_get_current_user();
+$name = $current_user->display_name;
+global $wp_roles;
+$u = get_userdata($current_user->ID);
 $role = array_shift($u->roles);
 
 ?>
