@@ -22,6 +22,11 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 
             <?php if (is_user_logged_in()) : ?>
                 <script async src="<?php echo get_theme_file_uri(); ?>/js/confetti.js"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        startConfetti();
+                    });
+                </script>
 
                 <div class="row m-0 p-0">
                     <div class="col-4 d-flex vertical-align-center">
@@ -57,12 +62,6 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
         </main>
     </section>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    startConfetti();
-});
-</script>
 
 <?php
 get_footer();
