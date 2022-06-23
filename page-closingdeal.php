@@ -21,8 +21,8 @@ $name = $current_user->display_name;
 global $wp_roles;
 $u = get_userdata($current_user->ID);
 $role = array_shift($u->roles);
-
 ?>
+
 <div class="wrapper" id="page-wrapper">
     <section class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
         <main class="site-main" id="main-closing-deal">
