@@ -32,6 +32,14 @@ $currentUser = $current_user->display_name;
 				]);
 			} */ ?>
 				<div class="type-company item">
+					<a class="active" role="button" data-target="#main" data-slide-to="2">
+						<div class="type-info">
+							<i class="fas fa-comment mr-2"></i>
+							<h4>Benachrichtigungen</h4>
+						</div>
+					</a>
+				</div>
+				<div class="type-company item">
 					<a role="button" data-target="#main" data-slide-to="0">
 						<div class="type-info">
 							<i class="fas fa-user mr-2"></i>
@@ -44,14 +52,6 @@ $currentUser = $current_user->display_name;
 						<div class="type-info">
 							<i class="fas fa-user-edit mr-2"></i>
 							<h4>Profil ändern</h4>
-						</div>
-					</a>
-				</div>
-				<div class="type-company item">
-					<a role="button" data-target="#main" data-slide-to="2">
-						<div class="type-info">
-							<i class="fas fa-comment mr-2"></i>
-							<h4>Benachrichtigungen</h4>
 						</div>
 					</a>
 				</div>
