@@ -40,13 +40,13 @@ $role = array_shift($u->roles);
                 </script>
 
                 <div class="row m-0 p-0">
-                    <div class="col-4 d-flex vertical-align-center">
+                    <div class="col-md-4 d-flex vertical-align-center">
                         <figure class="card-img-top m-auto text-center">
                             <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
                             <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
                         </figure>
                     </div>
-                    <div class="col-8 pr-md-0">
+                    <div class="col-md-8 pr-md-0">
                         <div class="card mb-4">
                             <div class="card-body p-0 p-md-3">
                                 <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
