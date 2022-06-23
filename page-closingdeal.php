@@ -25,6 +25,10 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
                         startConfetti();
+
+                        setTimeout(() => {
+                            stopConfetti();
+                        }, 4000);
                     });
                 </script>
 
@@ -62,6 +66,13 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
         </main>
     </section>
 </div>
+
+<style>
+    #confetti-canvas {
+        position: absolute;
+        top: 86px
+    }
+</style>
 
 <?php
 get_footer();
