@@ -31,7 +31,7 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
                             <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
                         </figure>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 pr-md-0">
                         <div class="card mb-4">
                             <div class="card-body p-0 p-md-3">
                                 <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
