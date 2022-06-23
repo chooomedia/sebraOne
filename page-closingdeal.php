@@ -13,6 +13,7 @@ get_header();
 
 $pageTitle = get_the_title();
 $container = get_theme_mod( 'SebraOne_container_type' );
+$currentUser = $current_user->display_name;
 
 ?>
 <div class="wrapper" id="page-wrapper">
@@ -22,8 +23,9 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
             <?php if (is_user_logged_in()) : ?>
                 <div class="card mb-4">
-                    <div class="card-body p-0 p-md-3 pb-0">
-                        <h2><b><?php echo $pageTitle ?></b></h2>
+                    <div class="card-body p-0 p-md-3">
+                        <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
+                        <h3><b><?php echo $pageTitle ?></b></h3>
                         <?php the_content() ?>
                     </div>
                 </div>
