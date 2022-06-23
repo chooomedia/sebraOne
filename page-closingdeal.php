@@ -25,7 +25,7 @@ $currentUser = $current_user->display_name;
                 <div class="card mb-4">
                     <div class="card-body p-0 p-md-3">
                         <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
-                        <h3><b><?php echo $pageTitle ?></b></h3>
+                        <h5 class="text-muted"><b><?php echo $pageTitle ?></b></h5>
                         <?php the_content() ?>
                     </div>
                 </div>
