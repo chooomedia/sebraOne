@@ -22,7 +22,7 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
             <main class="site-main container" id="main-closing-deal">
 
             <?php if (is_user_logged_in()) : ?>
-
+                <script src="<?php get_theme_file_uri(); ?>/js/confetti.js"></script>
 
                 <div class="row m-0 p-0">
                     <div class="col-4 d-flex vertical-align-center">
