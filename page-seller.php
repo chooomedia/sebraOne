@@ -31,13 +31,13 @@ $container = get_theme_mod( 'SebraOne_container_type' );
                     <?php get_template_part( 'system-templates/content', 'register' ); ?>
                 </div>
             <?php else : ?>
-                <div class="carousel-item active">
+                <div id="carousel-chat" class="carousel-item active">
                     <?php get_template_part( 'system-templates/comments', 'chat' ); ?>
                 </div>
-                <div class="carousel-item">
+                <div id="carousel-profile" class="carousel-item">
                     <?php  get_template_part( 'system-templates/content', 'profile' ); ?>
                 </div>
-                <div class="carousel-item">
+                <div id="carousel-profile-edit" class="carousel-item">
                     <?php get_template_part( 'system-templates/content', 'profile-edit' ); ?>
                 </div>
             <?php endif; ?>

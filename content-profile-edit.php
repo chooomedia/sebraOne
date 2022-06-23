@@ -240,14 +240,21 @@ $role = array_shift($u->roles);
 			<script>
 			jQuery(function($) {
 				var url = document.location.toString();
-				if (url.find('/account/#notifications-settings')) {
-					$('#main.carousel').carousel(2);
-				}
 				if (url.find('/account/#0')) {
-					$('#main.carousel').carousel(0);
+					if (!$('#main .carousel-inner #carousel-chat').classList.contains('active')) {
+						$('#main .carousel-inner #carousel-chat').addClass('active');
+					}
 				}
 				if (url.find('/account/#1')) {
-					$('#main.carousel').carousel(1);
+					if (!$('#main .carousel-inner #carousel-profile').classList.contains('active')) {
+						$('#main .carousel-inner #carousel-profile').addClass('active');
+					}
+				}
+				if (url.find('/account/#notifications-settings')) {
+					if (!$('#main .carousel-inner #carousel-profile-edit').classList.contains('active')) {
+						$('#main .carousel-inner #carousel-profile-edit').addClass('active');
+					}
+					// .carousel(2)
 				}
 			});
 			</script>
