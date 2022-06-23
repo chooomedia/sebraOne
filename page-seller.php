@@ -27,11 +27,11 @@ $container = get_theme_mod( 'SebraOne_container_type' );
     <main id="main" class="site-main carousel slide"data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
             <?php if (!is_user_logged_in()) : ?> 
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <?php get_template_part( 'system-templates/content', 'register' ); ?>
                 </div>
             <?php else : ?>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <?php  get_template_part( 'system-templates/content', 'profile' ); ?>
                 </div>
                 <div class="carousel-item">
