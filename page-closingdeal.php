@@ -65,13 +65,6 @@ $role = array_shift($u->roles);
 
             <?php else : ?>
                 <?php get_template_part( 'system-templates/content', 'register' ); ?>
-                <?php printf(
-				'<div id="search-search" class="row vh-50"><p>%s<p>',
-				esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'SebraOne' )
-			);
-			get_search_form(array('formId' => 'searchform-search'));
-			printf('</div>'); ?>
-
             <?php endif; ?>
 
         </main>
