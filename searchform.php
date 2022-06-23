@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 			<?php endif ?>
 		<?php endif ?>
-		<div class="inner-form bg-grey">
+		<div class="inner-form border">
 			<div class="input-field first-wrap">
 				<div class="icon-wrap">
 					<i class="fas fa-industry"></i>
