@@ -18,8 +18,7 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 ?>
 <div class="wrapper" id="page-wrapper">
     <section class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-        <div class="row">
-            <main class="site-main container" id="main-closing-deal">
+        <main class="site-main container" id="main-closing-deal">
 
             <?php if (is_user_logged_in()) : ?>
                 <script async src="<?php echo get_theme_file_uri(); ?>/js/confetti.js"></script>
@@ -55,8 +54,7 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 
             <?php endif; ?>
 
-            </main>
-        </div> 
+        </main>
     </section>
 </div>
 
