@@ -244,7 +244,7 @@ $role = array_shift($u->roles);
 					$('#main.carousel').carousel(2);
 				}
 				if (url.find('#0')) {
-					$('/account/#main.carousel').carousel(2);
+					$('/account/#main.carousel').carousel(0);
 				}
 				if (url.find('#1')) {
 					$('/account/#main.carousel').carousel(1);
