@@ -71,7 +71,23 @@ const eventHandler = (evt) => {
 	}
 };
 
+const mobileEventHandler = (mevt) => {
+	scrollContainer.scrollLeft += emvt.deltaY;
+
+	if(scrollContainerEndPosition >= scrollContainerEndpointEl.offsetLeft) {
+		//scrollContainer.removeEventListener("wheel", eventHandler);
+	} else {
+		mevt.preventDefault();
+	}
+}
+
+// for mobile
+if("ontouchstart" in window){
+   el.addEventListener('touchstart', mobileEventHandler);
+   el.addEventListener('touchmove', mobileEventHandler);
+   el.addEventListener('touchend', mobileEventHandler);
+}
+
+// for desktop
 scrollContainer.addEventListener("wheel", eventHandler);
-
-
 </script>
