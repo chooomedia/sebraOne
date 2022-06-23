@@ -133,7 +133,7 @@ $role = array_shift($u->roles);
 						<b>Andere Marken</b>
 						<a id="other-carbrand-types" class="pull-right-arrow" data-toggle="collapse" href="#test-block"
 							aria-expanded="true" aria-controls="test-block">
-							<div id="carbrand-arrow">
+							<div class="btn-chevron-arrow">
 								<i class="fas fa-chevron-down"></i>
 							</div>
 						</a>
@@ -255,7 +255,7 @@ $role = array_shift($u->roles);
 
 		jQuery(function ($) {
 			$(".card-header[data-toggle='collapse']").on("click", function () {
-				$("#carbrand-arrow").toggleClass('chevron-rotate', '');
+				$(".btn-chevron-arrow").toggleClass('chevron-rotate', '');
 			});
 		});
 
@@ -296,6 +296,4 @@ $role = array_shift($u->roles);
 </div>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhfgFGniLuaniNprEgBFbR8wjRkpNeSPk&callback=initMap&libraries=&v=weekly"
-	async></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_8JU38a7ZKj3TuM4ev2GGwKW9Lq_2Go&callback=initMap&libraries=&v=weekly" async></script>

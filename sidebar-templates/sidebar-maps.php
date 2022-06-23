@@ -36,7 +36,8 @@ if ( $args['data'] ) {
 		map = new google.maps.Map(document.getElementById("<?php echo esc_html($mapsId) ?>"), {
 			zoom: 10,
 			center: new google.maps.LatLng(52.520008, 13.404954),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			disableDefaultUI: true
 		});
 		var infowindow = new google.maps.InfoWindow();
 
@@ -60,7 +61,7 @@ if ( $args['data'] ) {
 
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhfgFGniLuaniNprEgBFbR8wjRkpNeSPk&callback=initMap&libraries=geometry&v=weekly"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_8JU38a7ZKj3TuM4ev2GGwKW9Lq_2Go&callback=initMap&libraries=geometry&v=weekly"
 	async>
 </script>
 

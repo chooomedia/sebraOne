@@ -232,6 +232,7 @@ html {
 	.pull-right-arrow {
 		position: absolute;
 		right: 18px;
+		top: 16px;
 	}
 
 	.box-shadow {
@@ -259,10 +260,24 @@ html {
 	.row-scroll-x {
 		overflow-x: auto;
 		white-space: nowrap;
-		min-width: 1860px;
+		scroll-behavior: smooth;
+		min-width: 1800px;
 		padding: 5rem 3rem;
+		scroll-snap-type: x mandatory;
 
-		.col-lg-2.box-shadow-lg {
+		.card {
+			scroll-snap-align: center;
+		}
+
+		@media screen and (max-width:$sm) {
+		
+			& {
+				min-width: 1680px;
+				padding: 1rem 1rem;
+			}
+		}
+
+		.salessteps-card.box-shadow-lg {
 
 			.list-group-flush {
 				width: 64px;
@@ -289,6 +304,35 @@ html {
 			transform: rotate(30deg);
 			z-index: 1000;
 			position: relative;
+		}
+	}
+}
+
+#landingpage-faqs {
+	clear: both;
+
+	#faqs-wrapper {
+		.carousel-inner {
+			.carousel-item {
+				min-height: 350px;
+
+				@media screen and (max-width:$sm) {
+					height: auto;
+				}
+			}
+		}
+
+		.page-item.active .page-link {
+			z-index: 3;
+			color: #111;
+			background-color: #fff;
+			border-color: #fff;
+		}
+
+		.page-link {
+			background: $blue;
+			border: 1px solid $blue;
+			color: #fff;
 		}
 	}
 }

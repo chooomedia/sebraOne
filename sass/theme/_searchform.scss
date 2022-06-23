@@ -2,9 +2,6 @@
     background: rgba(0,0,0,0.33);
 
     .main-search-inner {
-        .dropdown-menu.show {
-            max-width: 120px;
-        }
         @media screen and (max-width:$sm) {
             .main-search-inner {
                 position: absolute;
@@ -50,7 +47,7 @@
             padding: 0;
     
             .input-field {
-                width: calc(100% / 6);
+                /*width: calc(100% / 6);*/
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
                 border-bottom: 1px solid #111;
@@ -61,6 +58,7 @@
     
                 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
                     width: 100%;
+                    max-width: inherit!important;
                 }
 
                 .dropdown-menu.show {

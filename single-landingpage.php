@@ -94,12 +94,14 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 							</a>
 						
 							<a class="btn btn-primary py-3 px-3 mx-md-2" style="min-width:68px;" id="nav-searchbox-tab" data-toggle="tab" href="#nav-searchbox" role="tab" aria-controls="nav-searchbox" aria-selected="fals">
-								<img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" />
+								Terminanfrage <img width="22px" height="22px" src="<?php echo get_site_icon_url(); ?>" /> SEBRA1
 							</a>
 						
+							<?php if(the_sub_field('link')) : ?>
 							<a class="btn btn-primary py-3 px-md-4 px-2" target="_blank" href="<?php the_sub_field('link') ?>">
 								<?php the_sub_field('linktitle') ?>
 							</a>
+							<?php endif;?>
 						</div>	
 					</div>
 				</div>
@@ -194,10 +196,10 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 	</section>
 
 	<!-- FAQs --> 
-	<section id="landingpage-faqs" class="mvh-100 page-section bg-darker">
+	<section id="landingpage-faqs" class="mvh-50 page-section bg-darker">
 		<?php if( have_rows('sectionfaqs') ): ?>
 		<?php while( have_rows('sectionfaqs') ): the_row(); ?>
-		<div class="container py-md-4 my-5 pt-md-3">
+		<div class="container py-md-3 my-5 pt-md-4">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase text-white"><?php the_sub_field('faqs_headline') ?></h2><!-- <b>Meist</b> gestellte <b>Fragen</b> -->
 				<h3 class="section-subheading text-accent mb-5"><?php the_sub_field('faqs_subline') ?></h3><!-- <b>Haben Sie</b> weiterhin <b>Fragen?</b> - <a class="text-accent" href="#">schreiben</a> Sie uns -->

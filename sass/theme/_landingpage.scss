@@ -22,7 +22,7 @@
 				}
 
 				.active {
-					background: #08a9e8;
+					background: $blue;
 					border: transparent;
 				}
 
@@ -99,10 +99,6 @@
 		}
 	}
 
-	#landingpage-faqs {
-		clear: both;
-	}
-
 	#landingpage-listings {
 		list-style-type: none;
 
@@ -129,21 +125,27 @@
 	align-items: center;
 }
 
+.mvh-50 {
+	min-height: calc(50vh - 88px) !important;
+	display: flex;
+	align-items: center;
+}
+
 .bg-darker {
 	background: #111111 !important
 }
 
 .bg-turquoise,
 .bg-danger {
-	background: #08a9e8 !important;
+	background: $blue!important;
 }
 
 .bg-turquoise-gradient {
-	background: linear-gradient(#ffffff00 40%,#08a9e8 100%)!important;
+	background: linear-gradient(#ffffff00 40%,$blue 100%)!important;
 }
 
 .text-accent {
-	color: #08a9e8 !important;
+	color: $blue!important;
 }
 
 /* color: #dc3545 */
