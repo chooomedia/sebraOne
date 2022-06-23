@@ -151,7 +151,7 @@ $userName = $args['userName'];
 																		style="font-size: 14px; font-family: 'Montserrat', Tahoma, Verdana, Segoe, sans-serif; color: #ffffff; line-height: 1.2;">
 																		<p style="margin: 0; font-size: 14px;"><span
 																				style="font-size:30px;"><strong>Bitte
-																					bestätige deine
+																					bestätigen Sie Ihre
 																					Anfrage</strong></span></p>
 																	</div>
 																</div>
@@ -165,7 +165,7 @@ $userName = $args['userName'];
 															<td
 																style="padding-bottom:55px;padding-left:10px;padding-right:10px;padding-top:10px;text-align:left;">
 																<!--[if mso]><a:roundrect xmlns:a="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:42px;width:238px;v-text-anchor:middle;" arcsize="48%" stroke="false" fillcolor="#111111"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Tahoma, Verdana, sans-serif; font-size:16px"><![endif]-->
-																<a href="https://www.sebra1.com/#finishing-submit" style="padding:6px 12px;line-height: 2.2;margin: 0;text-decoration:none;display:inline-block;color:#ffffff;background-color:#111111;height: 56px;width: 100%;white-space: nowrap;-moz-border-radius: 4px;border-radius: 4px;font-size: 20px;font-family:'Montserrat', Tahoma, Verdana, Segoe, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;">
+																<a href="https://sebra1.com/https://sebra1.com/success-29933dsded#finishing-submit" style="padding:6px 12px;line-height: 2.2;margin: 0;text-decoration:none;display:inline-block;color:#ffffff;background-color:#111111;height: 56px;width: 100%;white-space: nowrap;-moz-border-radius: 4px;border-radius: 4px;font-size: 20px;font-family:'Montserrat', Tahoma, Verdana, Segoe, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;">
 																	<strong>Jetzt Anfrage bestätigen</strong></a>
 																<!--[if mso]></center></v:textbox></a:roundrect><![endif]-->
 															</td>
@@ -220,7 +220,7 @@ $userName = $args['userName'];
 													<table border="0" cellpadding="0" cellspacing="0"
 														class="social_block" role="presentation"
 														style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
-														<tr>
+														<tr style="display:none;">
 															<td
 																style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:35px;text-align:center;">
 																<table align="center" border="0" cellpadding="0"
@@ -264,7 +264,7 @@ $userName = $args['userName'];
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px; letter-spacing: 1px;">
 																			<span style="font-size:12px;"><span
-																					style=""><strong>Wir sind stets bemüht Dir das beste Nutzererlebniss wie möglich zu gewährleisten. Möchtest du uns Bewerten</strong></span><span
+																					style=""><strong>Wir sind stets bemüht Ihnen das beste Nutzererlebniss zu ermöglichen. Möchten Sie uns Bewerten</strong></span><span
 																					style=""><strong>?</strong></span></span>
 																		</p>
 																	</div>
@@ -279,7 +279,7 @@ $userName = $args['userName'];
 														<tr>
 															<td
 																style="width:100%;padding-right:0px;padding-left:0px;padding-top:20px;">
-																<a href="https://google.com/" target="_blank">
+																<a href="https://sebra1.com/https://sebra1.com/success-29933dsded#rating-deal" target="_blank">
 																<div align="center" style="line-height:10px"><img style="display: block; height: auto; border: 0; width: 124px; max-width: 100%;"
 																	width="124" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAAXCAYAAADJLSsnAAAENklEQVRogdWaTYgcRRiGn4mDiB68qESMMQFRD2sOgbgRWVAQiQdFT0GQea+KivEkGiGQQ1D0FBDx4M8rIsGDBHMxCImIEFlEEWMQL2YNBAWVREXj+rMeqmeYn+rp6pqe7Mx3qaW7up/v+Wqmpqp7W51Oh8S4FzgIHADe6B60nXp9NCRVMsZFDl9Sj2M7iTPmXmWnklwmqV+Ox4Ya938TuBF4rX5qM8W4WJyZZKQO+BJwDfAy0AIeqpvZjDCQNMCRNJcuuR6pA/5i0T4O/Aa8UDvD2WD0OLbn3SXLI2XArwIWCZ8kgOeA64Gb6+e4rgwkRTmS5splEo+UAd9btM8U7cGifb5OkjPAGOHYnleXbI+UAd8DfE2YNrpxFHigRoKzwOhxbM+7S7ZHu2hvISwANgE3AVuB64CF4vwTQ9c9BZwCfpX0GXAWWAG+Bb4HfrR9qv8CSdkMIMoozg9ELkdSKWeaLpIaZVR5tDqdznHgTuLxA/AW8HTk3LPAo0VCsVi2vVgkP3VGKsf2CEfSTLlM06Pdd+MngfeBfwnfntWSi7pxgLDhR9KlhMXKZcAdBOnb+vpGGbZXxzy46DGKv6sYYznjILZ7nFwXEuuV6DI1jzawA/gIeAx4FfirIvEYaJUwhSDp7eLwrr4uAwzbtRmEgp4t/o4xGuHUdSGjXlS7TM1jA2G+vxW4AbhA+VQyNiRtk7QG3A5st320Dz7AkJTFALYBPQZhodKLpjh1XMisF0Mu06hXzKO7Sv8O2Ej4cT8OPFjzxncBXwJ/AFttfzHcx/YAQ1ItBjDAAEYYTXByXKhZL4ZcplGvMo/+bdk5YAvwOfAe8HDijXcBx4AzwLW2T5f1tT3AkJTEIEx3PQZQypiEM4kLifViyGUa9Rrn0Sp5W/YVYfnfJiwYxsUa8BOw0XZV3/6kshjDfaveNvVzqvIrpr9aLsWiM9sl9W1ZUx7t+CX8DvwJ/JeQywpwSZ3BzmVQXcxGODPq0ohH2ZO2ncBhwqexKt4FNhXbgDpRm0HYztSNncBh2/Pu0ohHbMA3F+2xyLkdkWMfF+32hEQAkDR1RhVHUlOcda1XXY/YgN9dtJ/0HVskLJSWgfN9fQBOFO19pRmvDyPKkbQo6TSwLOm8pHlwacwjNuC7CVPTN4Tf+FeATwl7wn2EhwYfAoeAK23/DPwN3F9DYDewZjuJAeQwBjiS2pKiHEmHJE3kQmK9Ml0a84gN+BJwhPCbcQF4BHgduBzYD1wNvFQkcU7SPYSnRQuSWokCS8ARSUkMoMcg/AdJapRybO+33ZgLifXKdGnMY3hbdgVhNdiNM8VNTjAaC8A7hCdC/xA+3Vtsr4zLXNLEDMIqFCjflpVxbI9wJK2bSy4j12P4G74KfECYdvYRFiSx5AFOEh4P7iG8+10GfhmX/EVkjHBsb44VCcD2Sduz6tKox/8GFDixFGjGYgAAAABJRU5ErkJggg==" alt="ranking stars" /></div>
 																</a>
@@ -365,8 +365,8 @@ $userName = $args['userName'];
 																							<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px; letter-spacing: normal;">
 																								<span style="font-size:12px;">Diese E-Mail war für Dich bestimmt. &nbsp;<a href="https://www.sebra1.com/account/#notifications-settings" data-slide-to="1" rel="noopener" style="text-decoration: underline; color: #111111;" target="_blank">Abmeldung</a> von Nachrichten und ähnlichen Informationen,</span></p>
 																							<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px; letter-spacing: normal;">
-																								<span style="font-size:12px;"> oder besuche dein
-																								</span><span style="font-size:12px;">Profil und passe dementsprechend deine E-Mail-Benachrichtigungen an.</span>
+																								<span style="font-size:12px;"> oder besuchen Sie Ihr
+																								</span><span style="font-size:12px;">Profil und passen  Sie Ihre E-Mail-Benachrichtigungen an.</span>
 																							</p>
 																						</div>
 																							</td>
