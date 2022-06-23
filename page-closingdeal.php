@@ -9,9 +9,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
 get_header(); 
 
+$pageTitle = get_the_title();
 $container = get_theme_mod( 'SebraOne_container_type' );
 
 ?>
@@ -22,11 +22,12 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
             <?php if (is_user_logged_in()) : ?>
                 <div class="card">
-                    <div class="card-body p-0 p-md-3">
+                    <div class="card-body p-0 p-md-3 mb-5">
+                        <h2><b><?php echo $pageTitle ?></b></h2>
                         <?php the_content() ?>
                     </div>
                 </div>
-                
+
                 <?php echo do_shortcode( '[contact-form-7 id="501" title="bug-issue-form"]' ); ?>
             <?php else : ?>
 
