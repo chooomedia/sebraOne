@@ -243,11 +243,11 @@ $role = array_shift($u->roles);
 				if (url.find('/account/#notifications-settings')) {
 					$('#main.carousel').carousel(2);
 				}
-				if (url.find('#0')) {
-					$('/account/#main.carousel').carousel(0);
+				if (url.find('/account/#0')) {
+					$('#main.carousel').carousel(0);
 				}
-				if (url.find('#1')) {
-					$('/account/#main.carousel').carousel(1);
+				if (url.find('/account/#1')) {
+					$('#main.carousel').carousel(1);
 				}
 			});
 			</script>
