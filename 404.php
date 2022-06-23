@@ -33,7 +33,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'SebraOne' ); ?></p>
 
-							<div class="bg-grey" id="search-search">
+							<div id="search-search">
 								<?php get_search_form(array('formId' => 'searchform-search')); ?>
 							</div>
 
