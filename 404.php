@@ -9,7 +9,6 @@
 defined( 'ABSPATH' ) || exit;
 get_header();
 $container = get_theme_mod( 'SebraOne_container_type' );
-
 ?>
 
 <div class="wrapper text-center" id="error-404-wrapper">
@@ -34,7 +33,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'SebraOne' ); ?></p>
 
-							<div id="search-search">
+							<div class="bg-grey" id="search-search">
 								<?php get_search_form(array('formId' => 'searchform-search')); ?>
 							</div>
 
