@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	<form method="get" name="search-form" class="p-lg-2" id="<?php echo $searchboxId ?>"
 		action="<?php echo home_url( '/results/' ); ?>" role="search">
 		<label class="sr-only" for="search-form"><?php esc_html_e( 'Search', 'SebraOne' ); ?></label>
-		<?php if(!is_search() || $searchboxId == 'maps-searchform') : ?>
+		<?php if(!is_search() || !is_404()) : ?>
 			<?php if (!is_page('landingpage')) : ?>
 			<div class="searchbox-inner-comment">
 				<legend class="text-white">Jetzt Auto verkaufen</legend>
