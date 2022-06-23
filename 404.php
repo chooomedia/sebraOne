@@ -12,7 +12,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 ?>
 
-<div class="wrapper" id="error-404-wrapper">
+<div class="wrapper text-center" id="error-404-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
