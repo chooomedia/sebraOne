@@ -65,7 +65,7 @@ function sebraone_menu_items($items, $args) {
 		$items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="nav-item"><a title="Abmelden" href="#" class="logout dropdown-item">Abmelden</a></li>';
 		$items .= '</ul>';
 		$items .= '</li>';
-        $items .= '<li id="ex4" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-item d-md-block d-none"><a title="Benachrichtigungen" role="button" href="/account/#2" data-target="#main" data-slide-to="2" class="nav-link p-0"><span class="p1 fa-stack has-badge" data-count="✓"><i class="p3 fas fa-comments fa-stack-1x xfa-inverse" data-count="4b"></i></span></a></li>';
+        $items .= '<li id="ex4" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-item d-md-block d-none"><a title="Benachrichtigungen" role="button" href="/account/#0" data-target="#main" data-slide-to="0" class="nav-link p-0"><span class="p1 fa-stack has-badge" data-count="✓"><i class="p3 fas fa-comments fa-stack-1x xfa-inverse" data-count="4b"></i></span></a></li>';
         }
     return $items;
 }
