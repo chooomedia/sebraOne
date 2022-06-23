@@ -84,7 +84,7 @@ $currentUser = $current_user->display_name;
                 </div>
                 <div class="carousel-inner">
                     <?php if (!is_user_logged_in()) : ?> 
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <?php get_template_part( 'system-templates/content', 'register' ); ?>
                         </div>
                     <?php else : ?>
@@ -94,7 +94,7 @@ $currentUser = $current_user->display_name;
                         <div class="carousel-item">
                             <?php get_template_part( 'system-templates/content', 'profile-edit' ); ?>
                         </div>
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <?php get_template_part( 'system-templates/comments', 'chat' ); ?>
                         </div>
                     <?php endif; ?>
