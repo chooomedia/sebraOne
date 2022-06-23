@@ -363,7 +363,7 @@ $userName = $args['userName'];
 																						style="text-align:center;padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:6px;">
 																						<div style="font-size: 12px; font-family: 'Montserrat', Tahoma, Verdana, Segoe, sans-serif; color: #9d9d9d; line-height: 1.5;">
 																							<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px; letter-spacing: normal;">
-																								<span style="font-size:12px;">Diese E-Mail ist für Sie persönlich bestimmt. &nbsp;<a href="https://www.sebra1.com/account/#notifications-settings" data-slide-to="1" rel="noopener" style="text-decoration: underline; color: #111111;" target="_blank">Abmeldung</a> von Nachrichten und ähnlichen Informationen,</span></p>
+																								<span style="font-size:12px;">Diese E-Mail ist für Sie persönlich bestimmt. &nbsp;<a href="https://www.sebra1.com/account/#notification-settings" data-slide-to="1" rel="noopener" style="text-decoration: underline; color: #111111;" target="_blank">Abmeldung</a> von Nachrichten und ähnlichen Informationen,</span></p>
 																							<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px; letter-spacing: normal;">
 																								<span style="font-size:12px;"> oder besuchen Sie Ihr
 																								</span><span style="font-size:12px;">Profil und passen Sie die  E-Mail-Benachrichtigungen an.</span>
