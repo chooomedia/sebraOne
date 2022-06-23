@@ -28,7 +28,7 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 
                         setTimeout(() => {
                             stopConfetti();
-                        }, 4000);
+                        }, 2800);
                     });
                 </script>
 
@@ -70,7 +70,13 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 <style>
     #confetti-canvas {
         position: absolute;
-        top: 86px
+        top: 120px;
+    }
+
+    @media screen and (max-width:471px) {
+        #confetti-canvas {
+            top: 62px;
+        }
     }
 </style>
 
