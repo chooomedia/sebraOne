@@ -74,6 +74,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 						</div>
 					</div>
 					<div role="tabpanel" id="nav-searchbox" class="tab-pane card-body border-0">
+						<h2><b>Jetzt Auto verkaufen</b></h2>
 						<div id="landingpage-search">
 							<!-- Add searchform.php -->
 							<div class="container-fluid p-0 m-0 w-100">

@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="my-md-3 mt-2 mb-5">
 	<!--ADVICE COMMENT-->
 	<!-- Do not change the following input names: userplace, carbuildyear, carkilometers, choices-single-default. -->
-	<form method="get" name="search-form" class="p-lg-2" id="maps-searchform <?php echo $searchboxId ?>"
+	<form method="get" name="search-form" class="p-lg-2" id="<?php echo $searchboxId ?>"
 		action="<?php echo home_url( '/results/' ); ?>" role="search">
 		<label class="sr-only" for="search-form"><?php esc_html_e( 'Search', 'SebraOne' ); ?></label>
 		<?php if(!is_search()) : ?>
