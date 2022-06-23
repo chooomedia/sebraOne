@@ -37,7 +37,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
                 <div class="carousel-item">
                     <?php get_template_part( 'system-templates/content', 'profile-edit' ); ?>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item active">
                     <?php get_template_part( 'system-templates/comments', 'chat' ); ?>
                 </div>
             <?php endif; ?>
