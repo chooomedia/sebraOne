@@ -14,7 +14,7 @@ get_header();
 $pageTitle = get_the_title();
 $container = get_theme_mod( 'SebraOne_container_type' );
 $currentUser = $current_user->display_name;
-$alt = get_post_meta ( $image_id, '_wp_attachment_image_alt', true );
+$alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 ?>
 <div class="wrapper" id="page-wrapper">
     <section class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -24,7 +24,7 @@ $alt = get_post_meta ( $image_id, '_wp_attachment_image_alt', true );
             <?php if (is_user_logged_in()) : ?>
                 <div class="card mb-4">
                     <figure>
-                    <img class="card-img-top" src="<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>" alt="<?php esc_html ( $alt ) ?>">
+                    <img class="card-img-top" src="<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>" alt="Thank you">
                     <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
                     </figure>
                     <div class="card-body p-0 p-md-3">
