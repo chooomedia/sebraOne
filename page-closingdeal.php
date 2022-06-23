@@ -23,8 +23,8 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 
             <?php if (is_user_logged_in()) : ?>
                 <div class="card mb-4">
-                    <figure>
-                    <img class="card-img-top" src="<?php echo get_the_post_thumbnail( $post->ID, 'thumbnnail' ); ?>" alt="Thank you">
+                    <figure class="card-img-top">
+                    <?php echo get_the_post_thumbnail( $post->ID, 'thumbnnail' ); ?>
                     <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
                     </figure>
                     <div class="card-body p-0 p-md-3">
