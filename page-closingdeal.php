@@ -22,18 +22,23 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
             <main class="site-main container" id="main-closing-deal">
 
             <?php if (is_user_logged_in()) : ?>
-                <div class="card mb-4">
+                <div class="col-4">
                     <figure class="card-img-top m-auto text-center">
-                    <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-                    <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
+                        <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
+                        <figcaption class="d-none"><?php esc_html ( $alt ) ?></figcaption>
                     </figure>
-                    <div class="card-body p-0 p-md-3">
-                        <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
-                        <h5 class="text-muted"><b><?php echo $pageTitle ?></b></h5>
-                        <?php the_content() ?>
+                </div>
+                
+                <div class="col-8">
+                    <div class="card mb-4">
+                        <div class="card-body p-0 p-md-3">
+                            <h2><b>Vielen Dank, <?php echo $currentUser ?></b></h2>
+                            <h5 class="text-muted"><b><?php echo $pageTitle ?></b></h5>
+                            <?php the_content() ?>
+                        </div>
                     </div>
                 </div>
-
+                
                 <?php echo do_shortcode( '[contact-form-7 id="501" title="bug-issue-form"]' ); ?>
 
             <?php else : ?>
