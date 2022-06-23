@@ -57,8 +57,6 @@ $role = array_shift($u->roles);
                     </div>
                 </div>
 
-                <?php echo $role; ?>
-
                 <?php if($role == 'buyer') : ?>
                     <?php echo do_shortcode( '[contact-form-7 id="871" title="page-deal-success-buyer"]' ); ?>
                 <?php else : ?>
