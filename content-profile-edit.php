@@ -240,10 +240,10 @@ $role = array_shift($u->roles);
 			<script>
 			jQuery(function($) {
 				var url = document.location.toString();
-				if (url.match('#notifications-settings')) {
+				if (url.find('#notifications-settings')) {
 					$('#main.carousel').carousel(1);
 				}
-				if (url.match('#2')) {
+				if (url.find('#2')) {
 					$('#main.carousel').carousel(2);
 				}
 			});
