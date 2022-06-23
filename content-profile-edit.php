@@ -243,6 +243,9 @@ $role = array_shift($u->roles);
 				if (url.match('#notifications-settings')) {
 					$('#main.carousel').carousel(1);
 				}
+				if (url.match('#2')) {
+					$('#main.carousel').carousel(2);
+				}
 			});
 			</script>
 			<div id="notifications-settings" class="col-12 mb-4">
