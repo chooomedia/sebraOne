@@ -34,7 +34,7 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'SebraOne' ); ?></p>
 
-							<?php get_search_form(); ?>
+							<?php get_search_form(array('formId' => 'maps-searchform')); ?>
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
