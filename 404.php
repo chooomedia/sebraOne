@@ -38,15 +38,6 @@ $container = get_theme_mod( 'SebraOne_container_type' );
 								<?php get_search_form(array('formId' => 'searchform-search')); ?>
 							</div>
 
-							<?php
-
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'SebraOne' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
-
 						</div><!-- .page-content -->
 
 					</section><!-- .error-404 -->
