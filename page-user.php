@@ -88,14 +88,14 @@ $currentUser = $current_user->display_name;
                             <?php get_template_part( 'system-templates/content', 'register' ); ?>
                         </div>
                     <?php else : ?>
+						<div class="carousel-item active">
+                            <?php get_template_part( 'system-templates/comments', 'chat' ); ?>
+                        </div>
                         <div class="carousel-item">
                             <?php  get_template_part( 'system-templates/content', 'profile' ); ?>
                         </div>
                         <div class="carousel-item">
                             <?php get_template_part( 'system-templates/content', 'profile-edit' ); ?>
-                        </div>
-                        <div class="carousel-item active">
-                            <?php get_template_part( 'system-templates/comments', 'chat' ); ?>
                         </div>
                     <?php endif; ?>
 
