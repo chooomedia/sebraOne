@@ -15,6 +15,8 @@ $pageTitle = get_the_title();
 $container = get_theme_mod( 'SebraOne_container_type' );
 $currentUser = $current_user->display_name;
 $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
+$role = array_shift($u->roles);
+
 ?>
 <div class="wrapper" id="page-wrapper">
     <section class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -49,8 +51,12 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
                         </div>
                     </div>
                 </div>
-                
-                <?php echo do_shortcode( '[contact-form-7 id="501" title="bug-issue-form"]' ); ?>
+
+                <?php if($role == 'buyer') : ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="871" title="page-deal-success-buyer"]' ); ?>
+                <?php else : ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="871" title="page-deal-success-user"]' ); ?>
+                <?php endif; ?>            
 
             <?php else : ?>
 
