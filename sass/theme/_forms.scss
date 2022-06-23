@@ -73,6 +73,10 @@
 					span {
 						color: #000;
 					}
+
+					&[aria-selected="true"] {
+						color: #f5f5f5;
+					}
 				}
 
 				input, button.dropdown-toggle {
