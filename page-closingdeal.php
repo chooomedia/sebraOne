@@ -63,7 +63,6 @@ $alt = get_post_meta ( $post->ID, '_wp_attachment_image_alt', true );
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     startConfetti();
-    confetti.maxCount = 200;
 });
 </script>
 
